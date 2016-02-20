@@ -1,0 +1,112 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------------------------------------
+    BUTTONS
+--------------------------------------------------------------------------------------- */
+
+@btnBackgroundColor: @mainColor;
+@btnTextColor: @invTextColor;
+
+.btn {}
+
+.btn-vPrimary {}
+
+/* FIXME!  
+.dynaform input[type="text"].ohne {
+  border: 0;
+  background: transparent;
+  box-shadow: none;}
+
+input[type="button"],
+input[type="submit"],
+button,
+a.button {
+    -webkit-appearance: none;
+    border-radius:0;
+    transition:all .3s ease;
+    color:#444;
+    display: inline-block;
+    margin-right:10px;
+    margin-bottom:10px;   
+    background: #e6e6e6;
+    border:1px solid #ccc;
+    font-family: "Graublau Web", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a.button,
+button.slim {
+    font-weight:400;
+    font-size:.9em;
+    padding:3px 9px;
+    border:1px solid #ccc;
+    background: #e6e6e6;
+    cursor:pointer;
+ }
+
+a.button:hover,
+button.slim:hover {
+    background: #f4f4f4; 
+}
+
+a.action {display:block; float:right; margin-bottom:20px;}
+
+input[type="button"],
+input[type="submit"],
+button.action,
+a.action {
+    color:#fff;
+    font-weight:700;
+    padding:9px 12px;
+    border:1px solid darken(@maincolor, 30%);
+    background-color:@maincolor;
+    letter-spacing:.1em;
+}
+
+input[type="submit"].order.primary,
+button.primary.action,
+a.primary.action {
+    background-color: @success;
+    border-color: lighten(@success, 20%);
+}
+
+button.reset.action {
+    color:#999;
+    border:1px solid #999;
+    background-color:#ccc; 
+}
+
+a.action:hover,
+button.action:hover {
+    color:#fff;
+    border-color: @maincolor;
+    background-color:lighten(@maincolor, 30%);
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+button.primary.action:hover,
+a.primary.action:hover {
+    border:1px solid #990000;
+    background:#cc0000;
+}
+
+input[type="search"] {padding:11px 9px 9px}
+*/
+
+
+// => Buttons Media Queries
+
+.media-mixin(@break) when (@break = @breakSmall) {
+
+}
+
+.media-mixin(@break) when (@break = @breakMedium) {
+
+}
+
+.media-mixin(@break) when (@break = @breakLarge) {
+
+}
+
+.media-mixin(@break) when (@break = @breakPrint) {
+
+}

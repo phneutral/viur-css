@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------------------------------------
+    #PARALLAX EFFECT BOX
+--------------------------------------------------------------------------------------- */
+
+.parallax {
+  height: 400px;
+  width: 100%;
+  background-image: url('../images/test.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+
+
+// => Tooltip Media Queries
+
+.media-mixin(@break) when (@break = @breakSmall) {
+  .parallax {
+    background-attachment: scroll!important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 280px;
+  }
+}
+
+.media-mixin(@break) when (@break = @breakMedium) {
+
+}
+
+.media-mixin(@break) when (@break = @breakLarge) {
+
+}
+
+.media-mixin(@break) when (@break = @break2x) {
+  /* disable background-attachment: fixed on iOS devices */
+  .parallax {
+    background-attachment: scroll!important;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+  }
+}
+
+.media-mixin(@break) when (@break = @breakPrint) {
+
+}
+
