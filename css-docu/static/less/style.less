@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+/* ViCSS 2016 */
+
+// Configuration and Reset
+@import "appconf.less";
+@import "reset.less";
+
+// Fundamental parts, Type and Utilities
+@import "basic.less"; 
+@import "wrap.less";
+@import "util.less";
+
+// Buttons, ViForms and Tables
+@import "button.less"; 
+@import "viform.less";
+@import "table.less";
+
+// Tooltips, Messages and States
+@import "tooltip.less";
+@import "message.less";
+@import "state.less";
+
+// Objects
+//@import "nav.less";
+@import "footer.less";
+@import "parallax.less";
+
+/* Media Queries */
+@media only screen and (max-width: @breakLarge) {
+  .media-mixin(@breakLarge);
+}
+
+@media only screen and (max-width: @breakMedium) {
+  .media-mixin(@breakMedium);
+}
+
+@media only screen and (max-width: @breakSmall) {
+  .media-mixin(@breakSmall);
+}
+
+@media  only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi) {
+  .media-mixin(@break2x);
+}
+
+/* Print */
+@media @breakPrint {
+  .media-mixin(@breakPrint);
+}
