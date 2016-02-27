@@ -3,95 +3,161 @@
     BUTTONS
 --------------------------------------------------------------------------------------- */
 
-@btnBackgroundColor: @mainColor;
-@btnTextColor: @invTextColor;
+// Colors:
+@btnBackgroundColor: #dedede;
+@btnPrimaryBgColor: @successColor;
+@btnDangerBgColor: @dangerColor;
 
-.btn {}
+// Shadows:
+@btnShadow: 1px 1px 2px rgba(0,0,0,0.4);
+@btnHoverShadow: @defaultShadow;
 
-.btn-vPrimary {}
-
-/* FIXME!  
-.dynaform input[type="text"].ohne {
-  border: 0;
-  background: transparent;
-  box-shadow: none;}
-
-input[type="button"],
-input[type="submit"],
-button,
-a.button {
-    -webkit-appearance: none;
-    border-radius:0;
-    transition:all .3s ease;
-    color:#444;
+.btn {
+    font-weight: 400;
+    padding: 9px 20px;
+    margin: 6px;
+    color: contrast(@btnBackgroundColor, #222222, #f4f4f4);
+    background-color: @btnBackgroundColor;
+    border: 1px solid darken(@btnBackgroundColor, 10%);;
+    box-shadow: @btnShadow;
+    border-radius: 1px;
+    cursor: pointer;
+    vertical-align: middle;
+    white-space: nowrap;
     display: inline-block;
-    margin-right:10px;
-    margin-bottom:10px;   
-    background: #e6e6e6;
-    border:1px solid #ccc;
-    font-family: "Graublau Web", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    transition: all .3s ease;
+    &:hover {
+        color: contrast(lighten(@btnBackgroundColor, 5%));
+        background-color: lighten(@btnBackgroundColor, 5%);
+        box-shadow: @btnHoverShadow;
+    }
+    &:active,
+    &.is-active {
+        color: contrast(lighten(@btnBackgroundColor, 10%));
+        background-color: lighten(@btnBackgroundColor, 10%);
+    }
+    &.is-disabled {
+        color: #aaaaaa;
+        cursor: default;
+        box-shadow: none;
+        border-style: dashed;
+        background-color: lighten(@btnBackgroundColor, 15%);
+        &:hover {
+            background-color: lighten(@btnBackgroundColor, 20%);
+        }
+    }
 }
 
-a.button,
-button.slim {
-    font-weight:400;
-    font-size:.9em;
-    padding:3px 9px;
-    border:1px solid #ccc;
-    background: #e6e6e6;
-    cursor:pointer;
- }
-
-a.button:hover,
-button.slim:hover {
-    background: #f4f4f4; 
+.btn-vSmall {
+    padding: 4px 12px;
+    font-size: .9em;
+    font-weight: 200;
 }
 
-a.action {display:block; float:right; margin-bottom:20px;}
-
-input[type="button"],
-input[type="submit"],
-button.action,
-a.action {
-    color:#fff;
-    font-weight:700;
-    padding:9px 12px;
-    border:1px solid darken(@maincolor, 30%);
-    background-color:@maincolor;
-    letter-spacing:.1em;
+.btn-vPrimary {
+    color: contrast(@btnPrimaryBgColor, #222222, #f4f4f4);
+    background-color: @btnPrimaryBgColor;
+    border: 1px solid darken(@btnPrimaryBgColor, 10%);
+    &:hover {
+        color: contrast(lighten(@btnPrimaryBgColor, 5%));
+        background-color: lighten(@btnPrimaryBgColor, 5%);
+        border: 1px solid darken(@btnPrimaryBgColor, 5%);
+    }
+    &:active,
+    &.is-active {
+        color: contrast(lighten(@btnPrimaryBgColor,10%));
+        background-color: lighten(@btnPrimaryBgColor, 10%);
+        border: 1px solid lighten(@btnPrimaryBgColor, 5%);
+    }
+    &.is-disabled {
+        color: #eeeeee;
+        background-color: lighten(@btnPrimaryBgColor, 35%);
+        border: 1px dashed lighten(@btnPrimaryBgColor, 30%);
+        cursor: default;
+        box-shadow: none;
+        &:hover {
+            background-color: lighten(@btnPrimaryBgColor, 40%);
+        }
+    }
 }
 
-input[type="submit"].order.primary,
-button.primary.action,
-a.primary.action {
-    background-color: @success;
-    border-color: lighten(@success, 20%);
+.btn-vDanger {
+    color: darken(@btnDangerBgColor,5%);
+    border: 1px solid darken(@btnDangerBgColor, 10%);
+    box-shadow: 1px 1px 2px fadeout(@btnDangerBgColor, 40%);
+    &:hover {
+        color: contrast(lighten(@btnDangerBgColor, 5%));
+        background-color: lighten(@btnDangerBgColor, 5%);
+        border: 1px solid darken(@btnDangerBgColor, 5%);
+    }
+    &:active,
+    &.is-active {
+        color: contrast(lighten(@btnDangerBgColor,10%));
+        background-color: lighten(@btnDangerBgColor, 10%);
+        border: 1px solid lighten(@btnDangerBgColor, 5%);
+    }
+    &.is-disabled {
+        color: lighten(@btnDangerBgColor, 30%);
+        background-color: lighten(@btnBackgroundColor, 15%);
+        border: 1px dashed lighten(@btnDangerBgColor, 30%);
+        cursor: default;
+        box-shadow: none;
+        &:hover {
+            background-color: lighten(@btnDangerBgColor, 50%);
+        }
+    }
 }
 
-button.reset.action {
-    color:#999;
-    border:1px solid #999;
-    background-color:#ccc; 
+.btn-group {
+    vertical-align: middle;
+    display: inline-block;
+    .btn {
+        margin-right: 0px;
+        margin-left: -1px;
+        float: left;
+        position: relative;
+        &:not(:first-child):not(:last-child) {
+            border-radius: 0;
+        }
+        &:first-child:not(:last-child) {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+        &:last-child:not(:first-child) {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+        &:first-of-type {
+            margin-left: 6px;
+        }
+        &.btn:last-of-type {
+            margin-right: 6px;
+        }
+        // Bring any button into forefront for proper borders given negative margin below
+        &.btn-vDanger,
+        &.btn-vPrimary {
+            z-index: 2; // border colors are important here.
+        }
+        &:hover,
+        &:active,
+        &.is-selected {
+            z-index: 3;
+        }
+        &.is-disabled:hover {
+            z-index: 1; // stay down!
+        }
+        &:focus {
+            z-index: 4;
+        }
+    }
 }
 
-a.action:hover,
-button.action:hover {
-    color:#fff;
-    border-color: @maincolor;
-    background-color:lighten(@maincolor, 30%);
+.btn-vBlock {
+    margin: 0;
+    width: 100%;
+    display: block;
+    margin-top: 5px;
 }
-
-input[type="button"]:hover,
-input[type="submit"]:hover,
-button.primary.action:hover,
-a.primary.action:hover {
-    border:1px solid #990000;
-    background:#cc0000;
-}
-
-input[type="search"] {padding:11px 9px 9px}
-*/
-
 
 // => Buttons Media Queries
 

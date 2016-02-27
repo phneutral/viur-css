@@ -13,7 +13,11 @@ Use it for different background colors oder images across the screen.
 .bind {max-width:@pageWidth; padding:0 5%; margin:0 auto; position: relative; overflow: hidden;}
 
 /* Container to seperate chunks of content in the middle of the page. */
-.content {width:100%; padding-top:40px; overflow:hidden;}
+.content {
+  width:100%;
+  padding:40px 4px 4px; /* 40px padding helps with top navigations, 4px paddings prevent shadow overflow. */
+  overflow:hidden;
+}
 
 
 // => Wrapper and Binder Media Queries

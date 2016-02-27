@@ -15,7 +15,7 @@
   left: 0;
   width: 100%;
   background: @successColor;
-  color: @invTextColor;
+  color: contrast(@successColor);
   padding: 10px 0;
   text-align: center;
   z-index: 9001;
@@ -24,14 +24,14 @@
 .is-admin a:link,
 .is-admin a:active,
 .is-admin a:visited,
-.is-admin a:hover {color:@invTextColor; text-decoration: underline;}
+.is-admin a:hover {color: contrast(@successColor); text-decoration: underline;}
 
 /* Selections */
 ::-moz-selection,
 ::selection {
     background-color: darken(@mainColor, 20%);
     text-shadow: none;
-    color:@invTextColor;
+    color: contrast(@mainColor);
 }
 
 // => Global States Media Queries

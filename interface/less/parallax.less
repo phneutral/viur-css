@@ -19,9 +19,6 @@
 .media-mixin(@break) when (@break = @breakSmall) {
   .parallax {
     background-attachment: scroll!important;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     height: 280px;
   }
@@ -39,9 +36,6 @@
   /* disable background-attachment: fixed on iOS devices */
   .parallax {
     background-attachment: scroll!important;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
     background-size: 100%;
   }
 }
