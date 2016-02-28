@@ -6,11 +6,11 @@
 /* These great tooltips are taken from primercss.io — created by and copyright GitHub, Inc. */
 
 @tipMultilineMaxwidth: 250px;
-@tipBackgroundColor: rgba(0, 0, 0, 0.8);
-@tipTextColor: @invTextColor;
+@tipColor: @hintColor;
 
 .tip {
   position: relative;
+  .zIndex('tooltip', 0);
 }
 
 // This is the tooltip bubble
@@ -19,7 +19,7 @@
   display: none;
   padding: 5px 8px;
   font: normal normal 11px/1.5 @bodyFonts;
-  color: @tipTextColor;
+  color: contrast(@tipColor);
   text-align: center;
   text-decoration: none;
   text-shadow: none;
@@ -29,7 +29,7 @@
   white-space: pre;
   pointer-events: none;
   content: attr(aria-label);
-  background: @tipBackgroundColor;
+  background: fadeout(@tipColor,10%);
   border-radius: 3px;
   -webkit-font-smoothing: subpixel-antialiased;
   .zIndex('tooltip', 0);
@@ -42,7 +42,7 @@
   display: none;
   width: 0;
   height: 0;
-  color: @tipBackgroundColor;
+  color: @tipColor;
   pointer-events: none;
   content: "";
   border: 5px solid transparent;
@@ -82,7 +82,7 @@
     right: 50%;
     bottom: -5px;
     margin-right: -5px;
-    border-bottom-color: @tipBackgroundColor;
+    border-bottom-color:  fadeout(@tipColor,10%);
   }
 }
 
@@ -113,7 +113,7 @@
     right: 50%;
     bottom: auto;
     margin-right: -5px;
-    border-top-color: @tipBackgroundColor;
+    border-top-color:  fadeout(@tipColor,10%);
   }
 }
 
@@ -149,7 +149,7 @@
     bottom: 50%;
     left: -5px;
     margin-top: -5px;
-    border-left-color: @tipBackgroundColor;
+    border-left-color: fadeout(@tipColor,10%);
   }
 }
 
@@ -167,15 +167,15 @@
     right: -5px;
     bottom: 50%;
     margin-top: -5px;
-    border-right-color: @tipBackgroundColor;
+    border-right-color: fadeout(@tipColor,10%);
   }
 }
 
 // Multiline tooltips
 //
-// `.tip-vMultiline` Add this class when you have long content.
-// The downside is you cannot preformat the text with newlines and `[w,e]`
-// are always `@tipMultilineMaxwidth` wide.
+// ».tip-vMultiline« Add this class when you have long content.
+// The downside is you cannot preformat the text with newlines and »[w,e]«
+// are always »@tipMultilineMaxwidth« wide.
 .tip-vMultiline {
   &:after {
     width: max-content;
@@ -221,37 +221,41 @@
 .colorizeTooltip(@backgroundColor) {
   &:after {
     color: contrast(@backgroundColor);
-    background: @backgroundColor;
+    background: fadeout(@backgroundColor,10%);
   }
 
-  .tooltipped-s,
-  .tooltipped-se,
-  .tooltipped-sw {
+  &.tip-s,
+  &.tip-se,
+  &.tip-sw {
     &:before {
-      border-bottom-color: @backgroundColor;
+      border-bottom-color: fadeout(@backgroundColor,10%);
     }
   }
 
-  &.tooltipped-n,
-  &.tooltipped-ne,
-  &.tooltipped-nw {
+  &.tip-n,
+  &.tip-ne,
+  &.tip-nw {
     &:before {
-      border-top-color: @backgroundColor;
+      border-top-color: fadeout(@backgroundColor,10%);
     }
   }
 
-  &.tooltipped-e:before {
-    border-right-color: @backgroundColor;
+  &.tip-e:before {
+    border-right-color: fadeout(@backgroundColor,10%);
   }
 
-  &.tooltipped-w:before {
-    border-left-color: @backgroundColor;
+  &.tip-w:before {
+    border-left-color: fadeout(@backgroundColor,10%);
   }
 }
 
 // Successful Tooltip!
 .tip-vSuccess {
   .colorizeTooltip(@successColor);
+}
+
+.tip-vError {
+  .colorizeTooltip(@failColor);
 }
 
 // => Tooltip Media Queries

@@ -6,6 +6,16 @@
 /* Clearfix */
 .clear {clear:both;}
 
+.clearfix {
+  *zoom: 1;
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+  }
+}
+
 /* Floats */
 .f-left {float:left;}
 .f-right {float:right;}
