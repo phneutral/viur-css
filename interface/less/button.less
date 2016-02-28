@@ -16,7 +16,7 @@
 
 .btn {
     font-weight: 400;
-    padding: 9px 20px;
+    padding: 7px 21px;
     margin: 6px;
     color: contrast(@btnBackgroundColor, #222222, #f4f4f4);
     background-color: @btnBackgroundColor;
@@ -45,7 +45,7 @@
         border-style: dashed;
         background-color: lighten(@btnBackgroundColor, 15%);
         &:hover {
-            background-color: lighten(@btnBackgroundColor, 20%);
+            background-color: lighten(@btnBackgroundColor, 5%);
         }
     }
 }
@@ -72,13 +72,13 @@
         border: 1px solid lighten(@btnPrimaryBgColor, 5%);
     }
     &.is-disabled {
-        color: #eeeeee;
-        background-color: lighten(@btnPrimaryBgColor, 35%);
+        color: lighten(@btnPrimaryBgColor, 30%);
+        background-color: lighten(@btnBackgroundColor, 15%);
         border: 1px dashed lighten(@btnPrimaryBgColor, 30%);
         cursor: default;
         box-shadow: none;
         &:hover {
-            background-color: lighten(@btnPrimaryBgColor, 40%);
+            background-color: lighten(@btnPrimaryBgColor, 50%);
         }
     }
 }
@@ -118,6 +118,7 @@
         margin-left: -1px;
         float: left;
         position: relative;
+        z-index: 1;
         &:not(:first-child):not(:last-child) {
             border-radius: 0;
         }
@@ -145,6 +146,7 @@
         &.is-selected {
             z-index: 3;
         }
+        &.is-disabled,
         &.is-disabled:hover {
             z-index: 1; // stay down!
         }

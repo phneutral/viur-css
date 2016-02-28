@@ -70,66 +70,6 @@
   font-weight:900;
   src:local("Source Sans Pro Black"),local(SourceSansPro-Black),url(//fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGCDZg7i-e40o9FYYiSpZxAc.eot?#) format("eot"),url(//fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGHZhYM0_6AejPZE-OqA592o.woff2) format("woff2"),url(//fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGHiec-hVyr2k4iOzEQsW1iE.woff) format("woff");
 }
-@font-face{
-  font-family:monospace;
-  font-style:italic;
-  font-weight:400;
-  src:local("Menlo Italic"),local(Menlo-Italic),local("Consolas Italic"),local(Consolas-Italic),local("Courier New Italic");
-}
-@font-face{
-  font-family:monospace;
-  font-style:italic;
-  font-weight:700;
-  src:local("Menlo Bold Italic"),local(Menlo-BoldItalic),local(Monaco),local("Consolas Bold Italic"),local(Consolas-BoldItalic),local("Courier New Bold Italic");
-}
-@font-face{
-  font-family:monospace;
-  font-style:normal;
-  font-weight:400;
-  src:local("Menlo Regular"),local(Menlo-Regular),local(Monaco),local(Consolas),local("Courier New");
-}
-@font-face{
-  font-family:monospace;
-  font-style:normal;
-  font-weight:700;
-  src:local("Menlo Bold"),local(Menlo-Bold),local(Monaco),local("Consolas Bold"),local(Consolas-Bold),local("Courier New Bold");
-}
-@font-face{
-  font-family:sans-serif;
-  font-style:italic;
-  font-weight:300;
-  src:local("Helvetica Neue Light Italic"),local(HelveticaNeue-LightItalic),local("Helvetica Light Oblique"),local(Helvetica-LightOblique);
-}
-@font-face{
-  font-family:sans-serif;
-  font-style:italic;
-  font-weight:400;
-  src:local("Helvetica Neue Italic"),local(HelveticaNeue-Italic),local("Helvetica Oblique"),local(Helvetica-Oblique);
-}
-@font-face{
-  font-family:sans-serif;
-  font-style:italic;
-  font-weight:700;
-  src:local("Helvetica Neue Bold Italic"),local(HelveticaNeue-BoldItalic),local("Helvetica Bold Oblique"),local(Helvetica-BoldOblique);
-}
-@font-face{
-  font-family:sans-serif;
-  font-style:normal;
-  font-weight:300;
-  src:local("Helvetica Neue Light"),local(HelveticaNeue-Light),local("Helvetica Light"),local(Helvetica-Light);
-}
-@font-face{
-  font-family:sans-serif;
-  font-style:normal;
-  font-weight:400;
-  src:local(HelveticaNeue),local(Helvetica);
-}
-@font-face{
-  font-family:sans-serif;
-  font-style:normal;
-  font-weight:700;
-  src:local("Helvetica Neue Bold"),local(HelveticaNeue-Bold),local("Helvetica Bold"),local(Helvetica-Bold);
-}
 @charset "UTF-8";
 html,
 body,
@@ -271,7 +211,7 @@ button,
 input,
 select,
 textarea{
-  font-family:sans-serif;
+  font-family:'Source Sans Pro', 'Open Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 a:focus{
   outline:thin dotted;
@@ -306,8 +246,8 @@ pre,
 code,
 kbd,
 samp{
-  font-family:monospace, serif;
-  _font-family:'courier new', monospace;
+  font-family:Courier, monospace;
+  _font-family:Courier, monospace;
   font-size:1em;
 }
 pre{
@@ -393,7 +333,7 @@ textarea{
 }
 button,
 input{
-  line-height:normal;
+  line-height:1.5;
 }
 button,
 input[type="button"],
@@ -599,7 +539,7 @@ ol,
 }
 .btn{
   font-weight:400;
-  padding:9px 20px;
+  padding:7px 21px;
   margin:6px;
   color:#222222;
   background-color:#dedede;
@@ -630,7 +570,7 @@ ol,
   background-color:#ffffff;
 }
 .btn.is-disabled:hover,.btn.is-disabled:focus{
-  background-color:#ffffff;
+  background-color:#ebebeb;
 }
 .btn-vSmall{
   padding:4px 12px;
@@ -654,14 +594,14 @@ ol,
   border:1px solid #49ab40;
 }
 .btn-vPrimary.is-disabled{
-  color:#eeeeee;
-  background-color:#abdea6;
+  color:#99d793;
+  background-color:#ffffff;
   border:1px dashed #99d793;
   cursor:default;
   box-shadow:none;
 }
 .btn-vPrimary.is-disabled:hover,.btn-vPrimary.is-disabled:focus{
-  background-color:#bce5b8;
+  background-color:#dff2de;
 }
 .btn-vDanger{
   color:#b30000;
@@ -698,6 +638,7 @@ ol,
   margin-left:-1px;
   float:left;
   position:relative;
+  z-index:1;
 }
 .btn-group .btn:not(:first-child):not(:last-child){
   border-radius:0;
@@ -726,7 +667,9 @@ ol,
 .btn-group .btn:focus{
   z-index:3;
 }
-.btn-group .btn.is-disabled:hover,.btn-group .btn.is-disabled:focus{
+.btn-group .btn.is-disabled,
+.btn-group .btn.is-disabled:hover,
+.btn-group .btn.is-disabled:focus{
   z-index:1;
 }
 .btn-group .btn:focus{
