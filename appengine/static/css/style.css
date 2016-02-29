@@ -506,12 +506,6 @@ ol,
 .wrap{
   width:100%;
 }
-.wrap:after{
-  content:'';
-  display:block;
-  clear:both;
-  height:0;
-}
 .bind{
   max-width:1200px;
   padding:0 3%;
@@ -1356,6 +1350,7 @@ ol,
   top:0;
   width:100%;
   padding:25px;
+  z-index:7;
 }
 .alert-vSuccess{
   color:#193b16;
@@ -1381,7 +1376,7 @@ ol,
   color:#ffffff;
   padding:10px 0;
   text-align:center;
-  z-index:8;
+  z-index:9;
 }
 .is-admin a,
 .is-admin a:link,
@@ -1407,7 +1402,7 @@ ol,
   background-position:center center;
 }
 .zDev{
-  z-index:7;
+  z-index:8;
 }
 @media only screen and (max-width: 959px){
   body{
