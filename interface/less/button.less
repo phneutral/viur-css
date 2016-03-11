@@ -4,13 +4,13 @@
 --------------------------------------------------------------------------------------- */
 
 // Colors:
-@btnBackgroundColor: #dedede;
+@btnBackgroundColor: #e3e1e1;
 @btnPrimaryBgColor: @successColor;
 @btnDangerBgColor: @failColor;
 @btnEditBgColor: @hintColor;
 
 // Shadows:
-@btnShadow: 1px 1px 2px rgba(0,0,0,0.4);
+@btnShadow: 1px 1px 1px rgba(0,0,0,0.4);
 @btnHoverShadow: @defaultShadow;
 
 //overwrite these colors and shadows in your appconf.less
@@ -21,7 +21,7 @@
     margin: 6px;
     color: contrast(@btnBackgroundColor, #222222, #f4f4f4);
     background-color: @btnBackgroundColor;
-    border: 1px solid darken(@btnBackgroundColor, 10%);;
+    border: 1px solid darken(@btnBackgroundColor, 5%);;
     box-shadow: @btnShadow;
     border-radius: 1px;
     cursor: pointer;
@@ -138,7 +138,7 @@
     }
 }
 
-.btn-group {
+.btnGroup {
     vertical-align: middle;
     display: inline-block;
     .btn {
