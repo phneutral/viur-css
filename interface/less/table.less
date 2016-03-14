@@ -14,12 +14,15 @@
   margin: 0 0 15px;
   padding: 0;
   font-size: .8rem; // 80% of body text.
+  .shd(); // default shadow class.
 }
 
-.tableHead {box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);}
-.tableHead-row {}
-.tableHead-cell {
+.tableHead {}
+.tableHead-row {
   background-color:@tableHeadBackgroundColor;
+  &:hover {background-color:lighten(@tableHeadBackgroundColor, 10%);}
+}
+.tableHead-cell {
   border:0px solid darken(@tableHeadBackgroundColor,15%);
   border-width:0px 0px 1px 1px;
   font-weight:bold;
@@ -31,7 +34,6 @@
   padding: 4px 10px;
   &:first-of-type {border-width:0px 0px 1px 0px;}
   &:last-of-type {border-width:0px 0px 1px 1px;}
-  .tableHead-row:hover & {background-color:lighten(@tableHeadBackgroundColor, 10%);}
 }
 
 .tableBody {}
