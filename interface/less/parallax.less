@@ -3,14 +3,24 @@
     #PARALLAX EFFECT BOX
 --------------------------------------------------------------------------------------- */
 
+// The parallax effect box is … #FIXME (introduction, different ratios (http://codepen.io/necolas/pen/Aksni) and parallax.html)
+
 .parallax {
-  height: 400px;
+  max-height: 400px;
   width: 100%;
   background-image: url('../images/test.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-bottom: 50%; /* image in 2:1 ratio. */
+  }
 }
+
 
 
 
@@ -20,7 +30,7 @@
   .parallax {
     background-attachment: scroll!important;
     background-size: cover;
-    height: 280px;
+    max-height: 300px;
   }
 }
 
