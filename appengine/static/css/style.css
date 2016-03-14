@@ -835,11 +835,14 @@ ol,
   width:100%;
   margin:0 0 15px;
   padding:0;
-  font-size:.7rem;
+  font-size:.8rem;
+}
+.tableHead{
+  box-shadow:1px 1px 10px rgba(0, 0, 0, 0.6);
 }
 .tableHead-cell{
   background-color:#cc0000;
-  border:0px solid #eee;
+  border:0px solid #800000;
   border-width:0px 0px 1px 1px;
   font-weight:bold;
   color:#ffffff;
@@ -847,7 +850,7 @@ ol,
   white-space:nowrap;
   text-overflow:ellipsis;
   overflow:hidden;
-  padding:2px 5px;
+  padding:4px 10px;
 }
 .tableHead-cell:first-of-type{
   border-width:0px 0px 1px 0px;
@@ -859,37 +862,37 @@ ol,
   background-color:#ff0000;
 }
 .tableBody-row:nth-of-type(even){
-  background-color:#e5e5e5;
+  background-color:#f9f9f9;
 }
 .tableBody-row:nth-of-type(odd){
-  background-color:#d8d8d8;
+  background-color:#f4f4f4;
 }
 .tableBody-row:nth-of-type(even):hover,.tableBody-row:nth-of-type(even):focus{
   background-color:#ffffff;
 }
 .tableBody-row:nth-of-type(odd):hover,.tableBody-row:nth-of-type(odd):focus{
-  background-color:#f2f2f2;
+  background-color:#ffffff;
 }
 .tableBody-row:nth-of-type(even).is-active{
-  background-color:#419839;
+  background-color:#3e9136;
 }
 .tableBody-row:nth-of-type(odd).is-active{
-  background-color:#398532;
+  background-color:#3b8933;
 }
 .tableBody-row:nth-of-type(even).is-active:hover,.tableBody-row:nth-of-type(even).is-active:focus{
-  background-color:#53bb49;
+  background-color:#4bae41;
 }
 .tableBody-row:nth-of-type(odd).is-active:hover,.tableBody-row:nth-of-type(odd).is-active:focus{
-  background-color:#49ab40;
+  background-color:#4bae41;
 }
 .tableBody-cell{
   vertical-align:middle;
-  border:1px solid #eee;
+  border:1px solid #d8d8d8;
   border-width:0px 1px 1px 0px;
   text-align:left;
   padding:5px 10px;
   font-weight:normal;
-  color:#222;
+  color:#000000;
 }
 .tableBody-row.is-active .tableBody-cell{
   color:#ffffff;
@@ -906,7 +909,19 @@ ol,
 .tableLink{
   display:block;
   padding:8px;
-  color:#222;
+  color:#000000;
+}
+.table-th{
+  border:1px solid #e6e6e6;
+  padding:12px 10px;
+  font-weight:bold;
+}
+.table-td{
+  border:1px solid #e6e6e6;
+  padding:7px 10px;
+}
+.table-tr:nth-child(odd){
+  background-color:#f7f7f7;
 }
 .tip{
   position:relative;
