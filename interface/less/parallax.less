@@ -25,7 +25,9 @@
 }
 
 .media-mixin(@break) when (@break = @breakMedium) {
-
+  .parallax {
+    background-attachment: scroll!important;
+  }
 }
 
 .media-mixin(@break) when (@break = @breakLarge) {
