@@ -1,11 +1,13 @@
 @charset "UTF-8";
 /* ---------------------------------------------------------------------------------------
-    #FOOTER
+    #PROJECTSPECIFIC ELEMENTS
 --------------------------------------------------------------------------------------- */
 
-.footer {}
+// Put all your custom CSS down here!
+// But start new LESS files for major components.
 
-// => Footer Media Queries
+
+// => Projectspecific Media Queries
 
 .media-mixin(@break) when (@break = @breakSmall) {
 
@@ -19,6 +21,11 @@
 
 }
 
+.media-mixin(@break) when (@break = @break2x) {
+
+}
+
 .media-mixin(@break) when (@break = @breakPrint) {
 
 }
+
