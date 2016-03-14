@@ -590,14 +590,6 @@ p {
   line-height: 1.6;
   font-size: 1em;
 }
-.lead {
-  font-size: 1.3em;
-  font-weight: 300;
-}
-.sandbox {
-  padding: 10px 20px;
-  background-color: #f6f6f6;
-}
 em {
   font-style: italic;
 }
@@ -642,38 +634,46 @@ ol,
   padding: 3px 18px;
   list-style-type: upper-alpha;
 }
-h1 {
-  margin: 0;
-  padding: 20px 40px;
-  border-bottom: 0;
+/* ------------------------------------------------------------------------------------------------------
+    #MENU PARTS
+------------------------------------------------------------------------------------------------------ */
+.menu-ul {
+  list-style: none;
+  width: 240px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+}
+.menu-ul-li {
+  box-sizing: border-box;
+  padding: 10px 20px;
   color: #000;
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-top: 0px;
+  transition: all .3s ease;
 }
-.placeholder {
-  height: 130px;
-}
-.page {
-  margin: 0 auto;
-  width: 64%;
-  min-height: 800px;
-  margin-bottom: 40px;
-  background-color: #ffffff;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-}
-.whats-new {
-  padding: 20px 40px;
-}
-.whats-new:hover {
+.menu-ul-li:hover {
   background-color: #f5f5f5;
 }
-.whats-new-title {
-  font-size: 1.5em;
-  font-weight: bold;
+.menu-ul a:first-of-type .menu-ul-li {
+  border-top: 1px solid #e6e6e6;
 }
-.whats-new-desc {
-  font-size: 1em;
+.menu-ul-li.is-active {
+  color: #cc0000;
+  background-color: #f5f5f5;
 }
-.pointer {
-  cursor: pointer;
+.menu-ul-li.menu-ul-li-icon {
+  padding-left: 52px;
+}
+.menu-ul-li-icon::before {
+  content: "";
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  left: 65px;
+  background-image: url(../images/settings.png);
+  background-size: 20px;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 /* ---------------------------------------------------------------------------------------
     #WRAPPER and BINDER
@@ -703,7 +703,7 @@ Use it for different background colors oder images across the screen.
 /* Container to seperate chunks of content in the middle of the page. */
 .content {
   width: 100%;
-  padding: 40px 4px 10px;
+  padding: 40px 4px;
   /* 40px padding-top helps with top navigation, 4px paddings prevent shadow overflow. */
 
 }
@@ -920,10 +920,8 @@ Use it for different background colors oder images across the screen.
   display: block;
   margin-top: 5px;
 }
-/* ViUR Form 2016 */
-/* by mausbrand.de */
 /* ------------------------------------------------------------------------------------------------------
-    #ViUR FORM
+    #FORM PARTS
 ------------------------------------------------------------------------------------------------------ */
 .input {
   padding: 7px 14px;
@@ -1039,195 +1037,6 @@ Use it for different background colors oder images across the screen.
   margin: 0;
   padding-left: 22px;
 }
-/* FIXME! Bones */
-.viurForm-bone {
-  padding-bottom: 15px;
-  margin-bottom: 10px;
-  overflow: hidden;
-  width: 100%;
-}
-/* Labels */
-.viurForm-label {
-  width: 220px;
-  float: left;
-  text-align: right;
-  padding: 4px 10px 5px;
-  min-height: 16px;
-  border: 1px dotted #ddd;
-  border-right-width: 0;
-  background: #f9f9f9;
-  overflow: hidden;
-  line-height: 1.4em;
-  font-size: 0.8em;
-}
-.viurForm-label.is-required {
-  border-style: solid;
-  border-left-color: #cc0000;
-  border-left-width: 2px;
-  background: #fff;
-}
-.viurForm-label.is-invalid {
-  background: #cc0000;
-  color: #fff;
-  border-left-color: #660000;
-}
-.vi-formLabel-vText {
-  border-bottom: 0;
-  border-right-width: 1px;
-}
-.vi-formLabel-vSelectone {
-  border-right-width: 1px;
-}
-.vi-formBone-vSelectMulti div label {
-  border: 1px solid #ccc;
-  border-top-width: 0;
-  clear: left;
-  margin-left: 241px;
-  width: 320px;
-}
-.vi-formBone-vSelectMulti div label:first-of-type {
-  clear: none;
-  margin-left: 0;
-  border: 1px solid #ccc;
-}
-.vi-formBone-vSelectMulti div label:nth-of-type(even) {
-  background-color: #eee;
-}
-.vi-formBone-vSelectMulti div label input {
-  float: right;
-  width: 15px;
-  margin-right: 0;
-}
-.vi-formBone-vSelectMulti div label span {
-  display: block;
-  float: left;
-}
-.vi-form .password div label {
-  margin-top: 40px;
-  margin-left: -240px;
-}
-/* Input Fields */
-.vi-formTextarea,
-.vi-formInput,
-.vi-formText .preview,
-.vi-form [contenteditable] {
-  display: inline-block;
-  font-size: 0.9em;
-  width: 50%;
-  margin-right: 15px;
-  margin-left: 0;
-  margin-top: 0;
-  padding: 4px 1.3% 6px;
-  height: 16px;
-  border: 1px solid #ccc;
-  border-bottom: 1px solid #cc0000;
-  box-shadow: inset 0px 0px 3px #eee;
-  font-weight: 300;
-  border-radius: 0px;
-  background: #eaeaea;
-  background: linear-gradient(to bottom, #eaeaea 0%, #fafafa 100%);
-}
-.vi-formInput-vDate {
-  width: 162px;
-}
-.vi-formInput-vRadio,
-.vi-formInput-vCheckbox {
-  margin-right: 15px;
-}
-.vi-formInput-Password:nth-of-type(even) {
-  margin-top: 12px;
-}
-.vi-formTextarea,
-.vi-formText .preview {
-  width: 100%;
-  height: 120px;
-  line-height: 1.5em;
-}
-.vi-formText .preview {
-  overflow: hidden;
-  overflow-y: scroll;
-  border-bottom: 1px solid #777;
-  background: #f1f1f1;
-  text-overflow: ellipsis;
-  max-width: 1300px;
-}
-.vi-formSelect {
-  min-width: 175px;
-  max-width: 300px;
-  margin-left: 15px;
-  border: 1px solid #ccc;
-  font-size: .75em;
-  font-weight: 100;
-  color: #222222;
-}
-.vi-formContainer {
-  display: inline-block;
-}
-.vi-form .tagcontainer {
-  min-width: 50%;
-}
-.vi-form .selectioncontainer button,
-.vi-form .tagcontainer button {
-  margin-right: 15px;
-}
-.vi-form .tagcontainer button {
-  margin-bottom: 5px;
-}
-.vi-form .selectioncontainer .entrydescription,
-.vi-form .selectioncontainer label {
-  border: 1px solid #ccc;
-  border-right-width: 0;
-  width: auto;
-  min-width: 220px;
-  max-width: 80%;
-  height: 16px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.vi-form .selectioncontainer .entrydescription,
-.vi-form .selectioncontainer label,
-.vi-form .selectioncontainer button {
-  margin-bottom: 5px;
-}
-/* Focus */
-.vi-formInput:focus {
-  outline: 0;
-  border-color: #cc0000;
-}
-/* Buttons */
-.vi-formBtn {
-  padding: 10px 5px;
-  color: #fff!important;
-  background-color: #cc0000;
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  font-weight: bold;
-  font-size: 1.2em;
-  line-height: 1.6;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-  border: 1px solid #800000;
-  transition: all .3s ease;
-  cursor: pointer;
-}
-.df_radiocontainer {
-  float: left;
-  margin-left: 15px;
-  border: 1px solid #ccc;
-  padding: 1px 6px 1px 2px;
-  border-radius: 5px;
-}
-.radiovalue label {
-  background: None;
-  float: none;
-  border: none;
-  padding: 0px;
-  line-height: 2em;
-}
-.radiovalue input {
-  margin-right: 0px!important;
-  margin-left: 5px;
-}
 /* ---------------------------------------------------------------------------------------
     #TABLES
 --------------------------------------------------------------------------------------- */
@@ -1331,99 +1140,6 @@ Use it for different background colors oder images across the screen.
   background-color: #f7f7f7;
 }
 /* ---------------------------------------------------------------------------------------
-    MESSAGES and ALERTS
---------------------------------------------------------------------------------------- */
-.msg {
-  position: relative;
-  padding: 15px;
-  font-size: .9rem;
-  color: #1c5675;
-  background-color: #e4f1f9;
-  border: 1px solid #26749e;
-  border-radius: 3px;
-}
-.msg p:last-child {
-  margin-bottom: 0;
-}
-.msg-center {
-  margin-bottom: 20px;
-}
-.msg-close {
-  float: right;
-  width: 34px;
-  height: 44px;
-  margin: -11px;
-  line-height: 40px;
-  color: inherit;
-  text-align: center;
-  cursor: pointer;
-  background: none;
-  border: 0;
-  -webkit-appearance: none;
-  opacity: 0.6;
-}
-.msg-close:hover {
-  opacity: 1;
-}
-.msg-vSuccess {
-  color: #193b16;
-  background-color: #bce5b8;
-  border: 1px solid #296024;
-}
-.msg-vWarn {
-  color: #5a4400;
-  background-color: #ffeaa6;
-  border: 1px solid #8d6b00;
-}
-.msg-vError {
-  color: #4d0000;
-  background-color: #ff9999;
-  border: 1px solid #800000;
-}
-.msg-vFull {
-  margin-top: -1px;
-  border-width: 1px 0;
-  border-radius: 0;
-}
-.alert {
-  position: relative;
-  padding: 8px 10px;
-  font-size: .8rem;
-  color: #1c5675;
-  background-color: #e4f1f9;
-  border: 1px solid #26749e;
-  border-radius: 2px;
-  width: 25%;
-  max-width: 300px;
-  float: right;
-  clear: both;
-  margin-bottom: 10px;
-}
-.alert p:last-child {
-  margin-bottom: 0;
-}
-.alert-center {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 25px;
-}
-.alert-vSuccess {
-  color: #193b16;
-  background-color: #bce5b8;
-  border: 1px solid #296024;
-}
-.alert-vWarn {
-  color: #5a4400;
-  background-color: #ffeaa6;
-  border: 1px solid #8d6b00;
-}
-.alert-vError {
-  color: #4d0000;
-  background-color: #ff9999;
-  border: 1px solid #800000;
-}
-/* ---------------------------------------------------------------------------------------
     GLOBAL STATES
 --------------------------------------------------------------------------------------- */
 /* Admin Hint */
@@ -1453,243 +1169,15 @@ Use it for different background colors oder images across the screen.
   color: #ffffff;
 }
 /* ---------------------------------------------------------------------------------------
-    #NAVIGATION
---------------------------------------------------------------------------------------- */
-.nav {
-  position: fixed;
-  height: 70px;
-  width: 100%;
-  background-color: #ffffff;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  z-index: 100;
-}
-.nav-menu-left-wrap {
-  margin-top: -6px;
-  position: absolute;
-}
-.nav-menu-right-wrap {
-  margin-top: -6px;
-  right: 0;
-  position: absolute;
-}
-.nav-menu-right-icon {
-  cursor: pointer;
-  display: inline-block;
-  height: 30px;
-  width: 30px;
-  margin-top: -30px;
-  margin-right: 10px;
-  background-size: 26px;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-.nav-menu-right-wrap div.nav-menu-right-icon:last-of-type {
-  margin-right: 20px;
-}
-.hamburger {
-  transform: scale(0.7);
-}
-.nav-page-title {
-  text-align: center;
-  margin: 0 auto;
-  top: 0;
-  margin-top: 14px;
-  font-size: 1.8em;
-  font-weight: bold;
-}
-.nav-menu-right-notifi {
-  cursor: default;
-  position: absolute;
-  top: 0px;
-  right: 20px;
-  opacity: 0;
-  height: 0;
-  width: 305px;
-  overflow: hidden;
-  transition: all .4s ease;
-}
-#notifi-is-open:hover .nav-menu-right-notifi {
-  opacity: 1;
-  height: 330px;
-  width: 305px;
-  padding-bottom: 50px;
-}
-.nav-menu-right-notifi-content {
-  margin: 0 auto;
-  background-color: #ffffff;
-  height: 270px;
-  width: 300px;
-  margin-top: 28px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  overflow-y: scroll;
-}
-.nav-menu-right-notifi-content-arrow {
-  position: absolute;
-  right: 76px;
-  top: 7px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 25px 21px 25px;
-  border-color: transparent transparent #ffffff transparent;
-  -webkit-filter: drop-shadow(0 -3.3px 3px rgba(0, 0, 0, 0.1));
-  filter: drop-shadow(0 -3.3px 3px rgba(0, 0, 0, 0.1));
-}
-.nav-menu-right-notifi-content-list {
-  cursor: pointer;
-  height: 68px;
-  padding: 10px 20px;
-  border-bottom: 1px solid #f5f5f5;
-}
-.nav-menu-right-notifi-content-list:hover {
-  background-color: #f5f5f5;
-}
-.nav-menu-right-notifi-content-list-title {
-  font-weight: bold;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.nav-menu-right-notifi-content-list-desc {
-  margin-top: -1px;
-  font-size: 0.9em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.nav-menu-right-notifi-content-more {
-  cursor: pointer;
-  padding: 10px 20px;
-  text-align: center;
-  font-size: 0.8em;
-}
-.sec-nav-wrap {
-  width: 100%;
-  position: fixed;
-  top: 70px;
-}
-.sec-nav {
-  margin: 0 auto;
-  width: 64%;
-  height: 60px;
-  background-color: #f8f8f8;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-}
-.sec-nav-title {
-  font-size: 1.4em;
-  padding: 16px 40px;
-  font-weight: bold;
-}
-.sec-nav-icon-wrap {
-  float: right;
-  margin-top: -17px;
-}
-.sec-nav-icon {
-  cursor: pointer;
-  display: inline-block;
-  height: 30px;
-  width: 30px;
-  margin-top: -30px;
-  margin-right: 2px;
-  background-size: 18px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: #ffffff;
-  border: 1px solid #ccc;
-  transition: all .3s ease;
-}
-.sec-nav-icon:hover {
-  background-color: rgba(0, 0, 0, 0.02);
-}
-.sec-nav-icon-wrap div.sec-nav-icon:last-of-type {
-  margin-right: 40px;
-}
-.sidebar {
-  margin-left: -148px;
-  position: fixed;
-  width: 220px;
-  height: 100%;
-  background-color: #ffffff;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 99;
-  overflow-y: scroll;
-  transition: all .3s ease;
-}
-.sidebar.is-active {
-  margin-left: 0;
-}
-.sidebar-wrap {
-  padding-top: 90px;
-}
-.sidebar-ul {
-  list-style: none;
-}
-.sidebar-ul-li {
-  cursor: pointer;
-  list-style: none;
-  padding: 15px 20px;
-  font-weight: bold;
-}
-.sidebar-ul-li:hover {
-  background-color: #f5f5f5;
-}
-.sidebar-ul-li-icon {
-  top: 100;
-  left: 20px;
-  position: fixed;
-  height: 30px;
-  width: 30px;
-  display: inline-block;
-  margin-top: -3px;
-  margin-right: 20px;
-  background-size: 28px;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-.sidebar-ul-li-text {
-  display: inline-block;
-  margin-left: 50px;
-  opacity: .0;
-  transition: all .3s ease;
-  transition-delay: .15s;
-}
-.sidebar-ul-li-text.is-not-animated {
-  display: inline-block;
-  margin-left: 50px;
-  opacity: 1;
-}
-.sidebar-ul-li-text.is-animated {
-  -webkit-animation-name: fadeInSidebar;
-  -webkit-animation-duration: .04s;
-  animation-name: fadeInSidebar;
-  animation-duration: .04s;
-}
-@-webkit-keyframes fadeInSidebar {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-@keyframes fadeInSidebar {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-/* ---------------------------------------------------------------------------------------
-    #FOOTER
+    #PROJECTSPECIFIC ELEMENTS
 --------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------
-    #PARALLAX EFFECT BOX
+    #PARALLAX EFFECT WRAPPER
 --------------------------------------------------------------------------------------- */
 .parallax {
   max-height: 400px;
   width: 100%;
-  background-image: url('../images/test.jpg');
+  background-image: url('../images/placeholder-parallax.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
@@ -1699,9 +1187,36 @@ Use it for different background colors oder images across the screen.
   content: "";
   display: block;
   width: 100%;
+  padding-bottom: 100%;
+}
+.parallax.parallax-v3by1:before {
+  padding-bottom: 33.33333%;
+  /* image in 3:1 ratio. */
+
+}
+.parallax.parallax-v2by1:before {
   padding-bottom: 50%;
   /* image in 2:1 ratio. */
 
+}
+.parallax.parallax-v16by9:before {
+  padding-bottom: 56.25%;
+  /* image in 16:9 ratio. */
+
+}
+.parallax.parallax-v4by3:before {
+  padding-bottom: 75%;
+  /* image in 4:3 ratio. */
+
+}
+.parallax-v2by1 {
+  max-height: 420px;
+}
+.parallax-v16by9 {
+  max-height: 440px;
+}
+.parallax-v4by3 {
+  max-height: 460px;
 }
 /* Media Queries */
 @media only screen and (max-width: 1400px) {
@@ -1715,19 +1230,6 @@ Use it for different background colors oder images across the screen.
 @media only screen and (max-width: 959px) {
   body {
     font-size: 90%;
-  }
-  .vi-formLabel {
-    width: 100%;
-    float: left;
-    text-align: left;
-    box-sizing: border-box;
-    border-right-width: 1px;
-  }
-  .vi-formInput {
-    width: 100%;
-    margin-right: 0;
-    box-sizing: border-box;
-    height: 35px;
   }
   .no-mobile {
     display: none;
