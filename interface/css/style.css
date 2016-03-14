@@ -1311,6 +1311,25 @@ Use it for different background colors oder images across the screen.
   padding: 8px;
   color: #222222;
 }
+.table {
+  font-size: 1.1em;
+  background-color: #fff;
+}
+.table-tr-head {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
+}
+.table-th {
+  border: 1px solid #e6e6e6;
+  padding: 12px 10px;
+  font-weight: bold;
+}
+.table-td {
+  border: 1px solid #e6e6e6;
+  padding: 7px 10px;
+}
+.table-tr:nth-child(odd) {
+  background-color: #f7f7f7;
+}
 /* ---------------------------------------------------------------------------------------
     MESSAGES and ALERTS
 --------------------------------------------------------------------------------------- */
@@ -1668,12 +1687,21 @@ Use it for different background colors oder images across the screen.
     #PARALLAX EFFECT BOX
 --------------------------------------------------------------------------------------- */
 .parallax {
-  height: 400px;
+  max-height: 400px;
   width: 100%;
   background-image: url('../images/test.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
+}
+.parallax:before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-bottom: 50%;
+  /* image in 2:1 ratio. */
+
 }
 /* Media Queries */
 @media only screen and (max-width: 1400px) {
@@ -1707,7 +1735,7 @@ Use it for different background colors oder images across the screen.
   .parallax {
     background-attachment: scroll!important;
     background-size: cover;
-    height: 280px;
+    max-height: 300px;
   }
 }
 @media only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
