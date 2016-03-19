@@ -29,9 +29,14 @@
 .is-admin a:hover {color: contrast(@adminColor); text-decoration: underline;}
 
 /* Selections */
-::-moz-selection,
+::-moz-selection {
+    background-color: darken(@mainColor, 10%);
+    text-shadow: none;
+    color: contrast(@mainColor);
+}
+
 ::selection {
-    background-color: darken(@mainColor, 20%);
+    background-color: darken(@mainColor, 10%);
     text-shadow: none;
     color: contrast(@mainColor);
 }
