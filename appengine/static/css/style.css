@@ -554,7 +554,6 @@ ul.menu-list .menu-item:first-of-type .menu-link{
   flex:0 0 25%;
   order:1;
   padding:40px 2em 40px .5em;
-  height:100vh;
 }
 .sidebar:after{
   content:'';
@@ -970,6 +969,292 @@ ul.menu-list .menu-item:first-of-type .menu-link{
   padding:8px;
   color:#000000;
 }
+.tip{
+  position:relative;
+  z-index:5;
+}
+.tip:after{
+  position:absolute;
+  display:none;
+  padding:5px 8px;
+  font:normal normal 11px/1.5 'Source Sans Pro', 'Open Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  color:#ffffff;
+  text-align:center;
+  text-decoration:none;
+  text-shadow:none;
+  text-transform:none;
+  letter-spacing:normal;
+  word-wrap:break-word;
+  white-space:pre;
+  pointer-events:none;
+  content:attr(aria-label);
+  background:rgba(64, 158, 209, 0.9);
+  border-radius:3px;
+  -webkit-font-smoothing:subpixel-antialiased;
+  z-index:5;
+}
+.tip:before{
+  position:absolute;
+  z-index:6;
+  display:none;
+  width:0;
+  height:0;
+  color:#409ed1;
+  pointer-events:none;
+  content:"";
+  border:5px solid transparent;
+}
+.tip:hover:before,
+.tip:active:before,
+.tip:focus:before,
+.tip:hover:after,
+.tip:active:after,
+.tip:focus:after,
+.tip:focus:before,
+.tip:focus:after{
+  display:inline-block;
+  text-decoration:none;
+}
+.tip-vMultiline:hover:after,
+.tip-vMultiline:active:after,
+.tip-vMultiline:focus:after,
+.tip-vMultiline:focus:after{
+  display:table-cell;
+}
+.tip-s:after,
+.tip-se:after,
+.tip-sw:after{
+  top:100%;
+  right:50%;
+  margin-top:5px;
+}
+.tip-s:before,
+.tip-se:before,
+.tip-sw:before{
+  top:auto;
+  right:50%;
+  bottom:-5px;
+  margin-right:-5px;
+  border-bottom-color:rgba(64, 158, 209, 0.9);
+}
+.tip-se:after{
+  right:auto;
+  left:50%;
+  margin-left:-15px;
+}
+.tip-sw:after{
+  margin-right:-15px;
+}
+.tip-n:after,
+.tip-ne:after,
+.tip-nw:after{
+  right:50%;
+  bottom:100%;
+  margin-bottom:5px;
+}
+.tip-n:before,
+.tip-ne:before,
+.tip-nw:before{
+  top:-5px;
+  right:50%;
+  bottom:auto;
+  margin-right:-5px;
+  border-top-color:rgba(64, 158, 209, 0.9);
+}
+.tip-ne:after{
+  right:auto;
+  left:50%;
+  margin-left:-15px;
+}
+.tip-nw:after{
+  margin-right:-15px;
+}
+.tip-s:after,
+.tip-n:after{
+  transform:translateX(50%);
+}
+.tip-w:after{
+  right:100%;
+  bottom:50%;
+  margin-right:5px;
+  transform:translateY(50%);
+}
+.tip-w:before{
+  top:50%;
+  bottom:50%;
+  left:-5px;
+  margin-top:-5px;
+  border-left-color:rgba(64, 158, 209, 0.9);
+}
+.tip-e:after{
+  bottom:50%;
+  left:100%;
+  margin-left:5px;
+  transform:translateY(50%);
+}
+.tip-e:before{
+  top:50%;
+  right:-5px;
+  bottom:50%;
+  margin-top:-5px;
+  border-right-color:rgba(64, 158, 209, 0.9);
+}
+.tip-vMultiline:after{
+  width:max-content;
+  max-width:250px;
+  word-break:break-word;
+  word-wrap:normal;
+  white-space:pre-line;
+  border-collapse:separate;
+}
+.tip-vMultiline.tip-s:after,
+.tip-vMultiline.tip-n:after{
+  right:auto;
+  left:50%;
+  transform:translateX(-50%);
+}
+.tip-vMultiline.tip-w:after,
+.tip-vMultiline.tip-e:after{
+  right:100%;
+}
+.tip-vSticky:before,
+.tip-vSticky:after{
+  display:inline-block;
+}
+.tip-vSticky.tip-vMultiline:after{
+  display:table-cell;
+}
+.tip-vSuccess:after{
+  color:#ffffff;
+  background:rgba(65, 152, 57, 0.9);
+}
+.tip-vSuccess.tip-s:before,
+.tip-vSuccess.tip-se:before,
+.tip-vSuccess.tip-sw:before{
+  border-bottom-color:rgba(65, 152, 57, 0.9);
+}
+.tip-vSuccess.tip-n:before,
+.tip-vSuccess.tip-ne:before,
+.tip-vSuccess.tip-nw:before{
+  border-top-color:rgba(65, 152, 57, 0.9);
+}
+.tip-vSuccess.tip-e:before{
+  border-right-color:rgba(65, 152, 57, 0.9);
+}
+.tip-vSuccess.tip-w:before{
+  border-left-color:rgba(65, 152, 57, 0.9);
+}
+.tip-vError:after{
+  color:#ffffff;
+  background:rgba(204, 0, 0, 0.9);
+}
+.tip-vError.tip-s:before,
+.tip-vError.tip-se:before,
+.tip-vError.tip-sw:before{
+  border-bottom-color:rgba(204, 0, 0, 0.9);
+}
+.tip-vError.tip-n:before,
+.tip-vError.tip-ne:before,
+.tip-vError.tip-nw:before{
+  border-top-color:rgba(204, 0, 0, 0.9);
+}
+.tip-vError.tip-e:before{
+  border-right-color:rgba(204, 0, 0, 0.9);
+}
+.tip-vError.tip-w:before{
+  border-left-color:rgba(204, 0, 0, 0.9);
+}
+.msg{
+  position:relative;
+  padding:15px;
+  font-size:.9rem;
+  color:#1c5675;
+  background-color:#e4f1f9;
+  border:1px solid #26749e;
+  border-radius:3px;
+}
+.msg p:last-child{
+  margin-bottom:0;
+}
+.msg-center{
+  margin-bottom:20px;
+}
+.msg-close{
+  float:right;
+  width:34px;
+  height:44px;
+  margin:-11px;
+  line-height:40px;
+  color:inherit;
+  text-align:center;
+  cursor:pointer;
+  background:none;
+  border:0;
+  -webkit-appearance:none;
+  opacity:0.6;
+}
+.msg-close:hover,.msg-close:focus{
+  opacity:1;
+}
+.msg-vSuccess{
+  color:#193b16;
+  background-color:#bce5b8;
+  border:1px solid #296024;
+}
+.msg-vWarn{
+  color:#5a4400;
+  background-color:#ffeaa6;
+  border:1px solid #8d6b00;
+}
+.msg-vError{
+  color:#4d0000;
+  background-color:#ff9999;
+  border:1px solid #800000;
+}
+.msg-vFull{
+  margin-top:-1px;
+  border-width:1px 0;
+  border-radius:0;
+}
+.alert{
+  position:relative;
+  padding:8px 10px;
+  font-size:.8rem;
+  color:#1c5675;
+  background-color:#e4f1f9;
+  border:1px solid #26749e;
+  border-radius:2px;
+  width:25%;
+  max-width:300px;
+  float:right;
+  clear:both;
+  margin-bottom:10px;
+}
+.alert p:last-child{
+  margin-bottom:0;
+}
+.alert-center{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:25px;
+  z-index:7;
+}
+.alert-vSuccess{
+  color:#193b16;
+  background-color:#bce5b8;
+  border:1px solid #296024;
+}
+.alert-vWarn{
+  color:#5a4400;
+  background-color:#ffeaa6;
+  border:1px solid #8d6b00;
+}
+.alert-vError{
+  color:#4d0000;
+  background-color:#ff9999;
+  border:1px solid #800000;
+}
 .is-admin{
   position:fixed;
   bottom:0;
@@ -1031,6 +1316,9 @@ ul.menu-list .menu-item:first-of-type .menu-link{
 .parallax-v4by3{
   max-height:460px;
 }
+.zDev{
+  z-index:8;
+}
 @media only screen and (max-width: 1100px){
   .parallax{
     background-attachment:scroll!important;
@@ -1046,6 +1334,7 @@ ul.menu-list .menu-item:first-of-type .menu-link{
   .sidebar{
     order:2;
     padding:0px .5em 40px .5em;
+    flex:auto;
   }
   .content{
     order:1;

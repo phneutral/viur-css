@@ -35,7 +35,6 @@ Use it for different background colors oder images across the screen.
   flex: 0 0 25%;
   order: 1;
   padding:40px 2em 40px .5em;
-  height: 100vh;
   &:after {
     content: '';
     display: block;
@@ -65,7 +64,7 @@ Use it for different background colors oder images across the screen.
 
 .media-mixin(@break) when (@break = @breakSmall) {
   .flex {flex-direction: column;}
-  .sidebar {order: 2; padding: 0px .5em 40px .5em;}
+  .sidebar {order: 2; padding: 0px .5em 40px .5em; flex:auto;}
   .content {order: 1;}
 }
 
