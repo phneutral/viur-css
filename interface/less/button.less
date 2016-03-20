@@ -4,14 +4,14 @@
 --------------------------------------------------------------------------------------- */
 
 // Colors:
-@btnBackgroundColor: #e3e1e1;
+@btnBackgroundColor: #e7e5e5;
 @btnPrimaryBgColor: @successColor;
 @btnDangerBgColor: @failColor;
 @btnEditBgColor: @hintColor;
 
 // Shadows:
-@btnShadow: 1px 1px 1px rgba(0,0,0,0.4);
-@btnHoverShadow: @defaultShadow;
+@btnShadow: 0 1px 1px rgba(0,0,0,0.4);
+@btnHoverShadow: 0 3px 3px rgba(0,0,0,0.4);
 
 //overwrite these colors and shadows in your appconf.less
 
@@ -21,7 +21,7 @@
     margin: 6px;
     color: contrast(@btnBackgroundColor, #222222, #f4f4f4);
     background-color: @btnBackgroundColor;
-    border: 1px solid darken(@btnBackgroundColor, 5%);;
+    border: 1px solid darken(@btnBackgroundColor, 10%);;
     box-shadow: @btnShadow;
     border-radius: 1px;
     cursor: pointer;
@@ -87,7 +87,7 @@
 .btn-vDanger {
     color: darken(@btnDangerBgColor,5%);
     border: 1px solid darken(@btnDangerBgColor, 10%);
-    box-shadow: 1px 1px 2px fadeout(@btnDangerBgColor, 60%);
+    box-shadow: 0 1px 2px fadeout(@btnDangerBgColor, 60%);
     &:hover {
         color: contrast(lighten(@btnDangerBgColor, 5%));
         background-color: lighten(@btnDangerBgColor, 5%);
@@ -114,7 +114,7 @@
 .btn-vEdit {
     color: darken(@btnEditBgColor,5%);
     border: 1px solid darken(@btnEditBgColor, 10%);
-    box-shadow: 1px 1px 2px fadeout(@btnEditBgColor, 60%);
+    box-shadow: 0 1px 2px fadeout(@btnEditBgColor, 60%);
     &:hover {
         color: contrast(lighten(@btnEditBgColor, 5%));
         background-color: lighten(@btnEditBgColor, 5%);
