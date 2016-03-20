@@ -48,36 +48,36 @@ blockquote {
 code, pre {font-family: @monoFonts;}
 
 /* Lists */
-ul, .ul-vFirst {
-    padding:0;
+ul.is-list {
+    padding: 3px 18px;
     margin:0;
-    list-style-position: inside;
     list-style-type: disc;
 }
 
-.ul-vSecond {
+.is-list ul {
     padding: 3px 18px;
     list-style-type: square;
 }
 
-.ul-vThird {
+.is-list ul ul,
+.is-list ol ul {
     padding: 3px 18px;
     list-style-type: circle;
 }
 
-ol, .ol-vFirst {
-    padding:0;
+ol.is-list {
+    padding: 3px 20px;
     margin:0;
-    list-style-position: inside;
     list-style-type: decimal;
 }
 
-.ol-vSecond {
+.is-list ol {
     padding: 3px 18px;
     list-style-type: upper-roman;
 }
 
-.ol-vThird {
+.is-list ol ol,
+.is-list ul ol {
     padding: 3px 18px;
     list-style-type: upper-alpha;
 }
