@@ -34,7 +34,7 @@ Use it for different background colors oder images across the screen.
 .sidebar {
   flex: 0 0 25%;
   order: 1;
-  padding:40px 2em 40px .5em;
+  padding:40px 2em 20px .5em;
   &:after {
     content: '';
     display: block;
@@ -46,12 +46,13 @@ Use it for different background colors oder images across the screen.
 .content {
   flex: 1;
   order: 2;
+  padding-bottom:20px;
 }
 
 /* Container to seperate chunks of content in the middle of the page. */
 .section {
   max-width:100%;
-  padding:40px .5em; /* 40px padding-top helps with top navigation, .5em paddings prevent shadow overflow. */
+  padding:40px .5em 20px; /* 40px padding-top helps with top navigation, .5em paddings prevent shadow overflow. */
   &:after {
     content: '';
     display: block;
@@ -59,6 +60,9 @@ Use it for different background colors oder images across the screen.
     height: 0;
   }
 }
+
+.content:last-of-type,
+.section.content:last-of-type {padding-bottom:40px;}
 
 // => Wrapper and Binder Media Queries
 

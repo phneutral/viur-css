@@ -49,12 +49,31 @@
             background-color: lighten(@btnBackgroundColor, 5%);
         }
     }
+    &.has-icon:before {
+        content: "";
+        position: relative;
+        display: inline-block;
+        height: 1em;
+        width: 1em;
+        vertical-align: text-top;
+        margin: 4px 10px 0 -5px;
+        background-size: cover;
+        background-position: top left;
+        background-repeat: no-repeat;
+        //set background-image via icon.less
+    }
+    .icon {margin: 4px 7px 0 -5px;}
 }
 
 .btn-vSmall {
     padding: 3px 11px;
     font-size: .8em;
     font-weight: 400;
+    &.has-icon:before {
+        margin: 3px 5px 0 0;
+        //set background-image via icon.less
+    }
+    .icon {margin: 3px 3px 0 0;}
 }
 
 .btn-vPrimary {

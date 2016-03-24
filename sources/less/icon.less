@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+/* ------------------------------------------------------------------------------------------------------
+    #ICONS
+------------------------------------------------------------------------------------------------------ */
+
+/*
+ViUR Ignite features two types of icons: as inline SVG or before element.
+*/
+
+@iconColor: @complementColor;
+@iconSuccessColor: @successColor;
+@iconWarnColor: @warnColor;
+
+/* InlineSVG Icons */
+
+.icon {
+    display: inline-block;
+    vertical-align: text-top;
+    fill: currentcolor;
+    color:inherit;
+    width:1em;
+    height:1em;
+    & path {fill:inherit}
+}
+
+.icon-vSuccess {
+    color: darken(@iconSuccessColor, 25%);
+}
+
+.icon-vWarn {
+    color: darken(@iconWarnColor, 25%);
+}
+
+/* Before Icons */
+
+.i-heart:before {
+    background-image:url('../icons/heart.svg');
+}
+
+// => Icon Media Queries
+
+.media-mixin(@break) when (@break = @breakSmall) {
+
+}
+
+.media-mixin(@break) when (@break = @breakMedium) {
+
+}
+
+.media-mixin(@break) when (@break = @breakLarge) {
+
+}
+
+.media-mixin(@break) when (@break = @break2x) {
+
+}
+
+.media-mixin(@break) when (@break = @breakPrint) {
+
+}

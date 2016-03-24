@@ -11,15 +11,45 @@
 .msg {
   position: relative;
   padding: 15px;
+  margin-bottom: 20px;
   font-size: .9rem;
   color: darken(@alertColor,25%);
   background-color: lighten(@alertColor, 40%);
   border: 1px solid darken(@alertColor,15%);
   border-radius: 3px;
-
   p:last-child {
     margin-bottom: 0;
   }
+  &.has-icon {padding-left:4em;}
+  &.has-icon:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 2.4em;
+    width: 2.4em;
+    margin-left: -2em;
+    margin-top: 5px;
+    transform: translateX(-45%);
+    background-size: cover;
+    background-position: top left;
+    background-repeat: no-repeat;
+    //set background-image via icon.less
+  }
+  .icon {
+    position: absolute;
+    display: block;
+    height: 2.4em;
+    width: 2.4em;
+    margin-left: -2em;
+    margin-top: 5px;
+    transform: translateX(-45%);
+  }
+}
+
+.msg-headline {
+  font-size:.9rem;
+  font-weight: 600;
+  color: inherit;
 }
 
 // Contain the messages
@@ -42,15 +72,12 @@
   border: 0;
   -webkit-appearance: none;
   opacity: 0.6;
-
   &:hover {
     opacity: 1;
   }
 }
 
-//
 // Variations
-//
 
 .msg-vSuccess {
   color: darken(@alertSuccessColor,25%);
@@ -85,30 +112,47 @@
   background-color: lighten(@alertColor, 40%);
   border: 1px solid darken(@alertColor,15%);
   border-radius: 2px;
-  width:25%;
-  max-width: 300px;
+  min-width: 300px;
+  max-width: 25%;
   float: right;
   clear: both;
   margin-bottom: 10px;
-
   p:last-child {
     margin-bottom: 0;
   }
+  &.has-icon {padding-left:2em;}
+  &.has-icon:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: .8em;
+    width: .8em;
+    margin-left: -1em;
+    margin-top: 5px;
+    transform: translateX(-50%);
+    background-size: cover;
+    background-position: top left;
+    background-repeat: no-repeat;
+    //set background-image via icon.less
+  }
+}
+
+.alert-headline {
+  font-size:.8rem;
+  font-weight: 600;
+  color: inherit;
 }
 
 // Contain the messages
 .alert-center {
   position: fixed;
-  pointer-events: none;
   top:0;
-  width:100%;
+  right:0;
   padding: 25px;
   .zIndex('alert',0);
 }
 
-//
 // Variations
-//
 
 .alert-vSuccess {
   color: darken(@alertSuccessColor,25%);

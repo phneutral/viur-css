@@ -24,13 +24,13 @@
 	<div class="bind flex">
 		<div class="sidebar">
 			<ul class="menu-list">
-				<li class="menu-item"><a class="menu-link is-active" href="index.html">Start</a></li>
-				<li class="menu-item"><a class="menu-link" href="type.html">Type</a></li>
+				<li class="menu-item"><a class="menu-link is-primary" href="index.html">Start</a></li>
+				<li class="menu-item"><a class="menu-link" href="types.html">Type</a></li>
 				<li class="menu-item"><a class="menu-link" href="buttons.html">Buttons</a></li>
-				<li class="menu-item"><a class="menu-link" href="forms.html">Forms</a></li>
-				<li class="menu-item"><a class="menu-link" href="menu.html">Menu</a></li>
-				<li class="menu-item"><a class="menu-link" href="table.html">Table</a></li>
-				<li class="menu-item"><a class="menu-link" href="alerts.html">Alerts, Messages and Tooltips</a></li>
+				<li class="menu-item"><a class="menu-link is-active" href="forms.html">Forms</a></li>
+				<li class="menu-item"><a class="menu-link" href="menus.html">Menu</a></li>
+				<li class="menu-item"><a class="menu-link" href="tables.html">Table</a></li>
+				<li class="menu-item"><a class="menu-link" href="messages.html">Alerts, Messages and Tooltips</a></li>
 				<li class="menu-item"><a class="menu-link" href="#">States</a></li>
 				<li class="menu-item"><a class="menu-link" href="parallax.html">Parallax</a></li>
 			</ul>
@@ -75,7 +75,8 @@
 				<p>This is an input directly connected to a button.</p>
 				<form>
 					<div class="inputGroup">
-						<input class="input" type="text" placeholder="Default input">
+						<label class="label" for="inputGroup-input">Label</label>
+						<input class="input" id="inputGroup-input" type="text" placeholder="Default input">
 						<button class="btn" type="button">Button</button>
 					</div>
 				</form>
@@ -114,8 +115,8 @@
 				<h3>Checkbox</h3>
 				<p>This is an example of an checkbox.</p>
 				<form>
-					<label class="pointer">
-						<input class="checkbox" type="checkbox">
+					<label class="pointer" for="check1">
+						<input id="check1" class="checkbox" type="checkbox">
 						Test checkbox
 					</label>
 					<p class="note">This is an informative note.</p>

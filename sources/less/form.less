@@ -14,7 +14,6 @@
 
 .input {
     padding: 7px 14px;
-    margin: 6px;
     width: 250px;
     background-color: @inputColor;
     border: 1px solid darken(@inputColor,10%);
@@ -35,7 +34,7 @@
 
 // disabled input
 // required input
-// labels for inputs
+
 // readonly inputs
 
 .input-vContrast {
@@ -77,6 +76,16 @@
     background-color: lighten(@inputValidColor, 50%);
 }
 
+.label {
+    vertical-align: middle;
+    display: inline-block;
+    padding: 7px 14px;
+    background-color: darken(@inputColor,2%);
+    border: 1px solid darken(@inputColor,12%);
+    color:contrast(darken(@inputColor,2%), #000000, #ffffff);
+    border-right:0;
+}
+
 .select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -84,10 +93,9 @@
     border-radius: 0px;
     padding: 9px 20px;
     padding-right: 38px;
-    margin: 6px;
     background-color: #ffffff;
     border: 1px solid #dddddd;
-    .arrowsUpDownBg(); //import from images.less: arrows (up and down) in base64
+    .arrowsUpDownBg(); //import from image.less: arrows (up and down) in base64
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: right center;
@@ -105,18 +113,19 @@
 
 .inputGroup {
     display: block;
-    margin: 0 6px;
 }
 
 .inputGroup .input,
 .inputGroup .btn,
-.inputGroup .select {
+.inputGroup .select,
+.inputGroup .label {
     margin: 6px 0px;
     float: left;
     position: relative;
 }
 
-.inputGroup .input {
+.inputGroup .input,
+.inputGroup .label {
     box-shadow: @inputShadow;
 }
 
@@ -128,6 +137,10 @@
     margin-right: 5px;
     cursor: pointer;
 }
+
+//#FIXME: Radio Buttons
+
+//#FIXME: inputGroup for Check/Radio
 
 .note {
     font-size: 0.8em;
