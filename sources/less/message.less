@@ -20,7 +20,7 @@
   p:last-child {
     margin-bottom: 0;
   }
-  &.has-icon {padding-left:4em;}
+  &.has-icon {padding-left:4em; min-height: 5em;}
   &.has-icon:before {
     content: "";
     position: absolute;
@@ -33,6 +33,8 @@
     background-size: cover;
     background-position: top left;
     background-repeat: no-repeat;
+    background-color: inherit;
+    background-blend-mode: multiply;
     //set background-image via icon.less
   }
   .icon {
@@ -87,13 +89,13 @@
 
 .msg-vWarn {
   color: darken(@alertWarnColor,25%);
-  background-color: lighten(@alertWarnColor, 40%);
+  background-color: lighten(@alertWarnColor, 30%);
   border: 1px solid darken(@alertWarnColor,15%);
 }
 
 .msg-vError {
   color: darken(@alertErrorColor,25%);
-  background-color: lighten(@alertErrorColor, 40%);
+  background-color: lighten(@alertErrorColor, 30%);
   border: 1px solid darken(@alertErrorColor,15%);
 }
 
@@ -105,6 +107,7 @@
 
 
 .alert {
+  user-select: none;
   position: relative;
   padding: 8px 10px;
   font-size: .8rem;
@@ -117,6 +120,7 @@
   float: right;
   clear: both;
   margin-bottom: 10px;
+  cursor: default;
   p:last-child {
     margin-bottom: 0;
   }
@@ -133,6 +137,8 @@
     background-size: cover;
     background-position: top left;
     background-repeat: no-repeat;
+    background-color: inherit;
+    background-blend-mode: multiply;
     //set background-image via icon.less
   }
 }
@@ -162,13 +168,13 @@
 
 .alert-vWarn {
   color: darken(@alertWarnColor,25%);
-  background-color: lighten(@alertWarnColor, 40%);
+  background-color: lighten(@alertWarnColor, 30%);
   border: 1px solid darken(@alertWarnColor,15%);
 }
 
 .alert-vError {
   color: darken(@alertErrorColor,25%);
-  background-color: lighten(@alertErrorColor, 40%);
+  background-color: lighten(@alertErrorColor, 30%);
   border: 1px solid darken(@alertErrorColor,15%);
 }
 

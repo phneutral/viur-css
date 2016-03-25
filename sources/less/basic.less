@@ -17,16 +17,16 @@ body {
 }
 
 /* Links */
-a, a:link, a:visited { color: @mainColor; text-decoration: none; outline: 0; }
-a:hover, a:focus, a:active { color: darken(@mainColor, 30%); }
+a, a:link { color: @mainColor; text-decoration: none; outline: 0; }
+a:visited, a:hover, a:focus, a:active { color: darken(@mainColor, 30%); }
 p a, p a:visited { line-height: inherit; }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {font-family: @headFonts; font-weight: normal; font-size: 1.2em; line-height: 1.6;}
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {font-weight: inherit; color: inherit;}
 
-h1 {margin: 16px 0; color: @mainColor; font-size:2.1em;border-bottom: 1px solid #eeeeee;} // #FIXME! Borders and margins should be styled in project specific objects.
-h2 {margin: 16px 0; color: @mainColor; font-size:1.7em;border-bottom: 1px solid #eeeeee;} // #FIXME! Borders and margins should be styled in project specific objects.
+h1 {color: @mainColor; font-size:2.1em;}
+h2 {color: @mainColor; font-size:1.7em;}
 h3 {color: @mainColor; font-size:1.5em;}
 h4 {}
 h5 {}

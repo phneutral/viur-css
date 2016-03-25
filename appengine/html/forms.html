@@ -37,13 +37,14 @@
 		</div>
 		<div class="content">
 			<div class="section">
-				<h1>Forms</h1>
+				<h1 class="headline">Forms</h1>
 			</div>
 			<div class="section">
 				<h3>Default Form</h3>
 				<p>This is a standard form.</p>
 				<form>
-					<label class="label">Label</label><input class="input" type="text" placeholder="Default input">
+					<label class="label">Label</label>
+					<input class="input" type="text" placeholder="Default input">
 					<input class="input input-vContrast" type="text" placeholder="Input with contrast">
 					<button class="btn" type="button">Button</button>
 				</form>
@@ -96,6 +97,15 @@
 				</form>
 			</div>
 			<div class="section">
+				<h3>Disabled and read-only inputs</h3>
+				<p>This is a disabled and a read-only input.</p>
+				<form>
+					<label class="label is-disabled">Label</label>
+					<input class="input is-disabled" type="text" value="No input here" disabled="disabled">
+					<input class="input is-readonly" type="text" value="Just readin'" readonly>
+				</form>
+			</div>
+			<div class="section">
 				<h3>Block input</h3>
 				<p>This is a block input.</p>
 				<form>
@@ -103,12 +113,21 @@
 				</form>
 			</div>
 			<div class="section">
-				<h3>Error, warning and accepted on input</h3>
-				<p>These are examples for an error, a warning and an accepted status.</p>
+				<h3>Error, recommended and accepted on input</h3>
+				<p>These are examples for an error, a recommendation and an accepted status.</p>
 				<form>
-					<input class="input is-invalid" type="text" placeholder="Input">
-					<input class="input is-recommended" type="text" placeholder="Input">
-					<input class="input is-valid" type="text" placeholder="Input">
+					<div class="inputGroup">
+						<label class="label is-invalid">Label</label>
+						<input class="input is-invalid" type="text" placeholder="Input">
+					</div>
+					<div class="inputGroup">
+						<label class="label is-recommended">Label</label>
+						<input class="input is-recommended" type="text" placeholder="Input">
+					</div>
+					<div class="inputGroup">
+						<label class="label is-valid">Label</label>
+						<input class="input is-valid" type="text" placeholder="Input">
+					</div>
 				</form>
 			</div>
 			<div class="section">
@@ -122,6 +141,17 @@
 					<p class="note">This is an informative note.</p>
 				</form>
 			</div>
+			<div class="section">
+				<h3>Form actions</h3>
+				<p>Use formActions to float submit buttons to the right at the end of your form.</p>
+				<form>
+					<div class="formActions">
+						<input type="submit" class="btn btn-vPrimary">
+						<input type="reset" class="btn btn-vDanger">
+					</div>
+				</form>
+			</div>
+
 		</div>
     </div>
 </article>

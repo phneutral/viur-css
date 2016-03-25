@@ -21,8 +21,54 @@
     vertical-align: middle;
     display: inline-block;
     transition: all .3s ease;
+    background-position: 100% center;
+    background-size: 15px;
+    background-repeat: no-repeat;
     &:focus {
-      box-shadow: @inputHoverShadow;
+        box-shadow: @inputHoverShadow;
+    }
+    .inputGroup.is-invalid &,
+    &.is-invalid {
+        color: darken(@inputDangerColor, 15%);
+        border-color: @inputDangerColor;
+        background-color: lighten(@inputDangerColor, 40%);
+        background-image: url(../icons/cross.svg);
+        background-position: 95% center;
+    }
+    .inputGroup.is-recommended &,
+    &.is-recommended {
+        color: darken(@inputHintColor, 15%);
+        border-color: @inputHintColor;
+        background-color: lighten(@inputHintColor, 40%);
+        background-image: url(../icons/pen.svg);
+        background-position: 95% center;
+    }
+    .inputGroup.is-valid  &,
+    &.is-valid {
+        color: darken(@inputValidColor, 15%);
+        border-color: @inputValidColor;
+        background-color: lighten(@inputValidColor, 40%);
+        background-image: url(../icons/check.svg);
+        background-position: 95% center;
+    }
+    &.is-readonly,
+    &:read-only {
+        color: contrast(@inputColor, #222222, #f4f4f4);
+        cursor: default;
+        box-shadow: none;
+        border: 1px dashed darken(@inputColor,15%);
+        border-bottom-style: solid;
+        background-color: darken(@inputColor, 5%);
+    }
+    &.is-disabled,
+    &:disabled {
+        color: #aaaaaa;
+        cursor: not-allowed;
+        box-shadow: none;
+        border: 1px dashed darken(@inputColor,20%);
+        background-color: darken(@inputColor, 5%);
+        background-image:url('../icons/not-allowed.svg');
+        background-position: 95% center;
     }
 }
 
@@ -32,10 +78,9 @@
 .input::-moz-placeholder {color:lighten(contrast(@inputColor, #222222, #f4f4f4), 50%); opacity: 1;}
 .input:-ms-input-placeholder {color:lighten(contrast(@inputColor, #222222, #f4f4f4), 50%); opacity: 1;}
 
-// disabled input
 // required input
-
 // readonly inputs
+// textareas
 
 .input-vContrast {
     background-color: darken(@inputColor,5%);
@@ -61,21 +106,6 @@
     margin: 0;
 }
 
-.input.is-invalid {
-    border-color: @inputDangerColor;
-    background-color: lighten(@inputDangerColor, 50%);
-}
-
-.input.is-recommended {
-    border-color: @inputHintColor;
-    background-color: lighten(@inputHintColor, 30%);
-}
-
-.input.is-valid {
-    border-color: @inputValidColor;
-    background-color: lighten(@inputValidColor, 50%);
-}
-
 .label {
     vertical-align: middle;
     display: inline-block;
@@ -83,7 +113,33 @@
     background-color: darken(@inputColor,2%);
     border: 1px solid darken(@inputColor,12%);
     color:contrast(darken(@inputColor,2%), #000000, #ffffff);
-    border-right:0;
+    margin:6px 0;
+    .inputGroup.is-invalid &,
+    &.is-invalid {
+        color: darken(@inputDangerColor, 25%);
+        border-color: @inputDangerColor;
+        background-color: lighten(@inputDangerColor, 20%);
+    }
+    .inputGroup.is-recommended &,
+    &.is-recommended {
+        color: darken(@inputHintColor, 25%);
+        border-color: @inputHintColor;
+        background-color: lighten(@inputHintColor, 20%);
+    }
+    .inputGroup.is-valid  &,
+    &.is-valid {
+        color: darken(@inputValidColor, 25%);
+        border-color: @inputValidColor;
+        background-color: lighten(@inputValidColor, 20%);
+    }
+    &.is-disabled,
+    &:disabled {
+        color:#777777;
+        cursor: not-allowed;
+        box-shadow: none;
+        border: 1px dashed darken(@inputColor,20%);
+        background-color: darken(@inputColor, 5%);
+    }
 }
 
 .select {
@@ -113,6 +169,13 @@
 
 .inputGroup {
     display: block;
+    margin-bottom: 15px;
+    &:after {
+        content: '';
+        display: block;
+        clear: both; /* Clearfix for inputGroup. */
+        height: 0;
+    }
 }
 
 .inputGroup .input,
@@ -129,8 +192,30 @@
     box-shadow: @inputShadow;
 }
 
+.inputGroup .label {
+    &:first-child{border-right-width:0;}
+    &:last-child{border-left-width: 0;}
+}
+
 .inputGroup .btn {
     margin-left: -1px;
+}
+
+// Use formGroups to separate different inputs or inputGroups.
+.formGroup {
+    margin-bottom: 15px;
+}
+
+// Use formActions to float submit buttons to the right at the end of your form.
+.formActions {
+    &:after {
+        content: '';
+        display: block;
+        clear: both; /* Clearfix for formActions. */
+        height: 0;
+    }
+    .btn {float:right;}
+    .btn+.btn {margin-right: 10px;}
 }
 
 .checkbox {
@@ -151,7 +236,35 @@
 // => form Media Queries
 
 .media-mixin(@break) when (@break = @breakSmall) {
+    .inputGroup .label,
+    .label {
+        border-width: 1px;
+        border-bottom-width: 0;
+        width: 100%;
+        margin: 0;
+    }
 
+    .inputGroup .input,
+    .inputGroup .label {
+        box-shadow: none;
+    }
+
+    .input,
+    .select {
+        width:100%;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+
+    .inputGroup .select,
+    .inputGroup .input,
+    .inputGroup .btn {
+        width:100%;
+        margin: 0;
+    }
+    .inputGroup .btn {
+        margin-top: -1px;
+    }
 }
 
 .media-mixin(@break) when (@break = @breakLarge) {

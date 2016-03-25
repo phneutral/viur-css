@@ -18,17 +18,20 @@
 .btn {
     font-weight: 200;
     padding: 7px 21px;
-    margin: 6px;
+    margin: 6px 0;
     color: contrast(@btnBackgroundColor, #222222, #f4f4f4);
     background-color: @btnBackgroundColor;
     border: 1px solid darken(@btnBackgroundColor, 10%);;
     box-shadow: @btnShadow;
     border-radius: 1px;
     cursor: pointer;
+    user-select: none;
     vertical-align: middle;
     white-space: nowrap;
     display: inline-block;
     transition: all .3s ease;
+    &:link,
+    &:visited {color:contrast(@btnBackgroundColor, #222222, #f4f4f4);}
     &:hover {
         color: contrast(lighten(@btnBackgroundColor, 5%));
         background-color: lighten(@btnBackgroundColor, 5%);
@@ -60,7 +63,52 @@
         background-size: cover;
         background-position: top left;
         background-repeat: no-repeat;
+        background-color: inherit;
+        background-blend-mode: multiply;
         //set background-image via icon.less
+    }
+    &.just-icon {
+        color: transparent !important;
+        letter-spacing: -1em;
+        padding: 7px 14px;
+        position: relative;
+    }
+    &.just-icon:before {
+        margin: 2px 0 0;
+        height: 1.4em;
+        width: 1.4em;
+    }
+    &.just-icon:after {
+        position: absolute;
+        display: none;
+        padding: 5px 8px;
+        font: normal normal 11px/1.5 @bodyFonts;
+        color: contrast(@btnBackgroundColor);
+        text-align: center;
+        text-decoration: none;
+        text-shadow: none;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: break-word;
+        white-space: pre;
+        pointer-events: none;
+        content: attr(aria-label);
+        background: fadeout(@btnBackgroundColor,10%);
+        border-radius: 3px;
+        -webkit-font-smoothing: subpixel-antialiased;
+        .zIndex('tooltip', 0);
+        top: 100%;
+        right: 50%;
+        margin-top: 5px;
+        transform: translateX(50%);
+    }
+    &.just-icon:hover,
+    &.just-icon:active,
+    &.just-icon:focus {
+        &:after {
+            display: inline-block;
+            text-decoration: none;
+        }
     }
     .icon {margin: 4px 7px 0 -5px;}
 }
@@ -73,13 +121,26 @@
         margin: 3px 5px 0 0;
         //set background-image via icon.less
     }
+    &.just-icon {
+        color: transparent !important;
+        letter-spacing: -1em;
+        padding: 3px 8px;
+    }
+    &.just-icon:before {
+        margin: 2px 0 0;
+        height: 1.2em;
+        width: 1.2em;
+    }
     .icon {margin: 3px 3px 0 0;}
 }
 
 .btn-vPrimary {
+    font-weight: 600;
     color: contrast(@btnPrimaryBgColor, #222222, #f4f4f4);
     background-color: @btnPrimaryBgColor;
     border: 1px solid darken(@btnPrimaryBgColor, 10%);
+    &:link,
+    &:visited {color:contrast(@btnPrimaryBgColor, #222222, #f4f4f4);}
     &:hover {
         color: contrast(lighten(@btnPrimaryBgColor, 5%));
         background-color: lighten(@btnPrimaryBgColor, 5%);
@@ -98,7 +159,7 @@
         cursor: default;
         box-shadow: none;
         &:hover {
-            background-color: lighten(@btnPrimaryBgColor, 50%);
+            background-color: lighten(@btnPrimaryBgColor, 40%);
         }
     }
 }
@@ -107,6 +168,8 @@
     color: darken(@btnDangerBgColor,5%);
     border: 1px solid darken(@btnDangerBgColor, 10%);
     box-shadow: 0 1px 2px fadeout(@btnDangerBgColor, 60%);
+    &:link,
+    &:visited {color:darken(@btnDangerBgColor,5%);}
     &:hover {
         color: contrast(lighten(@btnDangerBgColor, 5%));
         background-color: lighten(@btnDangerBgColor, 5%);
@@ -125,7 +188,7 @@
         cursor: default;
         box-shadow: none;
         &:hover {
-            background-color: lighten(@btnDangerBgColor, 50%);
+            background-color: lighten(@btnDangerBgColor, 40%);
         }
     }
 }
@@ -134,6 +197,8 @@
     color: darken(@btnEditBgColor,5%);
     border: 1px solid darken(@btnEditBgColor, 10%);
     box-shadow: 0 1px 2px fadeout(@btnEditBgColor, 60%);
+    &:link,
+    &:visited {color:darken(@btnEditBgColor,5%);}
     &:hover {
         color: contrast(lighten(@btnEditBgColor, 5%));
         background-color: lighten(@btnEditBgColor, 5%);
