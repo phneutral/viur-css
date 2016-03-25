@@ -1705,10 +1705,19 @@ a.menu-link .icon{
   }
   .inputGroup .label,
   .label{
-    border-width:1px;
-    border-bottom-width:0;
+    border-width:0 1px;
     width:100%;
     margin:0;
+  }
+  .inputGroup .label:first-child,
+  .label:first-child{
+    border-width:1px;
+    border-bottom-width:0;
+  }
+  .inputGroup .label:last-child,
+  .label:last-child{
+    border-width:1px;
+    border-top-width:0;
   }
   .inputGroup .input,
   .inputGroup .label{
