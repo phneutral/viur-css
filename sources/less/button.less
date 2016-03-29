@@ -42,7 +42,9 @@
         color: contrast(lighten(@btnBackgroundColor, 10%));
         background-color: lighten(@btnBackgroundColor, 10%);
     }
-    &.is-disabled {
+    &.is-disabled,
+    &:disabled,
+    &[aria-disabled=true]{
         color: #aaaaaa;
         cursor: default;
         box-shadow: none;
@@ -152,7 +154,9 @@
         background-color: lighten(@btnPrimaryBgColor, 10%);
         border: 1px solid lighten(@btnPrimaryBgColor, 5%);
     }
-    &.is-disabled {
+    &.is-disabled,
+    &:disabled,
+    &[aria-disabled=true] {
         color: lighten(@btnPrimaryBgColor, 30%);
         background-color: lighten(@btnBackgroundColor, 15%);
         border: 1px dashed lighten(@btnPrimaryBgColor, 30%);
@@ -181,7 +185,9 @@
         background-color: lighten(@btnDangerBgColor, 10%);
         border: 1px solid lighten(@btnDangerBgColor, 5%);
     }
-    &.is-disabled {
+    &.is-disabled,
+    &:disabled,
+    &[aria-disabled=true] {
         color: lighten(@btnDangerBgColor, 30%);
         background-color: lighten(@btnBackgroundColor, 15%);
         border: 1px dashed lighten(@btnDangerBgColor, 30%);
@@ -210,7 +216,9 @@
         background-color: lighten(@btnEditBgColor, 10%);
         border: 1px solid lighten(@btnEditBgColor, 5%);
     }
-    &.is-disabled {
+    &.is-disabled,
+    &:disabled,
+    &[aria-disabled=true] {
         color: lighten(@btnEditBgColor, 20%);
         background-color: lighten(@btnBackgroundColor, 15%);
         border: 1px dashed lighten(@btnEditBgColor, 30%);

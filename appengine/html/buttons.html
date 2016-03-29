@@ -40,6 +40,7 @@
 				<h1 class="headline">Buttons</h1>
 				<h3>Default buttons</h3>
 				<p>This is a standard button. It is rendered the same way on every tag. </p>
+				<div class="sandbox">
 				<button class="btn" type="button">Button</button>
 				<span class="btn">Span</span>
 				<a href="#" class="btn">A Link</a>
@@ -49,6 +50,12 @@
 				<span class="btn btn-vSmall">Span</span>
 				<a href="#" class="btn btn-vSmall">A Link</a>
 				<input class="btn btn-vSmall" type="button" value="Input">
+				</div>
+				<div class="msg">
+					<h3 class="msg-headline">Be accessible!</h3>
+					<p>It is recommended to use the <code>button</code> element whenever possible. <br>
+						For further information please read the <a href="https://www.w3.org/TR/aria-in-html/">Notes on Using ARIA in HTML</a>.</p>
+				</div>
 			</div>
 			<div class="section">
 				<h3>Primary buttons</h3>
@@ -71,7 +78,7 @@
 			<div class="section">
 				<h3>Disabled buttons</h3>
 				<p>This is a disabled button.</p>
-				<button class="btn is-disabled" type="button">Button</button>
+				<button class="btn" type="button" aria-disabled="true">Button</button>
 				<button class="btn btn-vSmall is-disabled" type="button">Button</button>
 				<button class="btn btn-vPrimary is-disabled" type="button">Button</button>
 				<button class="btn btn-vSmall btn-vPrimary is-disabled" type="button">Button</button>

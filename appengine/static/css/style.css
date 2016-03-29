@@ -456,6 +456,25 @@ code,
 pre{
   font-family:Courier, monospace;
 }
+code{
+  color:#000000;
+  white-space:pre;
+  word-spacing:normal;
+  word-break:normal;
+  -moz-tab-size:4;
+  tab-size:4;
+  -webkit-hyphens:none;
+  -ms-hyphens:none;
+  hyphens:none;
+  background:#e1e1e1;
+  padding:3px;
+  border-radius:3px;
+}
+code:before,
+code:after{
+  letter-spacing:-0.2em;
+  content:"\00a0";
+}
 ul.is-list{
   padding:3px 18px;
   margin:0;
@@ -603,14 +622,21 @@ ol.is-list{
   color:#000000;
   background-color:#ffffff;
 }
-.btn.is-disabled{
+.btn.is-disabled,
+.btn:disabled,
+.btn[aria-disabled=true]{
   color:#aaaaaa;
   cursor:default;
   box-shadow:none;
   border-style:dashed;
   background-color:#ffffff;
 }
-.btn.is-disabled:hover,.btn.is-disabled:focus{
+.btn.is-disabled:hover,
+.btn:disabled:hover,
+.btn[aria-disabled=true]:hover,
+.btn.is-disabled:focus,
+.btn:disabled:focus,
+.btn[aria-disabled=true]:focus{
   background-color:#f3f2f2;
 }
 .btn.has-icon:before{
@@ -1383,6 +1409,10 @@ ol.is-list{
   -webkit-transform:translateX(-45%);
   transform:translateX(-45%);
 }
+.msg a{
+  color:#093142;
+  text-decoration:underline;
+}
 .msg-headline{
   font-size:.9rem;
   font-weight:600;
@@ -1413,15 +1443,27 @@ ol.is-list{
   background-color:#d1eccf;
   border:1px solid #34762d;
 }
+.msg-vSuccess a{
+  color:#132c11;
+  text-decoration:underline;
+}
 .msg-vWarn{
   color:#a67108;
   background-color:#fceccb;
   border:1px solid #d7920b;
 }
+.msg-vWarn a{
+  color:#765006;
+  text-decoration:underline;
+}
 .msg-vError{
   color:#a21309;
   background-color:#fccbc7;
   border:1px solid #d2190b;
+}
+.msg-vError a{
+  color:#710e06;
+  text-decoration:underline;
 }
 .msg-vFull{
   margin-top:-1px;
@@ -1469,6 +1511,10 @@ ol.is-list{
   background-color:inherit;
   background-blend-mode:multiply;
 }
+.alert a{
+  color:#093142;
+  text-decoration:underline;
+}
 .alert-headline{
   font-size:.8rem;
   font-weight:600;
@@ -1486,15 +1532,27 @@ ol.is-list{
   background-color:#d1eccf;
   border:1px solid #34762d;
 }
+.alert-vSuccess a{
+  color:#132c11;
+  text-decoration:underline;
+}
 .alert-vWarn{
   color:#a67108;
   background-color:#fceccb;
   border:1px solid #d7920b;
 }
+.alert-vWarn a{
+  color:#765006;
+  text-decoration:underline;
+}
 .alert-vError{
   color:#a21309;
   background-color:#fccbc7;
   border:1px solid #d2190b;
+}
+.alert-vError a{
+  color:#710e06;
+  text-decoration:underline;
 }
 .is-admin{
   position:fixed;
@@ -1531,7 +1589,8 @@ ol.is-list{
 }
 .sandbox{
   padding:10px 20px;
-  background-color:#f6f6f6;
+  background:#f2f2f2;
+  margin-bottom:10px;
 }
 .placeholder{
   height:130px;

@@ -46,6 +46,22 @@ blockquote {
 }
 
 code, pre {font-family: @monoFonts;}
+code {
+  color:contrast(darken(@backgroundColor,10%));
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  tab-size: 4;
+  hyphens: none;
+  background: darken(@backgroundColor,10%);
+  padding: 3px;
+  border-radius: 3px;
+  &:before,
+  &:after {
+    letter-spacing: -0.2em;
+    content: "\00a0";
+  }
+}
 
 /* Lists */
 ul.is-list {
