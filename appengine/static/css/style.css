@@ -741,14 +741,21 @@ ol.is-list{
   background-color:#69c260;
   border:1px solid #58bb4d;
 }
-.btn-vPrimary.is-disabled{
+.btn-vPrimary.is-disabled,
+.btn-vPrimary:disabled,
+.btn-vPrimary[aria-disabled=true]{
   color:#afdeaa;
   background-color:#ffffff;
   border:1px dashed #afdeaa;
   cursor:default;
   box-shadow:none;
 }
-.btn-vPrimary.is-disabled:hover,.btn-vPrimary.is-disabled:focus{
+.btn-vPrimary.is-disabled:hover,
+.btn-vPrimary:disabled:hover,
+.btn-vPrimary[aria-disabled=true]:hover,
+.btn-vPrimary.is-disabled:focus,
+.btn-vPrimary:disabled:focus,
+.btn-vPrimary[aria-disabled=true]:focus{
   background-color:#d1eccf;
 }
 .btn-vDanger{
@@ -771,14 +778,21 @@ ol.is-list{
   background-color:#f77066;
   border:1px solid #f55a4e;
 }
-.btn-vDanger.is-disabled{
+.btn-vDanger.is-disabled,
+.btn-vDanger:disabled,
+.btn-vDanger[aria-disabled=true]{
   color:#fccbc7;
   background-color:#ffffff;
   border:1px dashed #fccbc7;
   cursor:default;
   box-shadow:none;
 }
-.btn-vDanger.is-disabled:hover,.btn-vDanger.is-disabled:focus{
+.btn-vDanger.is-disabled:hover,
+.btn-vDanger:disabled:hover,
+.btn-vDanger[aria-disabled=true]:hover,
+.btn-vDanger.is-disabled:focus,
+.btn-vDanger:disabled:focus,
+.btn-vDanger[aria-disabled=true]:focus{
   background-color:#fff8f7;
 }
 .btn-vEdit{
@@ -801,14 +815,21 @@ ol.is-list{
   background-color:#49b9e7;
   border:1px solid #32b0e4;
 }
-.btn-vEdit.is-disabled{
+.btn-vEdit.is-disabled,
+.btn-vEdit:disabled,
+.btn-vEdit[aria-disabled=true]{
   color:#76caed;
   background-color:#ffffff;
   border:1px dashed #a3dcf3;
   cursor:default;
   box-shadow:none;
 }
-.btn-vEdit.is-disabled:hover,.btn-vEdit.is-disabled:focus{
+.btn-vEdit.is-disabled:hover,
+.btn-vEdit:disabled:hover,
+.btn-vEdit[aria-disabled=true]:hover,
+.btn-vEdit.is-disabled:focus,
+.btn-vEdit:disabled:focus,
+.btn-vEdit[aria-disabled=true]:focus{
   background-color:#d0edf9;
 }
 .btnGroup{
@@ -873,12 +894,9 @@ ol.is-list{
   vertical-align:middle;
   display:inline-block;
   transition:all .3s ease;
-  background-position:100% center;
+  background-position:150% center;
   background-size:15px;
   background-repeat:no-repeat;
-}
-.input:focus{
-  box-shadow:0 3px 3px rgba(0, 0, 0, 0.4);
 }
 .inputGroup.is-invalid .input,
 .input.is-invalid{
@@ -931,6 +949,9 @@ ol.is-list{
   background-color:#f2f2f2;
   background-image:url('../icons/not-allowed.svg');
   background-position:95% center;
+}
+.input:focus{
+  box-shadow:0 3px 3px rgba(0, 0, 0, 0.4);
 }
 .input::-webkit-input-placeholder{
   color:#a2a2a2;
