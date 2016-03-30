@@ -1,3 +1,4 @@
 interface/gulpfile.js
 interface/package.json
 interface/stylelintConfig.json
+interface/node_modules
