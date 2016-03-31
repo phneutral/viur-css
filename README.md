@@ -19,7 +19,7 @@ Thanks guys!
 
 ### How do I get set up? ###
 
-* All LESS files are stored in the interface/less folder.
+* All LESS files are stored in the sources/less folder.
 * The function of each LESS file is shown in the according HTML.
 * Each LESS file is documented in itself, too.
 * style.less is the catalogue of all used less files. Add and remove files as needed.
