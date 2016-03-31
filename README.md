@@ -13,7 +13,8 @@ Thanks guys!
 ### What is this repository for? ###
 
 * ViUR Ignite CSS is a development toolkit for sturdy HTML and CSS
-* It is a lightweighted collection of helpful CSS components
+* It is a lightweightned collection of helpful CSS components
+* It is responsive and adaptable
 * It is _no_ complete framework
 * It is build in LESS
 
