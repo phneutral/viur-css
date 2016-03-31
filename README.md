@@ -1,8 +1,8 @@
-# ViUR CSS #
+# ViUR Ignite CSS #
 
 First attempt in building a sturdy foundation of CSS for ViUR products and Mausbrand projects. 
 
-ViUR CSS is build upon the principles of: 
+ViUR Ignite CSS is build upon the principles of: 
 
 * [Primer CSS](http://primercss.io)
 * [Enduring CSS](https://benfrain.com/enduring-css-writing-style-sheets-rapidly-changing-long-lived-projects/)
@@ -12,7 +12,9 @@ Thanks guys!
 
 ### What is this repository for? ###
 
-* ViUR CSS is a development toolkit for sturdy HTML and CSS
+* ViUR Ignite CSS is a development toolkit for sturdy HTML and CSS
+* It is a lightweighted collection of helpful CSS components
+* It is _no_ complete framework
 * It is build in LESS
 
 ### How do I get set up? ###
