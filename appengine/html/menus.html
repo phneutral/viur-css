@@ -43,15 +43,41 @@
 				<p>This is a standard menu.</p>
 
 				<ul class="menu-list">
-					<li class="menu-item"><a class="menu-link is-primary" href="#">Punkt 1</a></li>
-					<li class="menu-item"><a class="menu-link is-active" href="#">Punkt 2</a></li>
-					<li class="menu-item"><a class="menu-link" href="#">Punkt 3</a></li>
-					<li class="menu-item"><a class="menu-link" href="#">Punkt 4</a></li>
-					<li class="menu-item"><a class="menu-link" href="#">Punkt 5</a></li>
+					<li class="menu-item"><a class="menu-link is-primary" href="#">Menu item 1 (primary choice)</a></li>
+					<li class="menu-item"><a class="menu-link is-active" href="#">Menu item 2 (active item)</a></li>
+					<li class="menu-item"><a class="menu-link " href="#">Menu item 3</a></li>
+					<li class="menu-item"><a class="menu-link" href="#">Menu item  4</a></li>
+					<li class="menu-item"><a class="menu-link" href="#">Menu item  5</a></li>
 				</ul>
 
 			</div>
+			<div class="section">
+				<h3>Submenu</h3>
+				<p>Submenu support two levels of depth. They can just have a different look or appear as an accordion with the help of <code>.is-accordion</code>.
+				The mouse-out hover effect of the accordion is delayed for better usability.</p>
 
+				<ul class="menu-list">
+					<li class="menu-item"><a class="menu-link" href="#">Menu item 1</a></li>
+					<li class="menu-item">
+						<a class="menu-link " href="#">
+							Menu item 2 (open sub menu)
+						</a>
+						<ul class="menu-list menu-vSub">
+							<li class="menu-item is-accordion"><a class="menu-link" href="#">Submenu item 1 (with accordion submenu)</a>
+								<ul class="menu-list menu-vSub">
+									<li class="menu-item"><a class="menu-link" href="#">Submenu item 1</a></li>
+									<li class="menu-item"><a class="menu-link" href="#">Submenu item 2</a></li>
+									<li class="menu-item"><a class="menu-link" href="#">Submenu item 3</a></li>
+								</ul>
+							</li>
+							<li class="menu-item"><a class="menu-link" href="#">Submenu item 2</a></li>
+							<li class="menu-item"><a class="menu-link" href="#">Submenu item 3</a></li>
+						</ul>
+					</li>
+					<li class="menu-item"><a class="menu-link" href="#">Menu item  3</a></li>
+				</ul>
+
+			</div>
 
 			<div class="section">
 				<h3>Default menu with icons</h3>

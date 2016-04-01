@@ -950,9 +950,6 @@ ol.is-list{
   background-image:url('../icons/not-allowed.svg');
   background-position:95% center;
 }
-.input:focus{
-  box-shadow:0 3px 3px rgba(0, 0, 0, 0.4);
-}
 .input::-webkit-input-placeholder{
   color:#a2a2a2;
   opacity:1;
@@ -1625,6 +1622,79 @@ ol.is-list{
   padding:0;
   box-shadow:1px 2px 3px rgba(0, 0, 0, 0.3);
 }
+.menu-item.is-accordion > a:after{
+  content:'';
+  float:right;
+  height:1em;
+  width:1em;
+  margin:4px -5px 0 0;
+  vertical-align:text-top;
+  background-size:cover;
+  background-position:top left;
+  background-repeat:no-repeat;
+  background-blend-mode:multiply;
+  background-image:url(../icons/arrowhead-left.svg);
+  transition:all .7s ease;
+  transition-delay:1s;
+}
+.menu-item.is-accordion:hover > a:after,.menu-item.is-accordion:focus > a:after{
+  -webkit-transform:rotate(-90deg);
+  transform:rotate(-90deg);
+  transition-delay:0s;
+}
+.menu-item.is-accordion > .menu-vSub > .menu-item{
+  transition:all .7s ease;
+  transition-delay:2s;
+  max-height:0;
+}
+.menu-item.is-accordion:hover > .menu-vSub > .menu-item,.menu-item.is-accordion:focus > .menu-vSub > .menu-item{
+  max-height:450px;
+  transition-delay:0s;
+}
+.menu-vSub{
+  box-shadow:none;
+  margin:0;
+  overflow:hidden;
+}
+.menu-vSub a.menu-link{
+  padding-left:32px;
+  color:#222;
+  background-color:#e7e7e7;
+  border-bottom-style:dotted;
+}
+.menu-vSub .menu-item:last-of-type a.menu-link{
+  border-bottom-style:solid;
+}
+.menu-vSub .menu-item:first-of-type a.menu-link{
+  border-top:0;
+}
+.is-accordion > .menu-vSub{
+  max-height:0;
+  min-height:0;
+  transition:all .3s ease;
+  transition-delay:2s;
+}
+.is-accordion:hover > .menu-vSub,.is-accordion:focus > .menu-vSub{
+  max-height:450px;
+  min-height:45px;
+  transition-delay:0s;
+}
+.menu-vSub .menu-vSub a.menu-link{
+  padding-left:44px;
+  color:#222;
+  background-color:#dbdbdb;
+  border-bottom-style:dotted;
+}
+.menu-vSub .menu-vSub .menu-item:last-of-type a.menu-link{
+  border-bottom-style:solid;
+}
+.menu-vSub .menu-vSub .menu-item:first-of-type a.menu-link{
+  border-top:0;
+}
+.menu-vSub .menu-vSub a.menu-link:hover,.menu-vSub .menu-vSub a.menu-link:focus{
+  color:#222;
+  background-color:#cecece;
+}
 a.menu-link{
   display:block;
   box-sizing:border-box;
@@ -1657,7 +1727,7 @@ a.menu-link.is-active:focus{
   background-color:#e8111f;
 }
 a.menu-link.has-icon:before{
-  content:"";
+  content:'';
   position:relative;
   display:inline-block;
   height:1em;

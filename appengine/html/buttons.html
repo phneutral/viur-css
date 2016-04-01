@@ -98,15 +98,17 @@
 			<div class="section">
 				<h3>Button group</h3>
 				<p>This is a button group.</p>
-				<div class="btnGroup">
-					<button class="btn" type="button">Button 1</button>
-					<button class="btn btn-vPrimary" type="button">Button 2</button>
-					<button class="btn" type="button">Button 3</button>
-				</div>
-				<div class="btnGroup">
-					<button class="btn btn-vSmall" type="button">Button 1</button>
-					<button class="btn btn-vSmall btn-vDanger" type="button">Button 2</button>
-					<button class="btn btn-vSmall" type="button">Button 3</button>
+				<div class="sandbox">
+					<div class="btnGroup">
+						<button class="btn" type="button">Button 1</button>
+						<button class="btn btn-vPrimary" type="button">Button 2</button>
+						<button class="btn" type="button">Button 3</button>
+					</div>
+					<div class="btnGroup">
+						<button class="btn btn-vSmall" type="button">Button 1</button>
+						<button class="btn btn-vSmall btn-vDanger" type="button">Button 2</button>
+						<button class="btn btn-vSmall" type="button">Button 3</button>
+					</div>
 				</div>
 			</div>
 			<div class="section">
@@ -125,11 +127,11 @@
 					Each type has its pros and cons. You'll have to try and find the right icons for your use case.<br>
 					For inline images the use of jinja is recommended.
 				</p>
-				<p>
+				<div class="sandbox">
 					<button class="btn has-icon i-heart" type="button">Before Button</button>
 					<button class="btn btn-vSmall has-icon i-heart" type="button">Small Before Button</button>
-				</p>
-				<p>
+				</div>
+				<div class="sandbox">
 					<button class="btn btn-vEdit is-disabled">
 						<svg class="icon" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
 							<path fill="#d00f1c"
@@ -144,15 +146,15 @@
 						</svg>
 						Small Inline Button
 					</button>
-				</p>
+				</div>
 			</div>
 			<div class="section">
 				<h3>Icon buttons without text</h3>
 				<p>They even have a nice tooltip!</p>
-				<p>
+				<div class="sandbox">
 					<button class="btn has-icon i-heart just-icon" aria-label="My <3 will go on." type="button">Before Button</button>
 					<button class="btn btn-vSmall has-icon i-heart just-icon" aria-label="Herzliche Grüße" type="button">Small Before Button</button>
-				</p>
+				</div>
 				<div class="msg msg-vWarn has-icon i-flash">
 					<p>The .just-icon class only works with before element icons!</p>
 				</div>
