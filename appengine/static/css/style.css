@@ -1387,6 +1387,7 @@ ol.is-list{
 .badge,
 .has-badge:after{
   content:attr(data-badge);
+  font-weight:700;
   display:inline-block;
   vertical-align:text-top;
   margin-left:10px;
@@ -1394,19 +1395,17 @@ ol.is-list{
   line-height:16px;
   font-size:11px;
   color:white;
-  text-shadow:0 1px #902a27;
-  border-radius:2px;
+  border-radius:.1em;
   background:#e93631;
-  background-image:linear-gradient(to bottom, #f65d5f, #e93631);
   box-shadow:inset 0 1px rgba(255, 255, 255, 0.2), 0 1px rgba(0, 0, 0, 0.2);
   pointer-events:none;
 }
 .marker,
 .has-marker:after{
   content:attr(aria-label);
+  text-transform:UPPERCASE;
   text-decoration:none;
   text-shadow:none;
-  text-transform:none;
   letter-spacing:normal;
   pointer-events:none;
   display:inline;
@@ -1418,7 +1417,9 @@ ol.is-list{
   text-align:center;
   white-space:nowrap;
   vertical-align:baseline;
-  border-radius:0.2em;
+  border-radius:.1em;
+  background:#e93631;
+  box-shadow:inset 0 1px rgba(255, 255, 255, 0.2), 0 1px rgba(0, 0, 0, 0.2);
 }
 .msg{
   position:relative;
