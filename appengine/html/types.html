@@ -39,24 +39,49 @@
 			<div class="section">
 				<h1 class="headline">Typography</h1>
 
-				<h3>Body text</h3>
-				<p>This is an example of a body text.</p>
+				<p> ViUR Ignite CSS supports the <a href="https://ia.net/know-how/100e2r" title="Information Architects: 100e2r">100% Easy to read</a> standard.
+					<ul class="is-list">
+						<li>The body font size is 100% (roughly 16px).</li>
+						<li>Objects use a font size based on the body &mdash; using »rem« (root em).</li>
+						<li>Inline elements and type should react to their direct surroundings &mdash; thus using »em«.</li>
+					</ul>
+				</p>
+			</div>
+			<div class="section">
+				<h2>Headlines and sublines</h2>
+				<p>These are the standard headlines.</p>
 				<div class="sandbox">
+					<h1>The headline! Use only <strong>one</strong> on every page (h1)</h1>
+					<h2>A minor headline. Use them as often as you like. (h2)</h2>
+					<h3>A subline to your headline. (h3)</h3>
+					<h4>All other headlines. (h4, 5, 6)</h4>
+				</div>
+				<div class="msg">
+					<p>Please style your own headlines with the help of classes (e.g.: <code>.headline</code>, <code>.subline</code>) in the <em>project.less</em> file.</p>
+				</div>
+			</div>
+			<div class="section">
+				<h2>Body text</h2>
+				<p>This is an example of a body text. The first paragraph is emphasized with <code>.lead</code></p>
+				<div class="sandbox">
+					<p class="lead">Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi
+						porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
+						eget lacinia odio sem nec elit.</p>
 					<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis
 						parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
 					<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
 						ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat
 						porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor
 						fringilla.</p>
-					<p class="lead">Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi
-						porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
-						eget lacinia odio sem nec elit.</p>
 				</div>
 			</div>
 			<div class="section">
-				<h3>Inline text elements</h3>
+				<h2>Inline text elements</h2>
 				<p>This is an example of inline text elements.</p>
 				<div class="sandbox">
+					<p><strong>This line rendered as bold text.</strong></p>
+					<p><em>This line rendered as italicized text.</em></p>
+					<p>H<sub>2</sub>O, this is sub and super text<sup>2</sup>.</p>
 					<p>You can use the mark tag to
 						<mark>highlight</mark>
 						text.
@@ -64,20 +89,15 @@
 					<p>
 						<del>This line of text is meant to be treated as deleted text.</del>
 					</p>
-					<p><s>This line of text is meant to be treated as no longer accurate.</s></p>
 					<p>
 						<ins>This line of text is meant to be treated as an addition to the document.</ins>
 					</p>
-					<p><u>This line of text will render as underlined</u></p>
-					<p>
-						<small>This line of text is meant to be treated as fine print.</small>
-					</p>
-					<p><strong>This line rendered as bold text.</strong></p>
-					<p><em>This line rendered as italicized text.</em></p>
+					<p><small>This line of text is meant to be treated as fine print.</small></p>
+					<p><code>This line is pure code.</code></p>
 				</div>
 			</div>
 			<div class="section">
-				<h3>Blockquote</h3>
+				<h2>Blockquote</h2>
 				<p>This is an example of a blockquote.</p>
 				<div class="sandbox">
 					<blockquote>
@@ -86,47 +106,42 @@
 				</div>
 			</div>
 			<div class="section">
-				<h3>Unordered Lists</h3>
+				<h2>Unordered Lists</h2>
 				<p>Here is an example of an unordered list.</p>
 				<div class="sandbox">
 					<ul class="is-list">
-						<li>Cocoa
+						<li>Make a list
 							<ul>
-								<li>Coffee</li>
+								<li>Check it twice</li>
 								<ul>
-									<li>Beer</li>
-									<li>Tea</li>
-									<li>Coca Cola</li>
+									<li>One!</li>
+									<li>Two!</li>
 								</ul>
-								<li>Fanta</li>
-								<li>Sprite</li>
+								<li>Check it again</li>
 							</ul>
 						</li>
-						<li>Mezzo Mix</li>
-						<li>Apple Juice</li>
+						<li>…</li>
+						<li>Profit!</li>
 					</ul>
 				</div>
 			</div>
 			<div class="section">
-				<h3>Ordered List</h3>
+				<h2>Ordered List</h2>
 				<p>Here is an example of an ordered list.</p>
 				<div class="sandbox">
 					<ol class="is-list">
-						<li>Cocoa</li>
-						<li>What
+						<li>Make a list
 							<ol>
-							<li>Coffee
+								<li>Check it twice</li>
 								<ol>
-									<li>Beer</li>
-									<li>Tea</li>
-									<li>Coca Cola</li>
+									<li>One!</li>
+									<li>Two!</li>
 								</ol>
-							</li>
-							<li>Fanta</li>
-							<li>Sprite</li>
-						</ol></li>
-						<li>Mezzo Mix</li>
-						<li>Apple Juice</li>
+								<li>Check it again</li>
+							</ol>
+						</li>
+						<li>…</li>
+						<li>Profit!</li>
 					</ol>
 				</div>
 			</div>

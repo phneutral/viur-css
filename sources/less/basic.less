@@ -3,6 +3,15 @@
     BASICS, FUNDAMENTALS and TYPE
 --------------------------------------------------------------------------------------- */
 
+// ViUR Ignite CSS supports the 100% Easy to read standard:
+// https://ia.net/know-how/100e2r
+
+// The body font size is 100% (roughly 16px).
+// Objects use a font size based on this size: using »rem« (root em).
+// Inline elements and type should react to their direct surroundings - thus use »em«.
+
+
+
 body {
   margin: 0; /* IE Reset */
   background: @backgroundColor;
@@ -18,31 +27,52 @@ body {
 
 /* Links */
 a, a:link { color: @mainColor; text-decoration: none; outline: 0; }
-a:visited, a:hover, a:focus, a:active { color: darken(@mainColor, 30%); }
+a:visited, a:hover, a:focus, a:active { color: darken(@mainColor, 10%); }
 p a, p a:visited { line-height: inherit; }
 
 /* Typography */
+
+// Please style your headlines with the help of classes (e.g.: .headline, .subline) in the project.less
 h1, h2, h3, h4, h5, h6 {font-family: @headFonts; font-weight: normal; font-size: 1.2em; line-height: 1.6;}
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {font-weight: inherit; color: inherit;}
 
 h1 {color: @mainColor; font-size:2.1em;}
 h2 {color: @mainColor; font-size:1.7em;}
-h3 {color: @mainColor; font-size:1.5em;}
-h4 {}
-h5 {}
-h6 {}
-    
+h3 {color: @complementColor; font-size:1.5em;}
+h4, h5, h6 {color: @complementColor}
+
 p {
   line-height: 1.6;
   font-size: 1em;
 }
 
+strong {font-weight: 700;}
 em {font-style:italic;}
+small {font-size: .8em}
+
+ins {
+text-decoration: none;
+border-bottom: 1px dashed;
+}
+
+mark {
+    background: lighten(@mainColor,40%);
+    color: contrast(lighten(@mainColor,40%), @textColor, @invTextColor);
+    padding:1px;
+    &:before,
+    &:after {
+      letter-spacing: -0.2em;
+      content: "\00a0";
+    }
+}
+
 blockquote {
   font-family: @headFonts;
-  color: #828282;
+  font-style: italic;
+  font-size: 1.2em;
+  color: @complementColor;
   padding: 0 15px;
-  border-left: 7px solid #d1d1d1;
+  border-left: 7px solid @complementColor;
 }
 
 code, pre {font-family: @monoFonts;}
@@ -53,7 +83,7 @@ code {
   word-break: normal;
   tab-size: 4;
   hyphens: none;
-  background: darken(@backgroundColor,10%);
+  background: fadeout(darken(@backgroundColor,15%),10%);
   padding: 3px;
   border-radius: 3px;
   &:before,

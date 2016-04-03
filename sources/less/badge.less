@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+/* ------------------------------------------------------------------------------------------------------
+    #BADGES and MARKERS
+------------------------------------------------------------------------------------------------------ */
+
+// Notification Badges are numerical indicators of how many items are associated with some kind of content.
+.badge,
+.has-badge:after {
+    content: attr(data-badge);
+    display: inline-block;
+    vertical-align: text-top;
+    margin-left: 10px;
+    padding: 0 5px;
+    line-height: 16px;
+    font-size: 11px;
+    color: white;
+    border-radius: 2px;
+    background: #e93631;
+    background-image: linear-gradient(to bottom, #f65d5f, #e93631);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+}
+
+// Markers are used to provide additional information about something.
+.marker,
+.has-marker:after {
+    content: attr(aria-label);
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: none;
+    letter-spacing: normal;
+    pointer-events: none;
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: .8em;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .2em
+}
+
+// => Badge Media Queries
+
+.media-mixin(@break) when (@break = @breakSmall) {
+
+}
+
+.media-mixin(@break) when (@break = @breakMedium) {
+
+}
+
+.media-mixin(@break) when (@break = @breakLarge) {
+
+}
+
+.media-mixin(@break) when (@break = @break2x) {
+
+}
+
+.media-mixin(@break) when (@break = @breakPrint) {
+
+}
