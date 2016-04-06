@@ -5,6 +5,7 @@
 
 @popupBackgroundColor: @backgroundColor;
 
+/* A dark overlay to hide the rest of the page. */
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -29,13 +30,14 @@
   .zIndex('background',-1);
   pointer-events: none;
   top:50px;
-  left:50%;
+  left:-14%;
+  width: 33%;
+  max-width:@pageWidth/2.5;
   transform: translateX(-50%);
   &.is-active {
     .zIndex('overlay', 1);
     opacity: 1;
-    width: 33%;
-    max-width:@pageWidth/2.5;
+    left:50%;
     pointer-events: auto;
   }
 }
@@ -82,7 +84,7 @@
   background-color: darken(@popupBackgroundColor,15%);
   border-top: 1px solid darken(@popupBackgroundColor,25%);
   color: contrast(darken(@popupBackgroundColor,15%), #222222, #f4f4f4);
-  font-size: .7rem;
+  font-size: .8rem;
 }
 
 .popup-close {
@@ -116,10 +118,34 @@
   }
 }
 
+/* Alert messages in popups */
 .msg-vPopup {
   margin:0 -15px 15px;
   border-width: 1px 0 1px 0;
   border-radius:0;
+}
+
+/* Form elements in popups */
+.inputGroup-vPopup {
+  .label {
+    border-width: 0 1px;
+    width: 100%;
+    margin: 0;
+    &:first-child{
+        border-width:1px;
+        border-bottom-width: 0;
+    }
+    &:last-child{
+        border-width: 1px;
+        border-top-width: 0;
+    }
+  }
+  .select,
+  .input,
+  .btn {
+      width:100%;
+      margin: 0;
+  }
 }
 
 // => Popup Media Queries
@@ -129,7 +155,9 @@
 }
 
 .media-mixin(@break) when (@break = @breakMedium) {
-
+  .popup {
+    width:90%;
+  }
 }
 
 .media-mixin(@break) when (@break = @breakLarge) {

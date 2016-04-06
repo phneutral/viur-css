@@ -1389,11 +1389,13 @@ ol.is-list{
   content:attr(data-badge);
   font-weight:700;
   display:inline-block;
-  vertical-align:text-top;
+  vertical-align:middle;
   margin-left:10px;
-  padding:0 5px;
-  line-height:16px;
-  font-size:11px;
+  margin-top:-3px;
+  margin-right:-2px;
+  padding:0 .45em;
+  line-height:1.6;
+  font-size:.7em;
   color:white;
   border-radius:.1em;
   background:#e93631;
@@ -1662,15 +1664,16 @@ ol.is-list{
   z-index:5;
   pointer-events:none;
   top:50px;
-  left:50%;
+  left:-14%;
+  width:33%;
+  max-width:520px;
   -webkit-transform:translateX(-50%);
   transform:translateX(-50%);
 }
 .popup.is-active{
   z-index:9;
   opacity:1;
-  width:33%;
-  max-width:520px;
+  left:50%;
   pointer-events:auto;
 }
 .popup-box{
@@ -1716,7 +1719,7 @@ ol.is-list{
   background-color:#d4d4d4;
   border-top:1px solid #bababa;
   color:#222222;
-  font-size:.7rem;
+  font-size:.8rem;
 }
 .popup-close{
   position:absolute;
@@ -1751,6 +1754,25 @@ ol.is-list{
   margin:0 -15px 15px;
   border-width:1px 0 1px 0;
   border-radius:0;
+}
+.inputGroup-vPopup .label{
+  border-width:0 1px;
+  width:100%;
+  margin:0;
+}
+.inputGroup-vPopup .label:first-child{
+  border-width:1px;
+  border-bottom-width:0;
+}
+.inputGroup-vPopup .label:last-child{
+  border-width:1px;
+  border-top-width:0;
+}
+.inputGroup-vPopup .select,
+.inputGroup-vPopup .input,
+.inputGroup-vPopup .btn{
+  width:100%;
+  margin:0;
 }
 .lead{
   font-size:1.3em;
@@ -1980,6 +2002,9 @@ a.menu-link .icon{
   z-index:12;
 }
 @media only screen and (max-width: 1100px){
+  .popup{
+    width:90%;
+  }
   .parallax{
     background-attachment:scroll!important;
   }
