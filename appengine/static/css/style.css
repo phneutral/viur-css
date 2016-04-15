@@ -539,6 +539,11 @@ ol.is-list{
   clear:both;
   height:0;
 }
+.sidebar:last-of-type{
+  -webkit-order:3;
+  -ms-flex-order:3;
+  order:3;
+}
 .content{
   -webkit-flex:1;
   -ms-flex:1;
@@ -663,38 +668,6 @@ ol.is-list{
   margin:2px 0 0;
   height:1.4em;
   width:1.4em;
-}
-.btn.just-icon:after{
-  position:absolute;
-  display:none;
-  padding:5px 8px;
-  font:normal normal 11px/1.5 'Source Sans Pro', 'Open Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  color:#000000;
-  text-align:center;
-  text-decoration:none;
-  text-shadow:none;
-  text-transform:none;
-  letter-spacing:normal;
-  word-wrap:break-word;
-  white-space:pre;
-  pointer-events:none;
-  content:attr(aria-label);
-  background:rgba(231, 229, 229, 0.9);
-  border-radius:3px;
-  -webkit-font-smoothing:subpixel-antialiased;
-  z-index:6;
-  top:100%;
-  right:50%;
-  margin-top:5px;
-  -webkit-transform:translateX(50%);
-  transform:translateX(50%);
-}
-.btn.just-icon:hover:after,
-.btn.just-icon:active:after,
-.btn.just-icon:focus:after,
-.btn.just-icon:focus:after{
-  display:inline-block;
-  text-decoration:none;
 }
 .btn .icon{
   margin:4px 7px 0 -5px;
@@ -994,6 +967,13 @@ ol.is-list{
   border:1px solid #e0e0e0;
   color:#000000;
   margin:6px 0;
+  min-width:150px;
+}
+.inputGroup.is-required .label,
+.label.is-required{
+  border-left:2px solid #d00f1c;
+  color:#d00f1c;
+  font-weight:600;
 }
 .inputGroup.is-invalid .label,
 .label.is-invalid{
@@ -1020,6 +1000,23 @@ ol.is-list{
   box-shadow:none;
   border:1px dashed #cccccc;
   background-color:#f2f2f2;
+}
+.label.has-icon:before{
+  content:"";
+  position:relative;
+  display:inline-block;
+  height:1em;
+  width:1em;
+  vertical-align:text-top;
+  margin:4px 7px 0 -4px;
+  background-size:cover;
+  background-position:top left;
+  background-repeat:no-repeat;
+  background-color:inherit;
+  background-blend-mode:multiply;
+}
+.label .icon{
+  margin:4px 4px 0 -4px;
 }
 .select{
   -webkit-appearance:none;
@@ -1776,6 +1773,49 @@ ol.is-list{
 .inputGroup-vPopup .btn{
   width:100%;
   margin:0;
+}
+.has-footnotes{
+  counter-reset:footnotes;
+}
+a.has-footnote{
+  counter-increment:footnotes;
+  text-decoration:none;
+  color:inherit;
+  outline:none;
+}
+a.has-footnote:after{
+  content:counter(footnotes);
+  font-size:0.65em;
+  margin-left:2px;
+  line-height:0;
+  vertical-align:baseline;
+  position:relative;
+  top:-0.5em;
+}
+a.has-footnote:focus:after{
+  outline:thin dotted;
+  outline-offset:2px;
+}
+.footnotes{
+  margin-top:50px;
+  border-top:1px solid #ccc;
+  font-size:0.8rem;
+}
+.footnotes :target{
+  background:#f9b2b6;
+  color:#222;
+  padding:1px;
+}
+.footnotes :target:before,
+.footnotes :target:after{
+  letter-spacing:-0.2em;
+  content:"\00a0";
+}
+.footnotes-list{
+  list-style-type:decimal;
+}
+.footnotes-backlink{
+  font-size:0.8em;
 }
 .lead{
   font-size:1.3em;
