@@ -16,6 +16,7 @@
 .input {
     padding: 7px 14px;
     width: 250px;
+    margin:6px 0;
     background-color: @inputColor;
     border: 1px solid darken(@inputColor,10%);
     color:contrast(@inputColor, #222222, #f4f4f4);
@@ -119,6 +120,10 @@
         color: @inputRequiredColor;
         font-weight: 600;
     }
+    .inputGroup.is-required &:after,
+    &.is-required:after {
+        content:'\00a0*';
+    }
     .inputGroup.is-invalid &,
     &.is-invalid {
         color: darken(@inputDangerColor, 25%);
@@ -163,12 +168,25 @@
     .icon {margin: 4px 4px 0 -4px;}
 }
 
+.label-vSmall {
+    padding: 3px 7px;
+    font-size: .8em;
+    font-weight: 400;
+}
+
+.label-vBlock {
+    width: 100%;
+    margin: 0;
+}
+
 .select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     border-radius: 0px;
-    padding: 9px 20px;
+    vertical-align: middle;
+    display: inline-block;
+    padding: 8px 20px;
     padding-right: 38px;
     background-color: #ffffff;
     border: 1px solid #dddddd;
@@ -209,7 +227,8 @@
 }
 
 .inputGroup .input,
-.inputGroup .label {
+.inputGroup .label,
+.inputGroup .textarea {
     box-shadow: @inputShadow;
 }
 
@@ -227,16 +246,25 @@
     margin-bottom: 15px;
 }
 
-// Use formActions to float submit buttons to the right at the end of your form.
-.formActions {
-    &:after {
-        content: '';
-        display: block;
-        clear: both; /* Clearfix for formActions. */
-        height: 0;
-    }
-    .btn {float:right;}
-    .btn+.btn {margin-right: 10px;}
+.textarea {
+    resize: none;
+    margin-top: 6px;
+    padding: 7px 14px;
+    width: 250px;
+    height: 180px;
+    background-color: @inputColor;
+    border: 1px solid darken(@inputColor,10%);
+    color:contrast(@inputColor, #222222, #f4f4f4);
+    transition: all .3s ease;
+    background-position: 150% center;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    text-align: left;
+}
+
+.textarea-vBlock {
+    width:100%;
+    margin: 0;
 }
 
 .checkbox {
@@ -252,6 +280,18 @@
     font-size: 0.8em;
     margin: 0;
     padding-left: 22px;
+}
+
+// Use formActions to float submit buttons to the right at the end of your form.
+.formActions {
+    &:after {
+        content: '';
+        display: block;
+        clear: both; /* Clearfix for formActions. */
+        height: 0;
+    }
+    .btn {float:right;}
+    .btn+.btn {margin-right: 10px;}
 }
 
 // => form Media Queries
