@@ -11,6 +11,10 @@ Their samples, knowledge and expertise helped us to make ViUR Ignite CSS.
 
 * [Primer CSS](http://primercss.io)
 * [Enduring CSS](https://benfrain.com/enduring-css-writing-style-sheets-rapidly-changing-long-lived-projects/)
+* [Bulma](http://bulma.io)
+* [CSS Guidelin.es](http://cssguidelin.es)
+* [Bijou](http://andhart.github.io/bijou)
+* [Bedrock](https://github.com/jscarmona/bedrock)
 * and others
 
 Thanks guys!
