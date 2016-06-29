@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------------------------------------
+	GRID
+--------------------------------------------------------------------------------------- */
+
+// Colors:
+@btnBackgroundColor: #e7e5e5;
+@btnPrimaryBgColor: @successColor;
+@btnDangerBgColor: @failColor;
+@btnEditBgColor: @hintColor;
+
+// Shadows:
+@btnShadow: 0 1px 1px rgba(0,0,0,0.4);
+@btnHoverShadow: 0 3px 3px rgba(0,0,0,0.4);
+
+//overwrite these colors and shadows in your appconf.less
+
+.grid-row {
+	width: 100%;
+	display: flex;
+
+	& .grid-col-1 {
+		width: 100 / 12%;
+	}
+	& .grid-col-2 {
+		width: 100 / 12 * 2%;
+	}
+	& .grid-col-3 {
+		width: 100 / 12 * 3%;
+	}
+	& .grid-col-4 {
+		width: 100 / 12 * 4%;
+	}
+	& .grid-col-5 {
+		width: 100 / 12 * 5%;
+	}
+	& .grid-col-6 {
+		width: 50%;
+	}
+	& .grid-col-7 {
+		width: 100 / 12 * 7%;
+	}
+	& .grid-col-8 {
+		width: 100 / 12 * 8%;
+	}
+	& .grid-col-9 {
+		width: 100 / 12 * 9%;
+	}
+	& .grid-col-10 {
+		width: 100 / 12 * 10%;
+	}
+	& .grid-col-11 {
+		width: 100 / 12 * 11%;
+	}
+	& .grid-col-12 {
+		width: 100%;
+	}
+	
+	& .grid-col-1, & .grid-col-2, & .grid-col-3, & .grid-col-4, & .grid-col-5, & .grid-col-6, & .grid-col-7, & .grid-col-8, & .grid-col-9, & .grid-col-10, & .grid-col-11, & .grid-col-12 {
+		float: left;
+		display: block;
+	}
+
+	&.flex-around {
+		justify-content: space-around;
+	}
+
+	&:after {
+		clear: both;
+	}
+
+	[class*="grid-col-"] {
+		border: 1px solid #aaa;
+	}
+}
+
+
+// => Grid Media Queries
+
+.media-mixin(@break) when (@break = @breakSmall) {
+
+}
+
+.media-mixin(@break) when (@break = @breakMedium) {
+
+}
+
+.media-mixin(@break) when (@break = @breakLarge) {
+
+}
+
+.media-mixin(@break) when (@break = @breakPrint) {
+
+}
