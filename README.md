@@ -1,8 +1,13 @@
 # ViUR Ignite CSS #
 
-First attempt in building a sturdy foundation of CSS for ViUR products and Mausbrand projects. 
+This is the first attempt in building a sturdy foundation of CSS (LESS) for ViUR products and Mausbrand projects.
+ViUR Ignite CSS is build upon the principles of many CSS guides and frameworks.
 
-ViUR Ignite CSS is build upon the principles of: 
+Different projects demand different solutions.
+ViUR Ignite CSS is a solution based on the needs of our python/jinja oriented stack.
+A lightweight framework for many different customer projects.
+For other purposes you may use one of the frameworks or guides below.
+Their samples, knowledge and expertise helped us to make ViUR Ignite CSS.
 
 * [Primer CSS](http://primercss.io)
 * [Enduring CSS](https://benfrain.com/enduring-css-writing-style-sheets-rapidly-changing-long-lived-projects/)
