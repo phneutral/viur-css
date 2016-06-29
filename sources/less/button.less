@@ -80,38 +80,6 @@
         height: 1.4em;
         width: 1.4em;
     }
-    &.just-icon:after {
-        position: absolute;
-        display: none;
-        padding: 5px 8px;
-        font: normal normal 11px/1.5 @bodyFonts;
-        color: contrast(@btnBackgroundColor);
-        text-align: center;
-        text-decoration: none;
-        text-shadow: none;
-        text-transform: none;
-        letter-spacing: normal;
-        word-wrap: break-word;
-        white-space: pre;
-        pointer-events: none;
-        content: attr(aria-label);
-        background: fadeout(@btnBackgroundColor,10%);
-        border-radius: 3px;
-        -webkit-font-smoothing: subpixel-antialiased;
-        .zIndex('tooltip', 0);
-        top: 100%;
-        right: 50%;
-        margin-top: 5px;
-        transform: translateX(50%);
-    }
-    &.just-icon:hover,
-    &.just-icon:active,
-    &.just-icon:focus {
-        &:after {
-            display: inline-block;
-            text-decoration: none;
-        }
-    }
     .icon {margin: 4px 7px 0 -5px;}
 }
 

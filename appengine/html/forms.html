@@ -30,7 +30,9 @@
 				<li class="menu-item"><a class="menu-link is-active" href="forms.html">Forms</a></li>
 				<li class="menu-item"><a class="menu-link" href="menus.html">Menu</a></li>
 				<li class="menu-item"><a class="menu-link" href="tables.html">Table</a></li>
-				<li class="menu-item"><a class="menu-link" href="messages.html">Alerts, Messages and Tooltips</a></li>
+				<li class="menu-item"><a class="menu-link" href="messages.html">Alerts and Messages</a></li>
+                <li class="menu-item"><a class="menu-link has-marker" href="badges.html" aria-label="new">Tooltips and Badges</a></li>
+                <li class="menu-item"><a class="menu-link has-marker" href="popup.html" aria-label="new">Popups</a></li>
 				<li class="menu-item"><a class="menu-link" href="states.html">States</a></li>
 				<li class="menu-item"><a class="menu-link" href="parallax.html">Parallax</a></li>
 				<li class="menu-item"><a class="menu-link" href="grid.html">Grid</a></li>
@@ -55,6 +57,7 @@
 				<h2>Selection</h2>
 				<p>This is a select menu.</p>
 				<form>
+					<label class="label">Select an option</label>
 					<select class="select">
 						<option>Test</option>
 						<option>Test 2</option>
@@ -66,6 +69,7 @@
 				<h2>Small selection</h2>
 				<p>This is a small select menu.</p>
 				<form>
+					<label class="label label-vSmall">Select an option</label>
 					<select class="select select-vSmall">
 						<option>Test</option>
 						<option>Test 2</option>
@@ -79,6 +83,16 @@
 				<form>
 					<div class="inputGroup">
 						<label class="label" for="inputGroup-input">Label</label>
+						<input class="input" id="inputGroup-input" type="text" placeholder="Default input">
+						<button class="btn" type="button">Button</button>
+					</div>
+					<div class="inputGroup">
+						<label class="label is-required" for="inputGroup-input">This is required</label>
+						<input class="input" id="inputGroup-input" type="text" placeholder="Default input">
+						<button class="btn" type="button">Button</button>
+					</div>
+					<div class="inputGroup">
+						<label class="label has-icon i-heart" for="inputGroup-input">Label with icon</label>
 						<input class="input" id="inputGroup-input" type="text" placeholder="Default input">
 						<button class="btn" type="button">Button</button>
 					</div>
@@ -141,6 +155,19 @@
 						Test checkbox
 					</label>
 					<p class="note">This is an informative note.</p>
+				</form>
+			</div>
+			<div class="section">
+				<h2>Textarea</h2>
+				<p>This is an example of a textarea.</p>
+				<form>
+					<div class="inputGroup">
+						<label class="label">Textarea1
+						</label>
+						<textarea class="textarea"></textarea>
+					</div>
+
+						<textarea class="textarea textarea-vBlock">Textarea as block.</textarea>
 				</form>
 			</div>
 			<div class="section">

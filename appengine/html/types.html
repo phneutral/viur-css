@@ -30,15 +30,17 @@
 				<li class="menu-item"><a class="menu-link" href="forms.html">Forms</a></li>
 				<li class="menu-item"><a class="menu-link" href="menus.html">Menu</a></li>
 				<li class="menu-item"><a class="menu-link" href="tables.html">Table</a></li>
-				<li class="menu-item"><a class="menu-link" href="messages.html">Alerts, Messages and Tooltips</a></li>
+				<li class="menu-item"><a class="menu-link" href="messages.html">Alerts and Messages</a></li>
+                <li class="menu-item"><a class="menu-link has-marker" href="badges.html" aria-label="new">Tooltips and Badges</a></li>
+                <li class="menu-item"><a class="menu-link has-marker" href="popup.html" aria-label="new">Popups</a></li>
 				<li class="menu-item"><a class="menu-link" href="states.html">States</a></li>
 				<li class="menu-item"><a class="menu-link" href="parallax.html">Parallax</a></li>
 				<li class="menu-item"><a class="menu-link" href="grid.html">Grid</a></li>
 				<li class="menu-item"><a class="menu-link" href="boxes.html">Boxes</a></li>
 			</ul>
 		</div>
-		<div class="content">
-			<div class="section">
+		<div class="content has-footnotes">
+			<section class="section">
 				<h1 class="headline">Typography</h1>
 
 				<p> ViUR Ignite CSS supports the <a href="https://ia.net/know-how/100e2r" title="Information Architects: 100e2r">100% Easy to read</a> standard.
@@ -48,8 +50,8 @@
 						<li>Inline elements and type should react to their direct surroundings &mdash; thus using »em«.</li>
 					</ul>
 				</p>
-			</div>
-			<div class="section">
+			</section>
+			<section class="section">
 				<h2>Headlines and sublines</h2>
 				<p>These are the standard headlines.</p>
 				<div class="sandbox">
@@ -61,23 +63,23 @@
 				<div class="msg">
 					<p>Please style your own headlines with the help of classes (e.g.: <code>.headline</code>, <code>.subline</code>) in the <em>project.less</em> file.</p>
 				</div>
-			</div>
-			<div class="section">
+			</section>
+			<section class="section">
 				<h2>Body text</h2>
 				<p>This is an example of a body text. The first paragraph is emphasized with <code>.lead</code></p>
 				<div class="sandbox">
-					<p class="lead">Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi
+					<p class="lead"><a class="has-footnote" href="#maecenas" id="maecenas-ref">Maecenas</a> sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi
 						porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
 						eget lacinia odio sem nec elit.</p>
 					<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis
 						parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
-					<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
+					<p>Cum sociis natoque <a class="has-footnote" href="#penatibus" id="penatibus-ref">penatibus</a> et magnis dis parturient montes, nascetur ridiculus mus. Donec
 						ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat
-						porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor
+						porttitor <a class="has-footnote" href="#ligula" id="ligula-ref">ligula</a>, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor
 						fringilla.</p>
 				</div>
-			</div>
-			<div class="section">
+			</section>
+			<section class="section">
 				<h2>Inline text elements</h2>
 				<p>This is an example of inline text elements.</p>
 				<div class="sandbox">
@@ -97,8 +99,8 @@
 					<p><small>This line of text is meant to be treated as fine print.</small></p>
 					<p><code>This line is pure code.</code></p>
 				</div>
-			</div>
-			<div class="section">
+			</section>
+			<section class="section">
 				<h2>Blockquote</h2>
 				<p>This is an example of a blockquote.</p>
 				<div class="sandbox">
@@ -106,8 +108,8 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
 					</blockquote>
 				</div>
-			</div>
-			<div class="section">
+			</section>
+			<section class="section">
 				<h2>Unordered Lists</h2>
 				<p>Here is an example of an unordered list.</p>
 				<div class="sandbox">
@@ -126,8 +128,8 @@
 						<li>Profit!</li>
 					</ul>
 				</div>
-			</div>
-			<div class="section">
+			</section>
+			<section class="section">
 				<h2>Ordered List</h2>
 				<p>Here is an example of an ordered list.</p>
 				<div class="sandbox">
@@ -146,7 +148,14 @@
 						<li>Profit!</li>
 					</ol>
 				</div>
-			</div>
+			</section>
+			<footer class="footnotes">
+				<ol class="footnotes-list">
+					<li id="maecenas">Maecenas sed diam eget risus varius blandit sit amet non magna. <a class="footnotes-backlink" href="#maecenas-ref" aria-label="Back to content">↩</a></li>
+					<li id="penatibus">Cum sociis natoque penatibus et magnis dis parturient montes <a class="footnotes-backlink" href="#penatibus-ref" aria-label="Back to content">↩</a></li>
+					<li id="ligula">Nisi erat porttitor ligula. <a class="footnotes-backlink" href="#ligula-ref" aria-label="Back to content">↩</a></li>
+				</ol>
+			</footer>
 		</div>
 	</div>
 </article>
