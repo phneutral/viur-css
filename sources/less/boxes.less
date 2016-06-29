@@ -7,23 +7,25 @@
 .media-box-1 {
 	border: 3px solid @mainColor;
 	padding: 15px;
+	display: flex;
+	align-items:flex-start;
+
+	& .media-box-1-left {
+		margin-right: 10px;
+	}
 
 	& .media-box-1-image {
-		height: 100%;
-		width: 15%;
+		height: 150px;
+		width: 150px;
 	}
-	/* #FIXME: use two columns and set image height as 100% */
-	/*
-	& .media-box-1-headline {
-		float: left;
-	}
-	& .media-box-1-content {
-		float: left;
-	}
-	*/
 
-	&:after {
-		clear: both;
+	& .media-content {
+		flex: 1;
+		text-align: left;
+	}
+
+	& .media-content [class^="h"] {
+		margin: 0 0 0 2em;
 	}
 }
 
