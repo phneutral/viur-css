@@ -1890,6 +1890,17 @@ a.menu-link .icon{
 .grid-row [class*="grid-col-"]{
   border:1px solid #aaa;
 }
+.media-box-1{
+  border:3px solid #d00f1c;
+  padding:15px;
+}
+.media-box-1 .media-box-1-image{
+  height:100%;
+  width:15%;
+}
+.media-box-1:after{
+  clear:both;
+}
 .icon{
   display:inline-block;
   vertical-align:text-top;
