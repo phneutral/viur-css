@@ -2375,12 +2375,14 @@ a.menu-link .icon{
 }
 .progress-bar::-webkit-progress-value{
   background-color:#69707a;
+  transition:1s ease-in-out all;
 }
 .progress-bar::-moz-progress-bar{
   background-color:#69707a;
 }
 .progress-bar.is-white::-webkit-progress-value{
   background-color:#fff;
+  transition:1s ease-in-out all;
 }
 .progress-bar.is-primary::-webkit-progress-value{
   background-color:#1fc8db;
