@@ -812,7 +812,7 @@ ol.is-list{
   margin-left:-1px;
   float:left;
   position:relative;
-  z-index:1;
+  z-index:2;
 }
 .btnGroup .btn:not(:first-child):not(:last-child){
   border-radius:0;
@@ -834,21 +834,21 @@ ol.is-list{
 .btnGroup .btn.btn-vDanger,
 .btnGroup .btn.btn-vPrimary,
 .btnGroup .btn.btn-vEdit{
-  z-index:2;
+  z-index:3;
 }
 .btnGroup .btn:hover,
 .btnGroup .btn:active,
 .btnGroup .btn.is-selected,
 .btnGroup .btn:focus{
-  z-index:3;
+  z-index:4;
 }
 .btnGroup .btn.is-disabled,
 .btnGroup .btn.is-disabled:hover,
 .btnGroup .btn.is-disabled:focus{
-  z-index:1;
+  z-index:2;
 }
 .btnGroup .btn:focus{
-  z-index:4;
+  z-index:5;
 }
 .btn-vBlock{
   margin:0;
@@ -1702,7 +1702,7 @@ ol.is-list{
   opacity:0;
   background:rgba(0, 0, 10, 0);
   transition:all .3s ease;
-  z-index:5;
+  z-index:1;
 }
 .popup-overlay.is-active{
   opacity:.7;
@@ -1713,7 +1713,7 @@ ol.is-list{
   opacity:0;
   position:fixed;
   transition:all .3s ease;
-  z-index:5;
+  z-index:1;
   pointer-events:none;
   top:50px;
   left:-14%;
