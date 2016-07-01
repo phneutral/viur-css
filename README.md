@@ -35,7 +35,7 @@ Thanks guys!
 * style.less is the catalogue of all used less files. Add and remove files as needed.
 * Customize your project using appconf.less (for dimensions, fonts and colors) and project.less for custom CSS.
 * Only the contents of the appengine folder is deployed to the server.
-* Use gulp to compile style.less into the appengine/static/css folder.
+* Use [Gulp](http://gulpjs.com) to compile style.less into the appengine/static/css folder.
 
 ### Contribution guidelines ###
 
