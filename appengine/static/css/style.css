@@ -2355,6 +2355,72 @@ a.menu-link .icon{
 .media h4{
   margin:0;
 }
+.progress-bar{
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  border:none;
+  border-radius:1em;
+  display:block;
+  height:12px;
+  overflow:hidden;
+  padding:0;
+  width:100%;
+}
+.progress-bar:not(:last-child){
+  margin-bottom:1em;
+}
+.progress-bar::-webkit-progress-bar{
+  background-color:#d3d6db;
+}
+.progress-bar::-webkit-progress-value{
+  background-color:#69707a;
+}
+.progress-bar::-moz-progress-bar{
+  background-color:#69707a;
+}
+.progress-bar.is-white::-webkit-progress-value{
+  background-color:#fff;
+}
+.progress-bar.is-primary::-webkit-progress-value{
+  background-color:#1fc8db;
+}
+.progress-bar.is-primary::-moz-progress-bar{
+  background-color:#1fc8db;
+}
+.progress-bar.is-info::-webkit-progress-value{
+  background-color:#42afe3;
+}
+.progress-bar.is-info::-moz-progress-bar{
+  background-color:#42afe3;
+}
+.progress-bar.is-success::-webkit-progress-value{
+  background-color:#97cd76;
+}
+.progress-bar.is-success::-moz-progress-bar{
+  background-color:#97cd76;
+}
+.progress-bar.is-warning::-webkit-progress-value{
+  background-color:#fce473;
+}
+.progress-bar.is-warning::-moz-progress-bar{
+  background-color:#fce473;
+}
+.progress-bar.is-danger::-webkit-progress-value{
+  background-color:#ed6c63;
+}
+.progress-bar.is-danger::-moz-progress-bar{
+  background-color:#ed6c63;
+}
+.progress-bar.is-small{
+  height:8px;
+}
+.progress-bar.is-medium{
+  height:16px;
+}
+.progress-bar.is-large{
+  height:20px;
+}
 .icon{
   display:inline-block;
   vertical-align:text-top;
