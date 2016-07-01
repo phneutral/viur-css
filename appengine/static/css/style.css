@@ -407,13 +407,13 @@ h2{
   font-size:1.7em;
 }
 h3{
-  color:#333;
+  color:green;
   font-size:1.5em;
 }
 h4,
 h5,
 h6{
-  color:#333;
+  color:green;
 }
 p{
   line-height:1.6;
@@ -446,9 +446,9 @@ blockquote{
   font-family:'Source Sans Pro', 'Open Sans', sans-serif;
   font-style:italic;
   font-size:1.2em;
-  color:#333;
+  color:green;
   padding:0 15px;
-  border-left:7px solid #333;
+  border-left:7px solid green;
 }
 code,
 pre{
@@ -1874,7 +1874,7 @@ a.has-footnote:focus:after{
   transition:all .7s ease;
   width:100%;
   height:0;
-  background:rgba(51, 51, 51, 0);
+  background:rgba(0, 128, 0, 0);
   pointer-events:none;
 }
 .spinner{
@@ -1900,7 +1900,7 @@ a.has-footnote:focus:after{
   -webkit-flex:1;
   -ms-flex:1;
   flex:1;
-  background-color:#333;
+  background-color:green;
   display:inline-block;
   margin:0 2%;
   opacity:0;
@@ -1924,9 +1924,9 @@ a.has-footnote:focus:after{
   height:100%;
   top:0;
   left:0;
-  border:1px dashed #333;
+  border:1px dashed green;
   position:absolute;
-  background:rgba(51, 51, 51, 0.35);
+  background:rgba(0, 128, 0, 0.35);
   pointer-events:auto;
   z-index:10;
 }
@@ -2089,7 +2089,7 @@ a.menu-link:hover,a.menu-link:focus{
 }
 a.menu-link.is-primary{
   color:#f4f4f4;
-  background-color:#333;
+  background-color:green;
 }
 a.menu-link.is-active{
   color:#f4f4f4;

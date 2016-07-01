@@ -206,7 +206,7 @@
         margin-left: -1px;
         float: left;
         position: relative;
-        z-index: 1;
+        .zIndex('content',0);
         &:not(:first-child):not(:last-child) {
             border-radius: 0;
         }
@@ -228,19 +228,19 @@
         &.btn-vDanger,
         &.btn-vPrimary,
         &.btn-vEdit {
-            z-index: 2; // border colors are important here.
+            .zIndex('content',1); // border colors are important here.
         }
         &:hover,
         &:active,
         &.is-selected {
-            z-index: 3;
+            .zIndex('content',2);
         }
         &.is-disabled,
         &.is-disabled:hover {
-            z-index: 1; // stay down!
+            .zIndex('content',0); // stay down!
         }
         &:focus {
-            z-index: 4;
+            .zIndex('content',3);
         }
     }
 }
