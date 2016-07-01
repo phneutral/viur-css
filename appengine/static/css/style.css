@@ -2201,11 +2201,17 @@ a.menu-link .icon{
   -ms-flex:none;
   flex:none;
 }
+.offset-is-1{
+  margin-left:8.33333333%;
+}
 .grid-col-2{
   width:16.66666667%;
   -webkit-flex:none;
   -ms-flex:none;
   flex:none;
+}
+.offset-is-2{
+  margin-left:16.66666667%;
 }
 .grid-col-3{
   width:25%;
@@ -2213,11 +2219,17 @@ a.menu-link .icon{
   -ms-flex:none;
   flex:none;
 }
+.offset-is-3{
+  margin-left:25%;
+}
 .grid-col-4{
   width:33.33333333%;
   -webkit-flex:none;
   -ms-flex:none;
   flex:none;
+}
+.offset-is-4{
+  margin-left:33.33333333%;
 }
 .grid-col-5{
   width:41.66666667%;
@@ -2225,11 +2237,17 @@ a.menu-link .icon{
   -ms-flex:none;
   flex:none;
 }
+.offset-is-5{
+  margin-left:41.66666667%;
+}
 .grid-col-6{
   width:50%;
   -webkit-flex:none;
   -ms-flex:none;
   flex:none;
+}
+.offset-is-6{
+  margin-left:50%;
 }
 .grid-col-7{
   width:58.33333333%;
@@ -2237,11 +2255,17 @@ a.menu-link .icon{
   -ms-flex:none;
   flex:none;
 }
+.offset-is-7{
+  margin-left:58.33333333%;
+}
 .grid-col-8{
   width:66.66666667%;
   -webkit-flex:none;
   -ms-flex:none;
   flex:none;
+}
+.offset-is-8{
+  margin-left:66.66666667%;
 }
 .grid-col-9{
   width:75%;
@@ -2249,11 +2273,17 @@ a.menu-link .icon{
   -ms-flex:none;
   flex:none;
 }
+.offset-is-9{
+  margin-left:75%;
+}
 .grid-col-10{
   width:83.33333333%;
   -webkit-flex:none;
   -ms-flex:none;
   flex:none;
+}
+.offset-is-10{
+  margin-left:83.33333333%;
 }
 .grid-col-11{
   width:91.66666667%;
@@ -2261,11 +2291,17 @@ a.menu-link .icon{
   -ms-flex:none;
   flex:none;
 }
+.offset-is-11{
+  margin-left:91.66666667%;
+}
 .grid-col-12{
   width:100%;
   -webkit-flex:none;
   -ms-flex:none;
   flex:none;
+}
+.offset-is-12{
+  margin-left:100%;
 }
 .offset-is-half{
   margin-left:50%;
@@ -2286,12 +2322,15 @@ a.menu-link .icon{
   -ms-flex-align:start;
   align-items:flex-start;
 }
-.media .media-left{
-  margin-right:10px;
-}
 .media .media-image{
-  height:150px;
-  width:150px;
+  margin-right:15px;
+  width:20%;
+  padding-bottom:20%;
+  background-size:cover;
+}
+.media .media-image.small{
+  width:10%;
+  padding-bottom:10%;
 }
 .media .media-content{
   -webkit-flex:1;
@@ -2301,6 +2340,20 @@ a.menu-link .icon{
 }
 .media .media-content [class^="h"]{
   margin:0 0 0 2em;
+}
+.media .media{
+  border:none;
+  border-top:1px solid #ddd;
+  padding:5px 0 0;
+}
+.media:not(:last-child){
+  margin-bottom:15px;
+}
+.media p{
+  font-size:.8em;
+}
+.media h4{
+  margin:0;
 }
 .icon{
   display:inline-block;
