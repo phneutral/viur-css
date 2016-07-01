@@ -1,0 +1,118 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------------------------------------
+	BOXES
+--------------------------------------------------------------------------------------- */
+
+// Colors:
+@progressBackground: #d3d6db;
+@progressDefault: #69707a;
+@progressPrimary: #1fc8db;
+@progressInfo: #42afe3;
+@progressSuccess: #97cd76;
+@progressWarning: #fce473;
+@progressDanger: #ed6c63;
+
+.progress {
+	appearance: none;
+	border: none;
+	border-radius: 1em;
+	display: block;
+	height: 12px;
+	overflow: hidden;
+	padding: 0;
+	width: 100%;
+
+	&:not(:last-child) {
+		margin-bottom: 1em;
+	}
+}
+
+.progress::-webkit-progress-bar {
+	background-color: @progressBackground;
+}
+
+.progress::-webkit-progress-value {
+	background-color: @progressDefault;
+	transition: 1s ease-in-out all;
+}
+
+.progress::-moz-progress-bar {
+	background-color: @progressDefault;
+}
+
+
+.progress.is-primary::-webkit-progress-value {
+	background-color: @progressPrimary;
+}
+
+.progress.is-primary::-moz-progress-bar {
+	background-color: @progressPrimary;
+}
+
+
+.progress.is-info::-webkit-progress-value {
+	background-color: @progressInfo;
+}
+
+.progress.is-info::-moz-progress-bar {
+	background-color: @progressInfo;
+}
+
+
+.progress.is-success::-webkit-progress-value {
+	background-color: @progressSuccess;
+}
+
+.progress.is-success::-moz-progress-bar {
+	background-color: @progressSuccess;
+}
+
+
+.progress.is-warning::-webkit-progress-value {
+	background-color: @progressWarning;
+}
+
+.progress.is-warning::-moz-progress-bar {
+	background-color: @progressWarning;
+}
+
+
+.progress.is-danger::-webkit-progress-value {
+	background-color: @progressDanger;
+}
+
+.progress.is-danger::-moz-progress-bar {
+	background-color: @progressDanger;
+}
+
+
+.progress.is-small {
+	height: 8px;
+}
+
+.progress.is-medium {
+	height: 16px;
+}
+
+.progress.is-large {
+	height: 20px;
+}
+
+
+// => Grid Media Queries
+
+.media-mixin(@break) when (@break = @breakSmall) {
+
+}
+
+.media-mixin(@break) when (@break = @breakMedium) {
+
+}
+
+.media-mixin(@break) when (@break = @breakLarge) {
+
+}
+
+.media-mixin(@break) when (@break = @breakPrint) {
+
+}
