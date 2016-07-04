@@ -2380,15 +2380,7 @@ a.menu-link .icon{
 .progress::-moz-progress-bar{
   background-color:#69707a;
 }
-<<<<<<< HEAD
 .progress.is-primary::-webkit-progress-value{
-=======
-.progress-bar.is-white::-webkit-progress-value{
-  background-color:#fff;
-  transition:1s ease-in-out all;
-}
-.progress-bar.is-primary::-webkit-progress-value{
->>>>>>> 48c7cd5d05cb336905f35ea92e2db18a0176151e
   background-color:#1fc8db;
 }
 .progress.is-primary::-moz-progress-bar{
