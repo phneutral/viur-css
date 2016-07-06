@@ -407,13 +407,13 @@ h2{
   font-size:1.7em;
 }
 h3{
-  color:green;
+  color:#333;
   font-size:1.5em;
 }
 h4,
 h5,
 h6{
-  color:green;
+  color:#333;
 }
 p{
   line-height:1.6;
@@ -446,9 +446,9 @@ blockquote{
   font-family:'Source Sans Pro', 'Open Sans', sans-serif;
   font-style:italic;
   font-size:1.2em;
-  color:green;
+  color:#333;
   padding:0 15px;
-  border-left:7px solid green;
+  border-left:7px solid #333;
 }
 code,
 pre{
@@ -812,7 +812,7 @@ ol.is-list{
   margin-left:-1px;
   float:left;
   position:relative;
-  z-index:1;
+  z-index:2;
 }
 .btnGroup .btn:not(:first-child):not(:last-child){
   border-radius:0;
@@ -834,21 +834,21 @@ ol.is-list{
 .btnGroup .btn.btn-vDanger,
 .btnGroup .btn.btn-vPrimary,
 .btnGroup .btn.btn-vEdit{
-  z-index:2;
+  z-index:3;
 }
 .btnGroup .btn:hover,
 .btnGroup .btn:active,
 .btnGroup .btn.is-selected,
 .btnGroup .btn:focus{
-  z-index:3;
+  z-index:4;
 }
 .btnGroup .btn.is-disabled,
 .btnGroup .btn.is-disabled:hover,
 .btnGroup .btn.is-disabled:focus{
-  z-index:1;
+  z-index:2;
 }
 .btnGroup .btn:focus{
-  z-index:4;
+  z-index:5;
 }
 .btn-vBlock{
   margin:0;
@@ -1702,7 +1702,7 @@ ol.is-list{
   opacity:0;
   background:rgba(0, 0, 10, 0);
   transition:all .3s ease;
-  z-index:5;
+  z-index:1;
 }
 .popup-overlay.is-active{
   opacity:.7;
@@ -1713,7 +1713,7 @@ ol.is-list{
   opacity:0;
   position:fixed;
   transition:all .3s ease;
-  z-index:5;
+  z-index:1;
   pointer-events:none;
   top:50px;
   left:-14%;
@@ -1874,7 +1874,7 @@ a.has-footnote:focus:after{
   transition:all .7s ease;
   width:100%;
   height:0;
-  background:rgba(0, 128, 0, 0);
+  background:rgba(51, 51, 51, 0);
   pointer-events:none;
 }
 .spinner{
@@ -1900,7 +1900,7 @@ a.has-footnote:focus:after{
   -webkit-flex:1;
   -ms-flex:1;
   flex:1;
-  background-color:green;
+  background-color:#333;
   display:inline-block;
   margin:0 2%;
   opacity:0;
@@ -1924,9 +1924,9 @@ a.has-footnote:focus:after{
   height:100%;
   top:0;
   left:0;
-  border:1px dashed green;
+  border:1px dashed #333;
   position:absolute;
-  background:rgba(0, 128, 0, 0.35);
+  background:rgba(51, 51, 51, 0.35);
   pointer-events:auto;
   z-index:10;
 }
@@ -2089,7 +2089,7 @@ a.menu-link:hover,a.menu-link:focus{
 }
 a.menu-link.is-primary{
   color:#f4f4f4;
-  background-color:green;
+  background-color:#333;
 }
 a.menu-link.is-active{
   color:#f4f4f4;
@@ -2354,6 +2354,70 @@ a.menu-link .icon{
 }
 .media h4{
   margin:0;
+}
+.progress{
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  border:none;
+  border-radius:1em;
+  display:block;
+  height:12px;
+  overflow:hidden;
+  padding:0;
+  width:100%;
+}
+.progress:not(:last-child){
+  margin-bottom:1em;
+}
+.progress::-webkit-progress-bar{
+  background-color:#d3d6db;
+}
+.progress::-webkit-progress-value{
+  background-color:#69707a;
+  transition:1s ease-in-out all;
+}
+.progress::-moz-progress-bar{
+  background-color:#69707a;
+}
+.progress.is-primary::-webkit-progress-value{
+  background-color:#1fc8db;
+}
+.progress.is-primary::-moz-progress-bar{
+  background-color:#1fc8db;
+}
+.progress.is-info::-webkit-progress-value{
+  background-color:#42afe3;
+}
+.progress.is-info::-moz-progress-bar{
+  background-color:#42afe3;
+}
+.progress.is-success::-webkit-progress-value{
+  background-color:#97cd76;
+}
+.progress.is-success::-moz-progress-bar{
+  background-color:#97cd76;
+}
+.progress.is-warning::-webkit-progress-value{
+  background-color:#fce473;
+}
+.progress.is-warning::-moz-progress-bar{
+  background-color:#fce473;
+}
+.progress.is-danger::-webkit-progress-value{
+  background-color:#ed6c63;
+}
+.progress.is-danger::-moz-progress-bar{
+  background-color:#ed6c63;
+}
+.progress.is-small{
+  height:8px;
+}
+.progress.is-medium{
+  height:16px;
+}
+.progress.is-large{
+  height:20px;
 }
 .icon{
   display:inline-block;
