@@ -39,7 +39,7 @@ Thanks guys!
 
 ### Contribution guidelines ###
 
-* Available for use under the MIT license
+* Available for use under the GNU license
 
 ### Who do I talk to? ###
 
