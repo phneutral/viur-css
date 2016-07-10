@@ -1,8 +1,7 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 from path import path
-from os.path import basename
-import operator, os, sys, json
+import operator, os, sys, json, time
 
 reload(sys)
 sys.setdefaultencoding("utf-8")
@@ -33,7 +32,7 @@ if len(args) == 1:
 	args.append("--all") # default: all
 else:
 	if not args[1] in ["--css-only", "--html-only"]:
-		sys.exit("Invalid command: %s %s" % (basename(args[0]), args[1]))
+		sys.exit("Invalid command: %s %s" % (os.path.basename(args[0]), args[1]))
 
 
 
@@ -42,12 +41,14 @@ if args[1] == "--css-only" or args[1] == "--all":
 
 
 if args[1] == "--html-only" or args[1] == "--all":
+	startTime = time.time()
+
 	with open("html/_sites.json") as json_file: # parse sites
 		sites = json.load(json_file)
 
 	sites = sorted(sites.items(), key=operator.itemgetter(1)) # Sort sites by value alphabetically
 
-	layout = path("html/_layout.html").bytes() # get Template
+	layout = open("html/_layout.html", 'r').read() # get Template
 
 	for site, title in sites:
 		print ("Processing %s" % site)
@@ -60,7 +61,7 @@ if args[1] == "--html-only" or args[1] == "--all":
 			tmpMenu += '\t\t\t\t' + '<li class="menu-item"><a class="menu-link' + ( ' is-active' if site == siteMenu else '' ) + '" href="' + siteMenu + '">' + titleMenu + '</a></li>' + '\n'
 		
 		# get content of file
-		tmpContent = path("html/" + site).bytes()
+		tmpContent = open("html/" + site, 'r').read()
 
 		# replace variables in template by content
 		tmp = layout.replace( '{{title}}', title ).replace( '{{menu}}', tmpMenu ).replace( '{{content}}', tmpContent )
@@ -72,3 +73,5 @@ if args[1] == "--html-only" or args[1] == "--all":
 		file = open("../appengine/html/" + site, "w")
 		file.write(tmp)
 		file.close()
+
+	print "\nFinished 'HTML' after %.2f s" % (time.time() - startTime)
