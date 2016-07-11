@@ -2,42 +2,46 @@
   "name": "viur-css",
   "version": "1.0.0",
   "main": "index.js",
-  "dependencies": {
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-cssnano": "^2.1.1",
-    "gulp-favicons": "^2.2.6",
-    "gulp-imagemin": "^2.4.0",
-    "gulp-less": "^3.0.5",
-    "gulp-postcss": "^6.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-svgmin": "^1.2.2",
-    "imagemin-pngquant": "^4.2.2",
-    "postcss-discard-comments": "^2.0.4",
-    "postcss-focus": "^1.0.0",
-    "postcss-font-magician": "^1.4.0",
-    "postcss-zindex": "^2.0.1",
-    "stylelint": "^5.1.0",
-    "stylelint-config-standard": "^4.0.1"
-  },
+  "dependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mausbrand Infosys",
-  "license": "SEE LICENSE",
+  "license": "SEE LICENSE IN ../LICENSE",
   "description": "This is the first attempt in building a sturdy foundation of CSS (LESS) for ViUR products and Mausbrand projects. ViUR Ignite CSS is build upon the principles of many CSS guides and frameworks.",
-  "repository": [{
-    "type": "git",
-    "url": "git+git@bitbucket.org:phneutral/viur-css.git"
-  },{
-    "type": "git",
-    "url": "git+git@github.com:phneutral/viur-css.git"
-  }],
+  "repository": [
+    {
+      "type": "git",
+      "url": "git+git@bitbucket.org:phneutral/viur-css.git"
+    },
+    {
+      "type": "git",
+      "url": "git+git@github.com:phneutral/viur-css.git"
+    }
+  ],
   "keywords": [
     "VIUR",
     "CSS",
     "framework",
     "vicss"
   ],
-  "homepage": "https://bitbucket.org/phneutral/viur-css#readme"
+  "homepage": "https://bitbucket.org/phneutral/viur-css#readme",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-cssnano": "latest",
+    "gulp-favicons": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-less": "latest",
+    "gulp-postcss": "latest",
+    "gulp-rename": "latest",
+    "gulp-svgmin": "latest",
+    "imagemin-pngquant": "latest",
+    "postcss-discard-comments": "latest",
+    "postcss-focus": "latest",
+    "postcss-font-magician": "latest",
+    "postcss-zindex": "latest",
+    "stylelint": "latest",
+    "stylelint-config-standard": "latest"
+  }
 }
