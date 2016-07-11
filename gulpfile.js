@@ -10,20 +10,20 @@ var developerURL = 'http://mausbrand.de/';
 var backgroundColor = '#fff'; // Background color of app icons.
 
 var srcpaths = {
-  less: './less/**/*.less',
-  images: './images/**/*',
-  icons: './icons/**/*',
-  meta: './meta/*'
+  less: './sources/less/**/*.less',
+  images: './sources/images/**/*',
+  icons: './sources/icons/**/*',
+  meta: './sources/meta/*'
 };
 
 var destpaths = {
-  css: '../appengine/static/css',
-  html: '../appengine/html',    
-  index: '../appengine/html/index.html',
-  webfonts: '../appengine/static/webfonts',
-  images: '../appengine/static/images',
-  icons: '../appengine/static/icons',
-  meta: '../appengine/static/meta',
+  css: './appengine/static/css',
+  html: './appengine/html',    
+  index: './appengine/html/index.html',
+  webfonts: './appengine/static/webfonts',
+  images: './appengine/static/images',
+  icons: './appengine/static/icons',
+  meta: './appengine/static/meta',
 };
 
 // Variables and requirements
@@ -62,7 +62,7 @@ gulp.task('css', function () {
 			formats: 'local eot woff2'
 		}) // import fonts   
     ];
-    return gulp.src('./less/style.less')
+    return gulp.src('./sources/less/style.less')
         .pipe(less({
       		paths: [ path.join(__dirname, 'less', 'includes') ]
     	})) // compile less to css
