@@ -1,7 +1,10 @@
+// ALL CHANGES IN THIS WILL BE OVERWRITTEN
+
+
 @charset "UTF-8";
 
 /* ------------------------------------------------------------------------------------------------------
-    #ICONS
+	#ICONS
 ------------------------------------------------------------------------------------------------------ */
 
 /*
@@ -14,78 +17,21 @@ ViUR Ignite features two types of icons: as inline SVG or before element.
 /* InlineSVG Icons */
 
 .icon {
-    display: inline-block;
-    vertical-align: text-top;
-    fill: currentcolor;
-    color:inherit;
-    width:1em;
-    height:1em;
-    & path {fill:inherit}
+	display: inline-block;
+	vertical-align: text-top;
+	fill: currentcolor;
+	color:inherit;
+	width:1em;
+	height:1em;
+	& path {fill:inherit}
 }
 
 .icon-vSuccess {
-    color: darken(@iconSuccessColor, 25%);
+	color: darken(@iconSuccessColor, 25%);
 }
 
 .icon-vWarn {
-    color: darken(@iconWarnColor, 25%);
+	color: darken(@iconWarnColor, 25%);
 }
 
 /* Before Icons */
-
-// A red heart. Something is in love.
-.i-heart:before {
-    background-image:url('../icons/heart.svg');
-}
-
-// A green check mark. Something is correct.
-.i-check:before {
-    background-image:url('../icons/check.svg');
-}
-
-// A red X. Perhaps something can be canceled or is wrong.
-.i-cross:before {
-    background-image:url('../icons/cross.svg');
-}
-
-// A circle crossed by a diagonal line.
-.i-not-allowed:before {
-    background-image:url('../icons/not-allowed.svg');
-}
-
-// A lightning symbol. Danger, be alert!
-.i-flash:before {
-    background-image:url('../icons/flash.svg');
-}
-
-// A pen symbol. Something can be edited.
-.i-pen:before {
-    background-image:url('../icons/pen.svg');
-}
-
-// An arrowhead pointing left, like: <
-.i-arrowhead-left {
-    background-image:url('../icons/arrowhead-left.svg');
-}
-
-// => Icon Media Queries
-
-.media-mixin(@break) when (@break = @breakSmall) {
-
-}
-
-.media-mixin(@break) when (@break = @breakMedium) {
-
-}
-
-.media-mixin(@break) when (@break = @breakLarge) {
-
-}
-
-.media-mixin(@break) when (@break = @break2x) {
-
-}
-
-.media-mixin(@break) when (@break = @breakPrint) {
-
-}

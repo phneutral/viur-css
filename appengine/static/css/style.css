@@ -1929,7 +1929,7 @@ a.has-footnote:focus:after{
   animation-delay:-0.48s;
 }
 .is-busy > .spinner-overlay .spinner .spinner-square:last-of-type{
-  animation-delay:0;
+  animation-delay:0s;
 }
 @keyframes spin-square-ani{
   0%,
@@ -2381,27 +2381,6 @@ a.menu-link .icon{
 }
 .icon-vWarn{
   color:#a67108;
-}
-.i-heart:before{
-  background-image:url('../icons/heart.svg');
-}
-.i-check:before{
-  background-image:url('../icons/check.svg');
-}
-.i-cross:before{
-  background-image:url('../icons/cross.svg');
-}
-.i-not-allowed:before{
-  background-image:url('../icons/not-allowed.svg');
-}
-.i-flash:before{
-  background-image:url('../icons/flash.svg');
-}
-.i-pen:before{
-  background-image:url('../icons/pen.svg');
-}
-.i-arrowhead-left{
-  background-image:url('../icons/arrowhead-left.svg');
 }
 .zDev{
   z-index:12;
