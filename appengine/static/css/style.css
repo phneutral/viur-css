@@ -2535,6 +2535,10 @@ a.menu-link .icon{
 .zDev{
   z-index:13;
 }
+.nav-trigger,
+label[for="nav-trigger"]{
+  display:none;
+}
 @media only screen and (max-width: 1100px){
   .popup{
     width:90%;
@@ -2635,6 +2639,7 @@ a.menu-link .icon{
     margin:0;
   }
   label[for="nav-trigger"]{
+    display:block;
     position:absolute;
     top:0;
     right:10px;
@@ -2657,9 +2662,6 @@ a.menu-link .icon{
     width:32px;
     margin-top:4px;
     margin-left:4px;
-  }
-  .nav-trigger{
-    display:none;
   }
   .nav-trigger:checked ~ .sidebar{
     right:0;
