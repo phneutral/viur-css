@@ -48,8 +48,6 @@ else:
 
 
 
-if args[1] == "--html-only" or args[1] == "--all":
-	htmlRender()
 if args[1] == "--icon-less-only" or args[1] == "--all":
 	iconlessRender()
 if args[1] == "--gulp-only" or args[1] == "--all":
@@ -62,3 +60,5 @@ if args[1] == "--gulp-icons-only":
 	os.system('gulp icons')
 if args[1] == "--gulp-images-only":
 	os.system('gulp images')
+if args[1] == "--html-only" or args[1] == "--all":
+	htmlRender()

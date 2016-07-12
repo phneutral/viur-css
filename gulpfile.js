@@ -19,7 +19,7 @@ var srcpaths = {
 var destpaths = {
   css: './appengine/static/css',
   html: './appengine/html',    
-  index: './appengine/html/index.html',
+  index: './sources/html/_layout.html',
   webfonts: './appengine/static/webfonts',
   images: './appengine/static/images',
   icons: './appengine/static/icons',
