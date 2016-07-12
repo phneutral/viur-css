@@ -50,15 +50,15 @@ else:
 
 if args[1] == "--html-only" or args[1] == "--all":
 	htmlRender()
-if args[1] == "--gulp-only" or args[1] == "--all":
-	os.system('gulp')
-if args[1] == "--gulp-css-only" or args[1] == "--all":
-	os.system('gulp css')
-if args[1] == "--gulp-meta-only" or args[1] == "--all":
-	os.system('gulp meta')
-if args[1] == "--gulp-icons-only" or args[1] == "--all":
-	os.system('gulp icons')
-if args[1] == "--gulp-images-only" or args[1] == "--all":
-	os.system('gulp image')
 if args[1] == "--icon-less-only" or args[1] == "--all":
 	iconlessRender()
+if args[1] == "--gulp-only" or args[1] == "--all":
+	os.system('gulp')
+if args[1] == "--gulp-css-only":
+	os.system('gulp css')
+if args[1] == "--gulp-meta-only":
+	os.system('gulp meta')
+if args[1] == "--gulp-icons-only":
+	os.system('gulp icons')
+if args[1] == "--gulp-images-only":
+	os.system('gulp images')

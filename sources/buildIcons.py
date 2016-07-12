@@ -21,7 +21,7 @@ lessDir = "./sources/less"
 _iconless = open(lessDir+"/_icon.less", 'r').read() # get _less file 
 
 file = open(lessDir+"/icon.less", "w") # write start of _less file
-file.write("// ALL CHANGES IN THIS WILL BE OVERWRITTEN\n\n\n" + _iconless)
+file.write("/* ALL CHANGES IN THIS WILL BE OVERWRITTEN */\n\n\n" + _iconless)
 file.close()
 
 
