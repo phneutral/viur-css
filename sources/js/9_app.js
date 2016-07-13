@@ -1,6 +1,6 @@
 $(function() {
-	$('.codeMe').each(function() {
-		var html = $(this).outerHTML().replace(' codeMe', '')
+	$('.js-codeMe').each(function() {
+		var html = $(this).outerHTML().replace(' js-codeMe', '')
 		var escaped = $("<div>").text(html).html();
 		console.log(html);
 
