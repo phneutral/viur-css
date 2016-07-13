@@ -26,7 +26,7 @@ def iconlessRender(folder=""):
 	
 
 def writeClasses(folder=""):
-	file = open("sources/less/icon.less", "a")
+	file = open(lessDir+"/icon.less", "a")
 
 	for item in os.listdir(iconDir+folder): # for each item in folder
 		

@@ -1,8 +1,8 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 import operator, os, sys, json, time
-from sources.htmlrender import htmlRender
-from sources.buildIcons import iconlessRender
+from htmlrender import htmlRender
+from buildIcons import iconlessRender
 
 reload(sys)
 sys.setdefaultencoding("utf-8")

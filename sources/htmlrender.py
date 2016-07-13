@@ -15,6 +15,7 @@ __author__ = "Sven Eberth <Sven.Eberth@gmail.com>"
 
 
 htmlDir = "./sources/html/"
+appengineDir = "./appengine/html/"
 
 
 def htmlRender():
@@ -44,10 +45,10 @@ def htmlRender():
 		tmp = layout.replace( '{{title}}', title ).replace( '{{menu}}', tmpMenu ).replace( '{{content}}', tmpContent )
 
 		# write file in appengine/html
-		if not os.path.exists("./appengine/html/"):
-			os.makedirs("./appengine/html/")
+		if not os.path.exists(appengineDir):
+			os.makedirs(appengineDir)
 
-		file = open("./appengine/html/" + site, "w")
+		file = open(appengineDir + site, "w")
 		file.write(tmp)
 		file.close()
 
