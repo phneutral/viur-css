@@ -805,7 +805,7 @@ ol.is-list{
   margin-left:-1px;
   float:left;
   position:relative;
-  z-index:3;
+  z-index:5;
 }
 .btnGroup .btn:not(:first-child):not(:last-child){
   border-radius:0;
@@ -827,21 +827,21 @@ ol.is-list{
 .btnGroup .btn.btn-vDanger,
 .btnGroup .btn.btn-vPrimary,
 .btnGroup .btn.btn-vEdit{
-  z-index:4;
+  z-index:6;
 }
 .btnGroup .btn:hover,
 .btnGroup .btn:active,
 .btnGroup .btn.is-selected,
 .btnGroup .btn:focus{
-  z-index:5;
+  z-index:7;
 }
 .btnGroup .btn.is-disabled,
 .btnGroup .btn.is-disabled:hover,
 .btnGroup .btn.is-disabled:focus{
-  z-index:3;
+  z-index:5;
 }
 .btnGroup .btn:focus{
-  z-index:6;
+  z-index:8;
 }
 .btn-vBlock{
   margin:0;
@@ -1209,7 +1209,7 @@ ol.is-list{
 }
 .tip{
   position:relative;
-  z-index:7;
+  z-index:9;
 }
 .tip:after{
   position:absolute;
@@ -1229,11 +1229,11 @@ ol.is-list{
   background:rgba(29, 167, 224, 0.9);
   border-radius:3px;
   -webkit-font-smoothing:subpixel-antialiased;
-  z-index:7;
+  z-index:9;
 }
 .tip:before{
   position:absolute;
-  z-index:8;
+  z-index:10;
   display:none;
   width:0;
   height:0;
@@ -1584,7 +1584,7 @@ ol.is-list{
   clear:both;
   margin-bottom:10px;
   cursor:default;
-  z-index:12;
+  z-index:14;
 }
 .alert p:last-child{
   margin-bottom:0;
@@ -1621,7 +1621,7 @@ ol.is-list{
   top:0;
   right:0;
   padding:25px;
-  z-index:11;
+  z-index:13;
 }
 .alert-vSuccess{
   color:#23511f;
@@ -1688,18 +1688,18 @@ ol.is-list{
   opacity:0;
   background:rgba(0, 0, 10, 0);
   transition:all .3s ease;
-  z-index:2;
+  z-index:4;
 }
 .popup-overlay.is-active{
   opacity:.7;
   background:#00000a;
-  z-index:9;
+  z-index:11;
 }
 .popup{
   opacity:0;
   position:fixed;
   transition:all .3s ease;
-  z-index:2;
+  z-index:4;
   pointer-events:none;
   top:50px;
   left:-14%;
@@ -1708,7 +1708,7 @@ ol.is-list{
   transform:translateX(-50%);
 }
 .popup.is-active{
-  z-index:10;
+  z-index:12;
   opacity:1;
   left:50%;
   pointer-events:auto;
@@ -1908,13 +1908,13 @@ a.has-footnote:focus:after{
   position:absolute;
   background:rgba(51, 51, 51, 0.35);
   pointer-events:auto;
-  z-index:11;
+  z-index:13;
 }
 .is-busy > .spinner-overlay .spinner{
   position:absolute;
   top:50%;
   opacity:1;
-  z-index:12;
+  z-index:14;
 }
 .is-busy > .spinner-overlay .spinner .spinner-square{
   animation:spin-square-ani 1.4s infinite ease-in-out both;
@@ -2065,7 +2065,7 @@ a.has-footnote:focus:after{
   width:11px !important;
   height:11px !important;
   font-size:10px !important;
-  z-index:1 !important;
+  z-index:3 !important;
 }
 .syntaxhighlighter .toolbar span.title{
   display:inline !important;
@@ -2694,6 +2694,67 @@ a.menu-link .icon{
 .progress-vLarge{
   height:1.8rem;
 }
+.tabs{
+  position:relative;
+  min-height:200px;
+  clear:both;
+  margin:25px 0;
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-direction:row;
+  flex-direction:row;
+}
+.tab label{
+  background:#eee;
+  padding:10px;
+  border:1px solid #ccc;
+  margin-left:-1px;
+  position:relative;
+  left:1px;
+  cursor:pointer;
+}
+.tab [type=radio]{
+  display:none;
+}
+.tab-content{
+  position:absolute;
+  top:28px;
+  left:0;
+  background:white;
+  right:0;
+  padding:20px;
+  border:1px solid #ccc;
+  overflow:hidden;
+  visibility:hidden;
+}
+.tab-content > *{
+  opacity:0;
+  -webkit-transform:translate3d(0, 0, 0);
+  -webkit-transform:translateX(-100%);
+  -moz-transform:translateX(-100%);
+  -ms-transform:translateX(-100%);
+  -o-transform:translateX(-100%);
+  -webkit-transition:all 0.6s ease;
+  -moz-transition:all 0.6s ease;
+  -ms-transition:all 0.6s ease;
+  -o-transition:all 0.6s ease;
+}
+[type=radio]:checked ~ label{
+  background:white;
+  border-bottom:1px solid white;
+  z-index:2;
+}
+[type=radio]:checked ~ label ~ .tab-content{
+  z-index:1;
+  visibility:visible;
+}
+[type=radio]:checked ~ label ~ .tab-content > *{
+  opacity:1;
+  -webkit-transform:translateX(0);
+  -moz-transform:translateX(0);
+  -ms-transform:translateX(0);
+  -o-transform:translateX(0);
+}
 .icon{
   display:inline-block;
   vertical-align:text-top;
@@ -3039,7 +3100,7 @@ a.menu-link .icon{
   background-image:url('../icons/pen.svg');
 }
 .zDev{
-  z-index:13;
+  z-index:15;
 }
 @media only screen and (max-width: 1100px){
   .popup{
@@ -3111,7 +3172,7 @@ a.menu-link .icon{
     position:absolute;
     top:40px;
     right:-80%;
-    z-index:1;
+    z-index:3;
     padding:0;
     transition:right 0.6s ease;
     box-shadow:0 0 5px 0px #777777;
@@ -3124,7 +3185,7 @@ a.menu-link .icon{
     position:absolute;
     top:0;
     right:10px;
-    z-index:1;
+    z-index:3;
     width:40px;
     height:35px;
     cursor:pointer;
