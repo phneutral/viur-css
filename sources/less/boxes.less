@@ -5,12 +5,13 @@
 
 
 .media {
-	border: 3px solid @mainColor;
+    border: 1px solid #eee;
 	padding: 15px;
 	display: flex;
 	align-items:flex-start;
+    box-shadow: 0 0 3px 0 #ddd;
 
-	& .media-image {
+	.media-image {
 		margin-right: 15px;
 		width: 20%;
 		padding-bottom: 20%;
@@ -22,30 +23,32 @@
 		}
 	}
 
-	& .media-content {
+	.media-content {
 		flex: 1;
 		text-align: left;
 	}
 
-	& .media-content [class^="h"] {
+	.media-content [class^="h"] {
 		margin: 0 0 0 2em;
 	}
 
-	& .media {
+	.media {
 		border: none;
 		border-top: 1px solid #ddd;
 		padding: 5px 0 0;
+		padding: 10px 0 0;
+		box-shadow: none;
 	}
 
 	&:not(:last-child) {
 		margin-bottom: 15px;
 	}
 
-	& p {
+	p {
 		font-size: .8em;
 	}
 
-	& h4 {
+	h4 {
 		margin: 0;
 	}
 }
