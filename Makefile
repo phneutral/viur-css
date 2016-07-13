@@ -1,23 +1,25 @@
 default:
-	python sources/script.py --all
-	
+	make icons
+	gulp
+	make html
+
 gulp:
-	python sources/script.py --gulp-only
+	gulp
 
 gulp-css:
-	python sources/script.py --gulp-css-only
+	gulp css
 	
 gulp-meta:
-	python sources/script.py --gulp-meta-only
+	gulp meta
 	
 gulp-icons:
-	python sources/script.py --gulp-icons-only
+	gulp icons
 
 gulp-images:
-	python sources/script.py --gulp-images-only
+	gulp images
 
 html:
-	python sources/script.py --html-only
+	python sources/htmlrender.py --run
 
 icons:
-	python sources/script.py --icon-less-only
+	python sources/buildIcons.py --run

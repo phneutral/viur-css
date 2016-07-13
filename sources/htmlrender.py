@@ -53,3 +53,7 @@ def htmlRender():
 		file.close()
 
 	print "\nFinished 'HTML' after %.2f s" % (time.time() - startTime)
+
+
+if sys.argv[1] and sys.argv[1] == "--run":
+	htmlRender() #init make html

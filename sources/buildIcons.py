@@ -42,3 +42,8 @@ def writeClasses(folder=""):
 	
 			file.write(tmpLess)
 	file.close()
+
+
+
+if sys.argv[1] and sys.argv[1] == "--run":
+	iconlessRender() # init make icon
