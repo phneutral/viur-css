@@ -1,7 +1,7 @@
 # ViUR Ignite CSS #
 
 This is the first attempt in building a sturdy foundation of CSS (LESS) for ViUR products and Mausbrand projects.
-ViUR Ignite CSS is build upon the principles of many CSS guides and frameworks.
+ViUR Ignite CSS is built upon the principles of many CSS guides and frameworks.
 
 Different projects demand different solutions.
 ViUR Ignite CSS is a solution based on the needs of our python/jinja oriented stack.

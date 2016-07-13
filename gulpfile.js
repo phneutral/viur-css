@@ -2,7 +2,7 @@
 
 var appURL = 'http://www.viur.is';
 var appName = 'VIUR CSS';
-var appDescription = 'This is the first attempt in building a sturdy foundation of CSS (LESS) for ViUR products and Mausbrand projects. ViUR Ignite CSS is build upon the principles of many CSS guides and frameworks.';
+var appDescription = 'This is the first attempt in building a sturdy foundation of CSS (LESS) for ViUR products and Mausbrand projects. ViUR Ignite CSS is built upon the principles of many CSS guides and frameworks.';
 
 var developerName = 'Mausbrand Infosys';
 var developerURL = 'http://mausbrand.de/';

@@ -8,7 +8,7 @@
   },
   "author": "Mausbrand Infosys",
   "license": "SEE LICENSE IN LICENSE",
-  "description": "This is the first attempt in building a sturdy foundation of CSS (LESS) for ViUR products and Mausbrand projects. ViUR Ignite CSS is build upon the principles of many CSS guides and frameworks.",
+  "description": "This is the first attempt in building a sturdy foundation of CSS (LESS) for ViUR products and Mausbrand projects. ViUR Ignite CSS is built upon the principles of many CSS guides and frameworks.",
   "repository": [
     {
       "type": "git",

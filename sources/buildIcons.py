@@ -32,7 +32,7 @@ def iconlessRender(folder=""):
 		else: # if file
 			print ("Processing %s" % folder+"/"+item)
 
-			tmpClass = "."+item.replace('.svg','').replace(' ', '-')
+			tmpClass = ".i-"+item.replace('.svg','').replace(' ', '-')
 			tmpLess  =	tmpClass+":before {" +"\n"
 			tmpLess +=		"\tbackground-image:url('../icons"+folder+"/"+item+"');" +"\n"
 			tmpLess +=	"}"+"\n";

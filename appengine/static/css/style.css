@@ -2430,158 +2430,186 @@ a.menu-link .icon{
 .icon-vWarn{
   color:#a67108;
 }
-.account:before{
-  background-image:url('../icons/modules/account.svg');
+.i-arrow-hat-top:before{
+  background-image:url('../icons/actions/arrow-hat-top.svg');
 }
-.apps:before{
-  background-image:url('../icons/modules/apps.svg');
+.i-add-table:before{
+  background-image:url('../icons/actions/add-table.svg');
 }
-.archived:before{
-  background-image:url('../icons/modules/archived.svg');
+.i-square-select-all:before{
+  background-image:url('../icons/actions/square-select-all.svg');
 }
-.calendar:before{
-  background-image:url('../icons/modules/calendar.svg');
+.i-new-folder:before{
+  background-image:url('../icons/actions/new-folder.svg');
 }
-.cart:before{
-  background-image:url('../icons/modules/cart.svg');
+.i-unlock:before{
+  background-image:url('../icons/actions/unlock.svg');
 }
-.categories:before{
-  background-image:url('../icons/modules/categories.svg');
+.i-upload:before{
+  background-image:url('../icons/actions/upload.svg');
 }
-.clock:before{
-  background-image:url('../icons/modules/clock.svg');
+.i-spyglass:before{
+  background-image:url('../icons/actions/spyglass.svg');
 }
-.comments:before{
-  background-image:url('../icons/modules/comments.svg');
+.i-lock:before{
+  background-image:url('../icons/actions/lock.svg');
 }
-.contact-person:before{
-  background-image:url('../icons/modules/contact-person.svg');
+.i-previous-folder:before{
+  background-image:url('../icons/actions/previous-folder.svg');
 }
-.file-system:before{
-  background-image:url('../icons/modules/file-system.svg');
+.i-reload:before{
+  background-image:url('../icons/actions/reload.svg');
 }
-.film:before{
-  background-image:url('../icons/modules/film.svg');
+.i-undo:before{
+  background-image:url('../icons/actions/undo.svg');
 }
-.gift:before{
-  background-image:url('../icons/modules/gift.svg');
+.i-scale:before{
+  background-image:url('../icons/actions/scale.svg');
 }
-.heart:before{
-  background-image:url('../icons/modules/heart.svg');
+.i-add-shape:before{
+  background-image:url('../icons/actions/add-shape.svg');
 }
-.hierarchy:before{
-  background-image:url('../icons/modules/hierarchy.svg');
+.i-bin:before{
+  background-image:url('../icons/actions/bin.svg');
 }
-.home:before{
-  background-image:url('../icons/modules/home.svg');
+.i-bookmark-add:before{
+  background-image:url('../icons/actions/bookmark-add.svg');
 }
-.labels:before{
-  background-image:url('../icons/modules/labels.svg');
+.i-bookmark-added:before{
+  background-image:url('../icons/actions/bookmark-added.svg');
 }
-.list:before{
-  background-image:url('../icons/modules/list.svg');
+.i-screen:before{
+  background-image:url('../icons/actions/screen.svg');
 }
-.locations:before{
-  background-image:url('../icons/modules/locations.svg');
+.i-download-delivery-note:before{
+  background-image:url('../icons/actions/download-delivery-note.svg');
 }
-.logbook:before{
-  background-image:url('../icons/modules/logbook.svg');
+.i-scissors:before{
+  background-image:url('../icons/actions/scissors.svg');
 }
-.music:before{
-  background-image:url('../icons/modules/music.svg');
+.i-download-bill:before{
+  background-image:url('../icons/actions/download-bill.svg');
 }
-.news:before{
-  background-image:url('../icons/modules/news.svg');
+.i-save-and-new:before{
+  background-image:url('../icons/actions/save-and-new.svg');
 }
-.newsletter-preview:before{
-  background-image:url('../icons/modules/newsletter-preview.svg');
+.i-exit-left:before{
+  background-image:url('../icons/actions/exit-left.svg');
 }
-.newsletter-send:before{
-  background-image:url('../icons/modules/newsletter-send.svg');
+.i-arrow-hat-bottom:before{
+  background-image:url('../icons/actions/arrow-hat-bottom.svg');
 }
-.newsletter:before{
-  background-image:url('../icons/modules/newsletter.svg');
+.i-import:before{
+  background-image:url('../icons/actions/import.svg');
 }
-.order-cancelled:before{
-  background-image:url('../icons/modules/order-cancelled.svg');
+.i-clone:before{
+  background-image:url('../icons/actions/clone.svg');
 }
-.order-not-paid:before{
-  background-image:url('../icons/modules/order-not-paid.svg');
+.i-save:before{
+  background-image:url('../icons/actions/save.svg');
 }
-.order-not-shipped:before{
-  background-image:url('../icons/modules/order-not-shipped.svg');
+.i-square-unselected:before{
+  background-image:url('../icons/actions/square-unselected.svg');
 }
-.order-paid:before{
-  background-image:url('../icons/modules/order-paid.svg');
+.i-rename:before{
+  background-image:url('../icons/actions/rename.svg');
 }
-.order-ready:before{
-  background-image:url('../icons/modules/order-ready.svg');
+.i-download:before{
+  background-image:url('../icons/actions/download.svg');
 }
-.order-return:before{
-  background-image:url('../icons/modules/order-return.svg');
+.i-save-and-continue:before{
+  background-image:url('../icons/actions/save-and-continue.svg');
 }
-.order-shipped:before{
-  background-image:url('../icons/modules/order-shipped.svg');
+.i-folder-red:before{
+  background-image:url('../icons/actions/folder-red.svg');
 }
-.pages:before{
-  background-image:url('../icons/modules/pages.svg');
+.i-arrow-hat-left:before{
+  background-image:url('../icons/actions/arrow-hat-left.svg');
 }
-.photo:before{
-  background-image:url('../icons/modules/photo.svg');
+.i-cancel:before{
+  background-image:url('../icons/actions/cancel.svg');
 }
-.press:before{
-  background-image:url('../icons/modules/press.svg');
+.i-redo:before{
+  background-image:url('../icons/actions/redo.svg');
 }
-.qr-code:before{
-  background-image:url('../icons/modules/qr-code.svg');
+.i-plus:before{
+  background-image:url('../icons/actions/plus.svg');
 }
-.recently-added:before{
-  background-image:url('../icons/modules/recently-added.svg');
+.i-square-selected:before{
+  background-image:url('../icons/actions/square-selected.svg');
 }
-.recently-edited:before{
-  background-image:url('../icons/modules/recently-edited.svg');
+.i-export:before{
+  background-image:url('../icons/actions/export.svg');
 }
-.settings:before{
-  background-image:url('../icons/modules/settings.svg');
+.i-edit-grey:before{
+  background-image:url('../icons/actions/edit-grey.svg');
 }
-.shoutbox:before{
-  background-image:url('../icons/modules/shoutbox.svg');
+.i-exit-right:before{
+  background-image:url('../icons/actions/exit-right.svg');
 }
-.statistics:before{
-  background-image:url('../icons/modules/statistics.svg');
+.i-error:before{
+  background-image:url('../icons/actions/error.svg');
 }
-.tree:before{
-  background-image:url('../icons/modules/tree.svg');
+.i-arrow-hat-right:before{
+  background-image:url('../icons/actions/arrow-hat-right.svg');
 }
-.users:before{
-  background-image:url('../icons/modules/users.svg');
+.i-error-file2:before{
+  background-image:url('../icons/actions/error-file2.svg');
 }
-.video:before{
-  background-image:url('../icons/modules/video.svg');
+.i-link:before{
+  background-image:url('../icons/actions/link.svg');
 }
-.arrowhead-left:before{
-  background-image:url('../icons/arrowhead-left.svg');
+.i-add-stats:before{
+  background-image:url('../icons/actions/add-stats.svg');
 }
-.check:before{
-  background-image:url('../icons/check.svg');
+.i-minus:before{
+  background-image:url('../icons/actions/minus.svg');
 }
-.cross:before{
-  background-image:url('../icons/cross.svg');
+.i-error-file1:before{
+  background-image:url('../icons/actions/error-file1.svg');
 }
-.flash:before{
+.i-error-cloudstorm:before{
+  background-image:url('../icons/actions/error-cloudstorm.svg');
+}
+.i-square-unselect-all:before{
+  background-image:url('../icons/actions/square-unselect-all.svg');
+}
+.i-paid:before{
+  background-image:url('../icons/actions/paid.svg');
+}
+.i-eye:before{
+  background-image:url('../icons/actions/eye.svg');
+}
+.i-edit-blue:before{
+  background-image:url('../icons/actions/edit-blue.svg');
+}
+.i-flash:before{
   background-image:url('../icons/flash.svg');
 }
-.heart:before{
+.i-arrowhead-left:before{
+  background-image:url('../icons/arrowhead-left.svg');
+}
+.i-cross:before{
+  background-image:url('../icons/cross.svg');
+}
+.i-check:before{
+  background-image:url('../icons/check.svg');
+}
+.i-heart:before{
   background-image:url('../icons/heart.svg');
 }
-.not-allowed:before{
+.i-not-allowed:before{
   background-image:url('../icons/not-allowed.svg');
 }
-.pen:before{
+.i-pen:before{
   background-image:url('../icons/pen.svg');
 }
 .zDev{
   z-index:13;
+}
+.nav-trigger,
+label[for="nav-trigger"]{
+  display:none;
 }
 @media only screen and (max-width: 1100px){
   .popup{
@@ -2688,6 +2716,7 @@ a.menu-link .icon{
     margin:0;
   }
   label[for="nav-trigger"]{
+    display:block;
     position:absolute;
     top:0;
     right:10px;
@@ -2710,9 +2739,6 @@ a.menu-link .icon{
     width:32px;
     margin-top:4px;
     margin-left:4px;
-  }
-  .nav-trigger{
-    display:none;
   }
   .nav-trigger:checked ~ .sidebar{
     right:0;
