@@ -1,25 +1,28 @@
 default:
-	make icons
+	make iconClass
 	gulp
 	make html
 
 gulp:
 	gulp
 
-gulp-css:
+js:
+	gulp js
+
+css:
 	gulp css
 	
-gulp-meta:
+meta:
 	gulp meta
 	
-gulp-icons:
+icons:
 	gulp icons
 
-gulp-images:
+images:
 	gulp images
 
 html:
 	python sources/htmlrender.py --run
 
-icons:
+iconClass:
 	python sources/buildIcons.py --run

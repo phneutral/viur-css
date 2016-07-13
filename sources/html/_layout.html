@@ -53,17 +53,18 @@
 <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="../static/meta/apple-touch-startup-image-1496x2048.png">
 <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="../static/meta/apple-touch-startup-image-1536x2008.png"></head>
 <body>
-<article class="wrap">
-	<div class="bind flex">
-		<input type="checkbox" id="nav-trigger" class="nav-trigger">
-		<label for="nav-trigger"></label>
-		<div class="sidebar">
-			<ul class="menu-list">
-				{{menu}}
-			</ul>
+	<article class="wrap">
+		<div class="bind flex">
+			<input type="checkbox" id="nav-trigger" class="nav-trigger">
+			<label for="nav-trigger"></label>
+			<div class="sidebar">
+				<ul class="menu-list">
+					{{menu}}
+				</ul>
+			</div>
+			{{content}}
 		</div>
-		{{content}}
-	</div>
-</article>
+	</article>
+	<script src="../static/js/app.js"></script>
 </body>
 </html>
