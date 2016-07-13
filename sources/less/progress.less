@@ -4,20 +4,19 @@
 --------------------------------------------------------------------------------------- */
 
 // Colors:
-@progressBackground: #d3d6db;
-@progressDefault: #69707a;
-@progressPrimary: #1fc8db;
-@progressInfo: #42afe3;
-@progressSuccess: #97cd76;
-@progressWarning: #fce473;
-@progressDanger: #ed6c63;
+@progressBackground: lighten(@complementColor,60%);
+@progressDefault: @mainColor;
+@progressPrimary: @successColor;
+@progressInfo: @hintColor;
+@progressWarning: @warnColor;
+@progressDanger: @failColor;
 
 .progress {
 	appearance: none;
 	border: none;
-	border-radius: 1em;
+  	border-radius: .2em;
 	display: block;
-	height: 12px;
+	height: 1rem;
 	overflow: hidden;
 	padding: 0;
 	width: 100%;
@@ -41,61 +40,51 @@
 }
 
 
-.progress.is-primary::-webkit-progress-value {
+.progress-vPrimary::-webkit-progress-value {
 	background-color: @progressPrimary;
 }
 
-.progress.is-primary::-moz-progress-bar {
+.progress-vPrimary::-moz-progress-bar {
 	background-color: @progressPrimary;
 }
 
 
-.progress.is-info::-webkit-progress-value {
+.progress-vInfo::-webkit-progress-value {
 	background-color: @progressInfo;
 }
 
-.progress.is-info::-moz-progress-bar {
+.progress-vInfo::-moz-progress-bar {
 	background-color: @progressInfo;
 }
 
-
-.progress.is-success::-webkit-progress-value {
-	background-color: @progressSuccess;
-}
-
-.progress.is-success::-moz-progress-bar {
-	background-color: @progressSuccess;
-}
-
-
-.progress.is-warning::-webkit-progress-value {
+.progress-vWarning::-webkit-progress-value {
 	background-color: @progressWarning;
 }
 
-.progress.is-warning::-moz-progress-bar {
+.progress-vWarning::-moz-progress-bar {
 	background-color: @progressWarning;
 }
 
 
-.progress.is-danger::-webkit-progress-value {
+.progress-vDanger::-webkit-progress-value {
 	background-color: @progressDanger;
 }
 
-.progress.is-danger::-moz-progress-bar {
+.progress-vDanger::-moz-progress-bar {
 	background-color: @progressDanger;
 }
 
 
-.progress.is-small {
-	height: 8px;
+.progress-vSmall {
+	height: .6rem;
 }
 
-.progress.is-medium {
-	height: 16px;
+.progress-vMedium {
+	height: 1.4rem;
 }
 
-.progress.is-large {
-	height: 20px;
+.progress-vLarge {
+	height: 1.8rem;
 }
 
 
