@@ -686,22 +686,22 @@ ol.is-list{
 }
 .btn-vPrimary{
   font-weight:600;
-  color:#222222;
+  color:#f4f4f4;
   background-color:#4cad42;
   border:1px solid #3c8834;
 }
 .btn-vPrimary:link,
 .btn-vPrimary:visited{
-  color:#222222;
+  color:#f4f4f4;
 }
 .btn-vPrimary:hover,.btn-vPrimary:focus{
-  color:#000000;
+  color:#ffffff;
   background-color:#58bb4d;
   border:1px solid #449b3b;
 }
 .btn-vPrimary:active,
 .btn-vPrimary.is-active{
-  color:#000000;
+  color:#ffffff;
   background-color:#69c260;
   border:1px solid #58bb4d;
 }
@@ -732,13 +732,13 @@ ol.is-list{
   color:#f32c1e;
 }
 .btn-vDanger:hover,.btn-vDanger:focus{
-  color:#000000;
+  color:#ffffff;
   background-color:#f55a4e;
   border:1px solid #f32c1e;
 }
 .btn-vDanger:active,
 .btn-vDanger.is-active{
-  color:#000000;
+  color:#ffffff;
   background-color:#f77066;
   border:1px solid #f55a4e;
 }
@@ -769,13 +769,13 @@ ol.is-list{
   color:#1a96c9;
 }
 .btn-vEdit:hover,.btn-vEdit:focus{
-  color:#000000;
+  color:#ffffff;
   background-color:#32b0e4;
   border:1px solid #1a96c9;
 }
 .btn-vEdit:active,
 .btn-vEdit.is-active{
-  color:#000000;
+  color:#ffffff;
   background-color:#49b9e7;
   border:1px solid #32b0e4;
 }
@@ -2558,6 +2558,22 @@ a.menu-link .icon{
 }
 .zDev{
   z-index:13;
+}
+.lead{
+  font-size:1.3em;
+  font-weight:300;
+}
+.sandbox{
+  padding:10px 20px;
+  background:#f2f2f2;
+  margin-bottom:10px;
+}
+.placeholder{
+  height:130px;
+}
+.headline{
+  margin:16px 0;
+  border-bottom:1px solid #eeeeee;
 }
 .nav-trigger,
 label[for="nav-trigger"]{
