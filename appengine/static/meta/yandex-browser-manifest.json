@@ -2,7 +2,7 @@
   "version": 1,
   "api_version": 1,
   "layout": {
-    "logo": "appengine/static/meta/yandex-browser-50x50.png",
+    "logo": "../static/meta/yandex-browser-50x50.png",
     "color": "#fff",
     "show_title": true
   }

@@ -3,9 +3,9 @@
   "name": "VIUR CSS",
   "description": "This is the first attempt in building a sturdy foundation of CSS (LESS) for ViUR products and Mausbrand projects. ViUR Ignite CSS is built upon the principles of many CSS guides and frameworks.",
   "icons": {
-    "60": "appengine/static/meta/firefox_app_60x60.png",
-    "128": "appengine/static/meta/firefox_app_128x128.png",
-    "512": "appengine/static/meta/firefox_app_512x512.png"
+    "60": "../static/meta/firefox_app_60x60.png",
+    "128": "../static/meta/firefox_app_128x128.png",
+    "512": "../static/meta/firefox_app_512x512.png"
   },
   "developer": {
     "name": "Mausbrand Infosys",

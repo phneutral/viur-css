@@ -29,6 +29,7 @@
   "devDependencies": {
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
+    "gulp-concat": "latest",
     "gulp-cssnano": "latest",
     "gulp-favicons": "latest",
     "gulp-imagemin": "latest",
@@ -36,6 +37,7 @@
     "gulp-postcss": "latest",
     "gulp-rename": "latest",
     "gulp-svgmin": "latest",
+    "gulp-uglify": "^1.5.4",
     "imagemin-pngquant": "latest",
     "postcss-discard-comments": "latest",
     "postcss-focus": "latest",

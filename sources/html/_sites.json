@@ -13,5 +13,6 @@
 	"progress.html" : "Progressbar",
 	"tables.html" : "Table",
 	"types.html" : "Typography",
-	"badges.html" : "Tooltips and Badges"
+	"badges.html" : "Tooltips and Badges",
+	"tabs.html" : "Tabs"
 }
