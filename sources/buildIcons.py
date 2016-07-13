@@ -22,13 +22,16 @@ def iconlessRender(folder=""):
 	file = open(lessDir+"/icon.less", "w") # write start of _less file
 	file.write("/* ALL CHANGES IN THIS WILL BE OVERWRITTEN */\n/* USE icon_prototype.less */\n\n\n" + _iconless)
 	file.close()
+	writeClasses(folder)
+	
 
+def writeClasses(folder=""):
 	file = open("sources/less/icon.less", "a")
 
 	for item in os.listdir(iconDir+folder): # for each item in folder
 		
 		if os.path.isdir(iconDir+"/"+folder+item): # if dir
-			iconlessRender(folder+"/"+item)
+			writeClasses(folder+"/"+item)
 		else: # if file
 			print ("Processing %s" % folder+"/"+item)
 
