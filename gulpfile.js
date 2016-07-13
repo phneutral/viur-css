@@ -24,6 +24,7 @@ var destpaths = {
   images: './appengine/static/images',
   icons: './appengine/static/icons',
   meta: './appengine/static/meta',
+  metaRel: '../static/meta',
 };
 
 // Variables and requirements
@@ -107,7 +108,7 @@ gulp.task ('meta', function () {
         developerName: developerName,
         developerURL: developerURL,
         background: backgroundColor,
-        path: destpaths.meta,
+        path: destpaths.metaRel,
         url: appURL,
         display: "standalone",
         orientation: "portrait",
