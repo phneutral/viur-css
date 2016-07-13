@@ -28,7 +28,7 @@ Thanks guys!
 
 ### How do I get set up? ###
 * Clone this Repository to your Desktop
-* Open your Console in your workspace and run "$ npm install" (make sure that you have installed npm)
+* Open your shell in your workspace and run "$ npm install" (make sure that you have installed npm)
 * All LESS files are stored in the sources/less folder.
 * The function of each LESS file is shown in the according HTML.
 * Each LESS file is documented in itself, too.
@@ -39,7 +39,7 @@ Thanks guys!
 
 ### Contribution guidelines ###
 
-* Available for use under the MIT license
+* Available for use under the GNU license
 
 ### Who do I talk to? ###
 
