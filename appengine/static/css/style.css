@@ -2306,9 +2306,9 @@ a.menu-link .icon{
   -moz-appearance:none;
   appearance:none;
   border:none;
-  border-radius:1em;
+  border-radius:.2em;
   display:block;
-  height:12px;
+  height:1rem;
   overflow:hidden;
   padding:0;
   width:100%;
@@ -2317,53 +2317,47 @@ a.menu-link .icon{
   margin-bottom:1em;
 }
 .progress::-webkit-progress-bar{
-  background-color:#d3d6db;
+  background-color:#cccccc;
 }
 .progress::-webkit-progress-value{
-  background-color:#69707a;
+  background-color:#d00f1c;
   transition:1s ease-in-out all;
 }
 .progress::-moz-progress-bar{
-  background-color:#69707a;
+  background-color:#d00f1c;
 }
-.progress.is-primary::-webkit-progress-value{
-  background-color:#1fc8db;
+.progress-vPrimary::-webkit-progress-value{
+  background-color:#4cad42;
 }
-.progress.is-primary::-moz-progress-bar{
-  background-color:#1fc8db;
+.progress-vPrimary::-moz-progress-bar{
+  background-color:#4cad42;
 }
-.progress.is-info::-webkit-progress-value{
-  background-color:#42afe3;
+.progress-vInfo::-webkit-progress-value{
+  background-color:#1da7e0;
 }
-.progress.is-info::-moz-progress-bar{
-  background-color:#42afe3;
+.progress-vInfo::-moz-progress-bar{
+  background-color:#1da7e0;
 }
-.progress.is-success::-webkit-progress-value{
-  background-color:#97cd76;
+.progress-vWarning::-webkit-progress-value{
+  background-color:#f5b639;
 }
-.progress.is-success::-moz-progress-bar{
-  background-color:#97cd76;
+.progress-vWarning::-moz-progress-bar{
+  background-color:#f5b639;
 }
-.progress.is-warning::-webkit-progress-value{
-  background-color:#fce473;
+.progress-vDanger::-webkit-progress-value{
+  background-color:#f44336;
 }
-.progress.is-warning::-moz-progress-bar{
-  background-color:#fce473;
+.progress-vDanger::-moz-progress-bar{
+  background-color:#f44336;
 }
-.progress.is-danger::-webkit-progress-value{
-  background-color:#ed6c63;
+.progress-vSmall{
+  height:.6rem;
 }
-.progress.is-danger::-moz-progress-bar{
-  background-color:#ed6c63;
+.progress-vMedium{
+  height:1.4rem;
 }
-.progress.is-small{
-  height:8px;
-}
-.progress.is-medium{
-  height:16px;
-}
-.progress.is-large{
-  height:20px;
+.progress-vLarge{
+  height:1.8rem;
 }
 .icon{
   display:inline-block;
