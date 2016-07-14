@@ -1,0 +1,19 @@
+{
+	"index.html" : "Start",
+	"boxes.html" : "Boxes",
+	"menus.html" : "Menu",
+	"messages.html" : "Alerts and Messages",
+	"forms.html" : "Forms",
+	"grid.html" : "Grid",
+	"buttons.html" : "Buttons",
+	"parallax.html" : "Parallax",
+	"popup.html" : "Popups",
+	"states.html" : "States",
+	"spinner.html" : "Spinner",
+	"progress.html" : "Progressbar",
+	"tables.html" : "Table",
+	"types.html" : "Typography",
+	"badges.html" : "Tooltips and Badges",
+	"tabs.html" : "Tabs",
+	"gettingStarted.html" : "Getting Started"
+}

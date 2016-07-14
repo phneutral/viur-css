@@ -13,7 +13,7 @@
 @import "basic.less"; // classic basic styling.
 @import "wrap.less"; // page wrappers.
 @import "util.less"; // utility classes.
- 
+
 // Buttons, Forms and Tables
 @import "button.less"; // some classic buttons.
 @import "form.less"; // inputs, selects and other form elements.
@@ -29,12 +29,13 @@
 @import "spinner.less";
 
 // Objects
-@import "project.less"; // customize your CSS here.
+@import "app.less"; // customize your CSS here.
 @import "menu.less";
 @import "parallax.less";
 @import "grid.less";
 @import "boxes.less";
 @import "progress.less";
+@import "tabs.less";
 
 // Configuration and Mixins
 @import "appconf.less"; // customize colors and fonts here.
@@ -45,23 +46,23 @@
 
 /* Media Queries */
 @media only screen and (max-width: @breakLarge) {
-  .media-mixin(@breakLarge);
+	.media-mixin(@breakLarge);
 }
 
 @media only screen and (max-width: @breakMedium) {
-  .media-mixin(@breakMedium);
+	.media-mixin(@breakMedium);
 }
 
 @media only screen and (max-width: @breakSmall) {
-  .media-mixin(@breakSmall);
+	.media-mixin(@breakSmall);
 }
 
 @media  only screen and (min-device-pixel-ratio: 2),
-        only screen and (min-resolution: 192dpi) {
-  .media-mixin(@break2x);
+only screen and (min-resolution: 192dpi) {
+	.media-mixin(@break2x);
 }
 
 /* Print */
 @media @breakPrint {
-  .media-mixin(@breakPrint);
+	.media-mixin(@breakPrint);
 }

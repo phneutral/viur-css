@@ -1,0 +1,118 @@
+<div class="content has-footnotes">
+	<section class="section">
+		<h1 class="headline">Typography</h1>
+
+		<p> ViUR Ignite CSS supports the <a href="https://ia.net/know-how/100e2r" title="Information Architects: 100e2r">100% Easy to read</a> standard.
+			<ul class="is-list">
+				<li>The body font size is 100% (roughly 16px).</li>
+				<li>Objects use a font size based on the body &mdash; using »rem« (root em).</li>
+				<li>Inline elements and type should react to their direct surroundings &mdash; thus using »em«.</li>
+			</ul>
+		</p>
+	</section>
+	<section class="section">
+		<h2>Headlines and sublines</h2>
+		<p>These are the standard headlines.</p>
+		<div class="sandbox">
+			<h1>The headline! Use only <strong>one</strong> on every page (h1)</h1>
+			<h2>A minor headline. Use them as often as you like. (h2)</h2>
+			<h3>A subline to your headline. (h3)</h3>
+			<h4>All other headlines. (h4, 5, 6)</h4>
+		</div>
+		<div class="msg">
+			<p>Please style your own headlines with the help of classes (e.g.: <code>.headline</code>, <code>.subline</code>) in the <em>project.less</em> file.</p>
+		</div>
+	</section>
+	<section class="section">
+		<h2>Body text</h2>
+		<p>This is an example of a body text. The first paragraph is emphasized with <code>.lead</code></p>
+		<div class="sandbox">
+			<p class="lead"><a class="has-footnote" href="#maecenas" id="maecenas-ref">Maecenas</a> sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi
+				porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
+				eget lacinia odio sem nec elit.</p>
+			<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis
+				parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+			<p>Cum sociis natoque <a class="has-footnote" href="#penatibus" id="penatibus-ref">penatibus</a> et magnis dis parturient montes, nascetur ridiculus mus. Donec
+				ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat
+				porttitor <a class="has-footnote" href="#ligula" id="ligula-ref">ligula</a>, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor
+				fringilla.</p>
+		</div>
+	</section>
+	<section class="section">
+		<h2>Inline text elements</h2>
+		<p>This is an example of inline text elements.</p>
+		<div class="sandbox">
+			<p><strong>This line rendered as bold text.</strong></p>
+			<p><em>This line rendered as italicized text.</em></p>
+			<p>H<sub>2</sub>O, this is sub and super text<sup>2</sup>.</p>
+			<p>You can use the mark tag to
+				<mark>highlight</mark>
+				text.
+			</p>
+			<p>
+				<del>This line of text is meant to be treated as deleted text.</del>
+			</p>
+			<p>
+				<ins>This line of text is meant to be treated as an addition to the document.</ins>
+			</p>
+			<p><small>This line of text is meant to be treated as fine print.</small></p>
+			<p><code>This line is pure code.</code></p>
+		</div>
+	</section>
+	<section class="section">
+		<h2>Blockquote</h2>
+		<p>This is an example of a blockquote.</p>
+		<div class="sandbox">
+			<blockquote class="js-codeMe">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+			</blockquote>
+		</div>
+	</section>
+	<section class="section">
+		<h2>Unordered Lists</h2>
+		<p>Here is an example of an unordered list.</p>
+		<div class="sandbox">
+			<ul class="is-list js-codeMe">
+				<li>Make a list
+					<ul>
+						<li>Check it twice</li>
+						<ul>
+							<li>One!</li>
+							<li>Two!</li>
+						</ul>
+						<li>Check it again</li>
+					</ul>
+				</li>
+				<li>…</li>
+				<li>Profit!</li>
+			</ul>
+		</div>
+	</section>
+	<section class="section">
+		<h2>Ordered List</h2>
+		<p>Here is an example of an ordered list.</p>
+		<div class="sandbox">
+			<ol class="is-list js-codeMe">
+				<li>Make a list
+					<ol>
+						<li>Check it twice</li>
+						<ol>
+							<li>One!</li>
+							<li>Two!</li>
+						</ol>
+						<li>Check it again</li>
+					</ol>
+				</li>
+				<li>…</li>
+				<li>Profit!</li>
+			</ol>
+		</div>
+	</section>
+	<footer class="footnotes">
+		<ol class="footnotes-list">
+			<li id="maecenas">Maecenas sed diam eget risus varius blandit sit amet non magna. <a class="footnotes-backlink" href="#maecenas-ref" aria-label="Back to content">↩</a></li>
+			<li id="penatibus">Cum sociis natoque penatibus et magnis dis parturient montes <a class="footnotes-backlink" href="#penatibus-ref" aria-label="Back to content">↩</a></li>
+			<li id="ligula">Nisi erat porttitor ligula. <a class="footnotes-backlink" href="#ligula-ref" aria-label="Back to content">↩</a></li>
+		</ol>
+	</footer>
+</div>

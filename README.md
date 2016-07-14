@@ -1,7 +1,7 @@
 # ViUR Ignite CSS #
 
 This is the first attempt in building a sturdy foundation of CSS (LESS) for ViUR products and Mausbrand projects.
-ViUR Ignite CSS is build upon the principles of many CSS guides and frameworks.
+ViUR Ignite CSS is built upon the principles of many CSS guides and frameworks.
 
 Different projects demand different solutions.
 ViUR Ignite CSS is a solution based on the needs of our python/jinja oriented stack.
@@ -20,7 +20,6 @@ Their samples, knowledge and expertise helped us to make ViUR Ignite CSS.
 Thanks guys!
 
 ### What is this repository for? ###
-
 * ViUR Ignite CSS is a development toolkit for sturdy HTML and CSS
 * It is a lightweightned collection of helpful CSS components
 * It is responsive and adaptable
@@ -28,14 +27,15 @@ Thanks guys!
 * ViUR Ignite CSS is JavaScript free as most projects use their own JS implementation.
 
 ### How do I get set up? ###
-
+* Clone this Repository to your Desktop
+* Open your shell in your workspace and run "$ npm install" (make sure that you have installed npm)
 * All LESS files are stored in the sources/less folder.
 * The function of each LESS file is shown in the according HTML.
 * Each LESS file is documented in itself, too.
 * style.less is the catalogue of all used less files. Add and remove files as needed.
-* Customize your project using appconf.less (for dimensions, fonts and colors) and project.less for custom CSS.
+* Customize your project using appconf.less (for dimensions, fonts and colors) and app.less for custom CSS.
 * Only the contents of the appengine folder is deployed to the server.
-* Use [Gulp](http://gulpjs.com) to compile style.less into the appengine/static/css folder.
+* Use the makefile to compile your source folder into the appengine folder.
 
 ### Contribution guidelines ###
 
@@ -43,4 +43,4 @@ Thanks guys!
 
 ### Who do I talk to? ###
 
-* @phneutral
+* @phneutral / @phsieben

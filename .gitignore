@@ -1,8 +1,2 @@
-interface/gulpfile.js
-interface/package.json
-interface/stylelintConfig.json
-interface/node_modules
-sources/stylelintConfig.json
-sources/gulpfile.js
-sources/package.json
-sources/node_modules
+/node_modules
+*.pyc

@@ -1,0 +1,83 @@
+<div class="content">
+	<section class="section">
+		<h1 class="headline">Getting Started</h1>
+
+
+		<h2>Dependencies</h2>
+
+		<p>Before you continue, be sure that you have these tools installed on your machine:</p>
+		<div class="sandbox">
+			NPM (https://www.npmjs.com)
+		</div>
+
+
+		<h2>Install</h2>
+
+		<p>Get the source from Github:</p>
+		<pre class="sandbox">$ git clone git@github.com:phneutral/viur-css.git</pre>
+
+		<p>Change into the viur-css root directory:</p>
+		<pre class="sandbox">$ cd &lt;viur-css root&gt;</pre>
+
+		<p>Install gulp and all dependencies:</p>
+		<pre class="sandbox">$ npm install</pre>
+
+		<div class="msg msg-vSuccess has-icon i-check">
+			<h3 class="msg-headline">You did it!</h3>
+			<p>Let's start.</p>
+		</div>
+
+
+		<h2>Build your project</h2>
+		<h4>Your Workspace ist /sources/</h4>
+
+		<ul class="is-list">
+			<li>
+				<p><b>HTML:</b> Write the site in _layout.html and fill html-files in sources/html with cool content. New sites must be added in the _sites.json</p> 
+			</li>
+			<li>
+				<p><b>LESS:</b> Add a less-file in sources/less and create your own elements or customize your project in the app.less and appconf.less</p> 
+			</li>
+			<li>
+				<p><b>JavaScript:</b> Look at the previous point! ... You tried it with Pure CSS? OKAY, add your scripts in sources/less/app.js</p> 
+			</li>
+			<li>
+				<p><b>Icons:</b> Add your own icons in sources/icons</p> 
+			</li>
+			<li>
+				<p><b>Images:</b> Add your images in sources/images</p> 
+			</li>
+			<li>
+				<p><b>Meta:</b> Add your favicon in sources/meta</p> 
+			</li>
+		</ul>
+
+
+
+		<h2>... And Make it</h2>
+
+		<p>Change back into the viur-css root directory:</p>
+		<pre class="sandbox">$ cd &lt;viur-css root&gt;</pre>
+
+		<p>And run the Makefile to compile the appengine-folder:</p>
+		<pre class="sandbox">$ make</pre>
+
+		<p>You want only compile specific parts? No Problem! Run one of the following commands:</p>
+		<pre class="sandbox">$ make html
+$ make gulp
+$ make js
+$ make css
+$ make meta
+$ make icons
+$ make images
+$ make html
+$ make iconClass</pre>
+
+		<div class="msg msg-vSuccess has-icon i-check">
+			<h3 class="msg-headline">Well Done!</h3>
+			<p>Look in your appengine folder and open your sites in a browser.</p>
+		</div>
+
+	
+	</section>
+</div>
