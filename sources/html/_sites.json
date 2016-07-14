@@ -14,5 +14,6 @@
 	"tables.html" : "Table",
 	"types.html" : "Typography",
 	"badges.html" : "Tooltips and Badges",
-	"tabs.html" : "Tabs"
+	"tabs.html" : "Tabs",
+	"gettingStarted.html" : "Getting Started"
 }

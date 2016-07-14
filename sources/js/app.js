@@ -1,3 +1,4 @@
+SyntaxHighlighter.defaults['gutter'] = false;
 $(function() {
 	$('.js-codeMe').each(function() {
 		var html = $(this).outerHTML().replace(' js-codeMe', '').replace('js-codeMe', '')

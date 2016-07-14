@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* ---------------------------------------------------------------------------------------
-    BASICS, FUNDAMENTALS and TYPE
+	BASICS, FUNDAMENTALS and TYPE
 --------------------------------------------------------------------------------------- */
 
 // ViUR Ignite CSS supports the 100% Easy to read standard:
@@ -13,16 +13,16 @@
 
 
 body {
-  margin: 0; /* IE Reset */
-  background: @backgroundColor;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  font-size:100.01%;
-  line-height:1.5;
-  color: @textColor;
-  font-family: @bodyFonts;
-  -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
-  -webkit-text-size-adjust: 100%;
+	margin: 0; /* IE Reset */
+	background: @backgroundColor;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	font-size:100.01%;
+	line-height:1.5;
+	color: @textColor;
+	font-family: @bodyFonts;
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
 }
 
 /* Links */
@@ -42,13 +42,13 @@ h3 {color: @complementColor; font-size:1.5em;}
 h4, h5, h6 {color: @complementColor}
 
 .lead {
-  font-size: 1.3em;
-  font-weight: 300;
+	font-size: 1.3em;
+	font-weight: 300;
 }
 
 p {
-  line-height: 1.6;
-  font-size: 1em;
+	line-height: 1.6;
+	font-size: 1em;
 }
 
 strong {font-weight: 700;}
@@ -56,85 +56,85 @@ em {font-style:italic;}
 small {font-size: .8em}
 
 ins {
-text-decoration: none;
-border-bottom: 1px dashed;
+	text-decoration: none;
+	border-bottom: 1px dashed;
 }
 
 mark {
-    background: lighten(@mainColor,40%);
-    color: contrast(lighten(@mainColor,40%), @textColor, @invTextColor);
-    padding:1px;
-    &:before,
-    &:after {
-      letter-spacing: -0.2em;
-      content: "\00a0";
-    }
+		background: lighten(@mainColor,40%);
+		color: contrast(lighten(@mainColor,40%), @textColor, @invTextColor);
+		padding:1px;
+		&:before,
+		&:after {
+			letter-spacing: -0.2em;
+			content: "\00a0";
+		}
 }
 
 blockquote {
-  font-family: @headFonts;
-  font-style: italic;
-  font-size: 1.2em;
-  color: @complementColor;
-  padding: 0 15px;
-  border-left: 7px solid @complementColor;
+	font-family: @headFonts;
+	font-style: italic;
+	font-size: 1.2em;
+	color: @complementColor;
+	padding: 0 15px;
+	border-left: 7px solid @complementColor;
 }
 
 code, pre {font-family: @monoFonts;}
 code {
-  color:contrast(darken(@backgroundColor,10%));
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  tab-size: 4;
-  hyphens: none;
-  background: fadeout(darken(@backgroundColor,15%),10%);
-  padding: 3px;
-  border-radius: 3px;
-  &:before,
-  &:after {
-    letter-spacing: -0.2em;
-    content: "\00a0";
-  }
+	color:contrast(darken(@backgroundColor,10%));
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	tab-size: 4;
+	hyphens: none;
+	background: fadeout(darken(@backgroundColor,15%),10%);
+	padding: 3px;
+	border-radius: 3px;
+	&:before,
+	&:after {
+		letter-spacing: -0.2em;
+		content: "\00a0";
+	}
 }
 
 /* Lists */
 ul.is-list {
-    padding: 3px 18px;
-    margin:0;
-    list-style-type: disc;
+		padding: 3px 18px;
+		margin:0;
+		list-style-type: disc;
 }
 
 .is-list ul {
-    padding: 3px 18px;
-    list-style-type: square;
+		padding: 3px 18px;
+		list-style-type: square;
 }
 
 .is-list ul ul,
 .is-list ol ul {
-    list-style-type: circle;
+		list-style-type: circle;
 }
 
 ol.is-list {
-    padding: 3px 20px;
-    margin:0;
-    list-style-type: decimal;
+		padding: 3px 20px;
+		margin:0;
+		list-style-type: decimal;
 }
 
 .is-list ol {
-    padding: 3px 20px;
-    list-style-type: upper-roman;
+		padding: 3px 20px;
+		list-style-type: upper-roman;
 }
 
 .is-list ol ol,
 .is-list ul ol {
-    list-style-type: upper-alpha;
+		list-style-type: upper-alpha;
 }
 
 // => Basic Media Queries
 
 .media-mixin(@break) when (@break = @breakSmall) {
-  body {font-size: 90%;}
+	body {font-size: 90%;}
 }
 
 .media-mixin(@break) when (@break = @breakMedium) {
