@@ -15,5 +15,6 @@
 	"types.html" : "Typography",
 	"badges.html" : "Tooltips and Badges",
 	"tabs.html" : "Tabs",
+	"breadcrumb.html" : "Breadcrumbs",
 	"gettingStarted.html" : "Getting Started"
 }

@@ -2602,6 +2602,97 @@ a.menu-link .icon{
   -ms-transform:translateX(0);
   -o-transform:translateX(0);
 }
+.breadcrumb{
+  list-style:none;
+  overflow:hidden;
+}
+.breadcrumb li{
+  float:left;
+}
+.breadcrumb li a{
+  color:white;
+  text-decoration:none;
+  padding:10px 0 10px 55px;
+  background:brown;
+  background:#a5630d;
+  position:relative;
+  display:block;
+  float:left;
+}
+.breadcrumb li a:after{
+  content:" ";
+  display:block;
+  width:0;
+  height:0;
+  border-top:50px solid transparent;
+  border-bottom:50px solid transparent;
+  border-left:30px solid #a5630d;
+  position:absolute;
+  top:50%;
+  margin-top:-50px;
+  left:100%;
+  z-index:2;
+}
+.breadcrumb li a:before{
+  content:" ";
+  display:block;
+  width:0;
+  height:0;
+  border-top:50px solid transparent;
+  border-bottom:50px solid transparent;
+  border-left:30px solid white;
+  position:absolute;
+  top:50%;
+  margin-top:-50px;
+  margin-left:1px;
+  left:100%;
+  z-index:1;
+}
+.breadcrumb li:first-child a{
+  padding-left:10px;
+}
+.breadcrumb li:nth-child(2) a{
+  background:#d48011;
+}
+.breadcrumb li:nth-child(2) a:after{
+  border-left-color:#d48011;
+}
+.breadcrumb li:nth-child(3) a{
+  background:#ee992b;
+}
+.breadcrumb li:nth-child(3) a:after{
+  border-left-color:#ee992b;
+}
+.breadcrumb li:nth-child(4) a{
+  background:#f2b05a;
+}
+.breadcrumb li:nth-child(4) a:after{
+  border-left-color:#f2b05a;
+}
+.breadcrumb li:nth-child(5) a{
+  background:#f5c689;
+}
+.breadcrumb li:nth-child(5) a:after{
+  border-left-color:#f5c689;
+}
+.breadcrumb li:last-child a{
+  background:#fff;
+  color:black;
+  pointer-events:none;
+  cursor:default;
+}
+.breadcrumb li:last-child a:before{
+  margin-left:0;
+}
+.breadcrumb li:last-child a:after{
+  border:0;
+}
+.breadcrumb li:last-child a:hover,.breadcrumb li:last-child a:focus{
+  background:#76470a;
+}
+.breadcrumb li:last-child a:hover:after,.breadcrumb li:last-child a:focus:after{
+  border-left-color:#76470a !important;
+}
 .icon{
   display:inline-block;
   vertical-align:text-top;
