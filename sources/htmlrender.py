@@ -33,10 +33,11 @@ def htmlRender():
 
 		# build navigation
 		tmpMenu = '<li class="menu-item"><a class="menu-link is-primary' + ( ' is-active' if site == "index.html" else '' ) + '" href="index.html">Start</a></li>' + '\n'
+		tmpMenu += '<li class="menu-item"><a class="menu-link' + ( ' is-active' if site == "gettingStarted.html" else '' ) + '" href="gettingStarted.html">Getting Started</a></li>' + '\n'
 		for siteMenu, titleMenu in sites:
-			if siteMenu == "index.html":
+			if siteMenu == "index.html" or siteMenu == "gettingStarted.html":
 				continue
-			tmpMenu += '\t\t\t\t' + '<li class="menu-item"><a class="menu-link' + ( ' is-active' if site == siteMenu else '' ) + '" href="' + siteMenu + '">' + titleMenu + '</a></li>' + '\n'
+			tmpMenu += '<li class="menu-item"><a class="menu-link' + ( ' is-active' if site == siteMenu else '' ) + '" href="' + siteMenu + '">' + titleMenu + '</a></li>' + '\n'
 		
 		# get content of file
 		tmpContent = open(htmlDir+"" + site, 'r').read()

@@ -100,7 +100,7 @@ gulp.task ('images', function () {
 
 // minify js and put in single file
 gulp.task('js', function() {
-	gulp.src(srcpaths.js)
+	gulp.src(['./sources/js/viurcss.js', './sources/js/app.js'])
 	.pipe(concat('app.js'))
 	.pipe(uglify())
 	.pipe(gulp.dest(destpaths.js))
