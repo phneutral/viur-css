@@ -10,6 +10,7 @@ var developerURL = 'http://mausbrand.de/';
 var backgroundColor = '#fff'; // Background color of app icons.
 
 var srcpaths = {
+	html: './sources/html/**/*',
 	less: './sources/less/**/*.less',
 	js: './sources/js/**/*.js',
 	images: './sources/images/**/*',
@@ -55,6 +56,9 @@ var favicons = require('gulp-favicons');
 
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+
+var shell = require('gulp-shell')
+
 
 // compilation and postproduction of LESS to CSS
 gulp.task('css', function () {
@@ -134,6 +138,10 @@ gulp.task ('meta', function () {
 	.pipe(gulp.dest(destpaths.meta));
 });
 
+gulp.task('html', shell.task([
+  'make html'
+]))
+
 
 gulp.task('watch', function () {
 	gulp.watch(srcpaths.less, ['css']);
@@ -141,6 +149,7 @@ gulp.task('watch', function () {
 	gulp.watch(srcpaths.icons, ['icons']);
 	gulp.watch(srcpaths.images, ['images']);
 	gulp.watch(srcpaths.meta, ['meta']);
+	gulp.watch(srcpaths.html, ['html']);
 });
 
 gulp.task('default', ['css', 'js', 'images', 'icons', 'meta']);
