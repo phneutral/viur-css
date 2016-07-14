@@ -1982,14 +1982,13 @@ a.has-footnote:focus:after{
   vertical-align:baseline !important;
   width:auto !important;
   box-sizing:content-box !important;
-  font-family:"Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+  font-family:Courier, monospace !important;
   font-weight:normal !important;
   font-style:normal !important;
   font-size:1em !important;
   min-height:inherit !important;
   min-height:auto !important;
 }
-
 .syntaxhighlighter{
   width:100% !important;
   margin:1em 0 1em 0 !important;
@@ -2035,144 +2034,24 @@ a.has-footnote:focus:after{
   overflow:hidden !important;
   white-space:pre !important;
 }
-.syntaxhighlighter table td.gutter .line{
-  text-align:right !important;
-  padding:0 0.5em 0 1em !important;
-}
 .syntaxhighlighter table td.code .line{
   padding:0 1em !important;
 }
-.syntaxhighlighter.nogutter td.code .container textarea, .syntaxhighlighter.nogutter td.code .line{
+.syntaxhighlighter.nogutter td.code .container textarea,
+.syntaxhighlighter.nogutter td.code .line{
   padding-left:0em !important;
 }
 .syntaxhighlighter.show{
   display:block !important;
 }
-.syntaxhighlighter.collapsed table{
-  display:none !important;
-}
-.syntaxhighlighter.collapsed .toolbar{
-  padding:0.1em 0.8em 0em 0.8em !important;
-  font-size:1em !important;
-  position:static !important;
-  width:auto !important;
-  height:auto !important;
-}
-.syntaxhighlighter.collapsed .toolbar span{
-  display:inline !important;
-  margin-right:1em !important;
-}
-.syntaxhighlighter.collapsed .toolbar span a{
-  padding:0 !important;
-  display:none !important;
-}
-.syntaxhighlighter.collapsed .toolbar span a.expandSource{
-  display:inline !important;
-}
-.syntaxhighlighter .toolbar{
-  position:absolute !important;
-  right:1px !important;
-  top:1px !important;
-  width:11px !important;
-  height:11px !important;
-  font-size:10px !important;
-  z-index:3 !important;
-}
-.syntaxhighlighter .toolbar span.title{
-  display:inline !important;
-}
-.syntaxhighlighter .toolbar a{
-  display:block !important;
-  text-align:center !important;
-  text-decoration:none !important;
-  padding-top:1px !important;
-}
-.syntaxhighlighter .toolbar a.expandSource{
-  display:none !important;
-}
-.syntaxhighlighter.ie{
-  font-size:.9em !important;
-  padding:1px 0 1px 0 !important;
-}
-.syntaxhighlighter.ie .toolbar{
-  line-height:8px !important;
-}
-.syntaxhighlighter.ie .toolbar a{
-  padding-top:0px !important;
-}
-.syntaxhighlighter.printing .line.alt1 .content,
-.syntaxhighlighter.printing .line.alt2 .content,
-.syntaxhighlighter.printing .line.highlighted .number,
-.syntaxhighlighter.printing .line.highlighted.alt1 .content,
-.syntaxhighlighter.printing .line.highlighted.alt2 .content{
-  background:none !important;
-}
-.syntaxhighlighter.printing .line .number{
-  color:#bbbbbb !important;
-}
-.syntaxhighlighter.printing .line .content{
-  color:black !important;
-}
-.syntaxhighlighter.printing .toolbar{
-  display:none !important;
-}
-.syntaxhighlighter.printing a{
-  text-decoration:none !important;
-}
-.syntaxhighlighter.printing .plain, .syntaxhighlighter.printing .plain a{
-  color:black !important;
-}
-.syntaxhighlighter.printing .comments, .syntaxhighlighter.printing .comments a{
-  color:#008200 !important;
-}
-.syntaxhighlighter.printing .string, .syntaxhighlighter.printing .string a{
-  color:blue !important;
-}
-.syntaxhighlighter.printing .keyword{
-  color:#006699 !important;
-  font-weight:bold !important;
-}
-.syntaxhighlighter.printing .preprocessor{
-  color:gray !important;
-}
-.syntaxhighlighter.printing .variable{
-  color:#aa7700 !important;
-}
-.syntaxhighlighter.printing .value{
-  color:#009900 !important;
-}
-.syntaxhighlighter.printing .functions{
-  color:#ff1493 !important;
-}
-.syntaxhighlighter.printing .constants{
-  color:#0066cc !important;
-}
-.syntaxhighlighter.printing .script{
-  font-weight:bold !important;
-}
-.syntaxhighlighter.printing .color1, .syntaxhighlighter.printing .color1 a{
-  color:gray !important;
-}
-.syntaxhighlighter.printing .color2, .syntaxhighlighter.printing .color2 a{
-  color:#ff1493 !important;
-}
-.syntaxhighlighter.printing .color3, .syntaxhighlighter.printing .color3 a{
-  color:red !important;
-}
-.syntaxhighlighter.printing .break, .syntaxhighlighter.printing .break a{
-  color:black !important;
-}
-
 .syntaxhighlighter{
-  background-color:white !important;
+  background-color:#f1f1f1 !important;
+  border:1px solid #ddd;
+  padding:10px;
+  border-radius:3px;
 }
-.syntaxhighlighter .line.alt1{
-  background-color:white !important;
-}
-.syntaxhighlighter .line.alt2{
-  background-color:white !important;
-}
-.syntaxhighlighter .line.highlighted.alt1, .syntaxhighlighter .line.highlighted.alt2{
+.syntaxhighlighter .line.highlighted.alt1,
+.syntaxhighlighter .line.highlighted.alt2{
   background-color:#e0e0e0 !important;
 }
 .syntaxhighlighter .line.highlighted.number{
@@ -2181,55 +2060,23 @@ a.has-footnote:focus:after{
 .syntaxhighlighter table caption{
   color:black !important;
 }
-.syntaxhighlighter .gutter{
-  color:#afafaf !important;
-}
-.syntaxhighlighter .gutter .line{
-  border-right:3px solid #6ce26c !important;
-}
-.syntaxhighlighter .gutter .line.highlighted{
-  background-color:#6ce26c !important;
-  color:white !important;
-}
-.syntaxhighlighter.printing .line .content{
-  border:none !important;
-}
-.syntaxhighlighter.collapsed{
-  overflow:visible !important;
-}
-.syntaxhighlighter.collapsed .toolbar{
-  color:blue !important;
-  background:white !important;
-  border:1px solid #6ce26c !important;
-}
-.syntaxhighlighter.collapsed .toolbar a{
-  color:blue !important;
-}
-.syntaxhighlighter.collapsed .toolbar a:hover,.syntaxhighlighter.collapsed .toolbar a:focus{
-  color:red !important;
-}
 .syntaxhighlighter .toolbar{
-  color:white !important;
-  background:#6ce26c !important;
-  border:none !important;
+  display:none !important;
 }
-.syntaxhighlighter .toolbar a{
-  color:white !important;
+.syntaxhighlighter .plain,
+.syntaxhighlighter .plain a{
+  color:#333 !important;
 }
-.syntaxhighlighter .toolbar a:hover,.syntaxhighlighter .toolbar a:focus{
-  color:black !important;
+.syntaxhighlighter .comments,
+.syntaxhighlighter .comments a{
+  color:#21b64b !important;
 }
-.syntaxhighlighter .plain, .syntaxhighlighter .plain a{
-  color:black !important;
-}
-.syntaxhighlighter .comments, .syntaxhighlighter .comments a{
-  color:#008200 !important;
-}
-.syntaxhighlighter .string, .syntaxhighlighter .string a{
-  color:blue !important;
+.syntaxhighlighter .string,
+.syntaxhighlighter .string a{
+  color:#d44950 !important;
 }
 .syntaxhighlighter .keyword{
-  color:#006699 !important;
+  color:#2f6f9f !important;
 }
 .syntaxhighlighter .preprocessor{
   color:gray !important;
@@ -2251,25 +2098,18 @@ a.has-footnote:focus:after{
   color:#006699 !important;
   background-color:none !important;
 }
-.syntaxhighlighter .color1, .syntaxhighlighter .color1 a{
-  color:gray !important;
+.syntaxhighlighter .color1,
+.syntaxhighlighter .color1 a{
+  color:#4f9fcf !important;
 }
-.syntaxhighlighter .color2, .syntaxhighlighter .color2 a{
+.syntaxhighlighter .color2,
+.syntaxhighlighter .color2 a{
   color:#ff1493 !important;
 }
-.syntaxhighlighter .color3, .syntaxhighlighter .color3 a{
+.syntaxhighlighter .color3,
+.syntaxhighlighter .color3 a{
   color:red !important;
 }
-
-.syntaxhighlighter .keyword{
-  font-weight:bold !important;
-}
-
-
-
-
-
-
 .syntaxhighlighter code:before,
 .syntaxhighlighter code:after{
   margin:0;
