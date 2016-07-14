@@ -32,18 +32,19 @@ def htmlRender():
 		print ("Processing %s" % site)
 
 		# build navigation
-		tmpMenu = '<li class="menu-item"><a class="menu-link is-primary' + ( ' is-active' if site == "index.html" else '' ) + '" href="index.html">Start</a></li>' + '\n'
-		tmpMenu += '<li class="menu-item"><a class="menu-link' + ( ' is-active' if site == "gettingStarted.html" else '' ) + '" href="gettingStarted.html">Getting Started</a></li>' + '\n'
+		tmpMenu1 = '<li class="menu-item"><a class="menu-link is-primary' + ( ' is-active' if site == "index.html" else '' ) + '" href="index.html">Start</a></li>' + '\n'
+		tmpMenu1 += '<li class="menu-item"><a class="menu-link' + ( ' is-active' if site == "gettingStarted.html" else '' ) + '" href="gettingStarted.html">Getting Started</a></li>' + '\n'
+		tmpMenu2 = ''
 		for siteMenu, titleMenu in sites:
 			if siteMenu == "index.html" or siteMenu == "gettingStarted.html":
 				continue
-			tmpMenu += '<li class="menu-item"><a class="menu-link' + ( ' is-active' if site == siteMenu else '' ) + '" href="' + siteMenu + '">' + titleMenu + '</a></li>' + '\n'
+			tmpMenu2 += '<li class="menu-item"><a class="menu-link' + ( ' is-active' if site == siteMenu else '' ) + '" href="' + siteMenu + '">' + titleMenu + '</a></li>' + '\n'
 		
 		# get content of file
 		tmpContent = open(htmlDir+"" + site, 'r').read()
 
 		# replace variables in template by content
-		tmp = layout.replace( '{{title}}', title ).replace( '{{menu}}', tmpMenu ).replace( '{{content}}', tmpContent )
+		tmp = layout.replace( '{{title}}', title ).replace( '{{menu1}}', tmpMenu1 ).replace( '{{menu2}}', tmpMenu2 ).replace( '{{content}}', tmpContent )
 
 		# write file in appengine/html
 		if not os.path.exists(appengineDir):
