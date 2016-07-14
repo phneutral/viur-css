@@ -1,32 +1,8 @@
 {
   "name": "viur-css",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "main": "",
-  "dependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Mausbrand Infosys",
-  "license": "SEE LICENSE IN LICENSE",
-  "description": "This is the first attempt in building a sturdy foundation of CSS (LESS) for ViUR products and Mausbrand projects. ViUR Ignite CSS is built upon the principles of many CSS guides and frameworks.",
-  "repository": [
-    {
-      "type": "git",
-      "url": "git+git@bitbucket.org:phneutral/viur-css.git"
-    },
-    {
-      "type": "git",
-      "url": "git+git@github.com:phneutral/viur-css.git"
-    }
-  ],
-  "keywords": [
-    "VIUR",
-    "CSS",
-    "framework",
-    "vicss"
-  ],
-  "homepage": "https://bitbucket.org/phneutral/viur-css#readme",
-  "devDependencies": {
+  "dependencies": {
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-concat": "latest",
@@ -46,5 +22,23 @@
     "postcss-zindex": "latest",
     "stylelint": "latest",
     "stylelint-config-standard": "latest"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mausbrand Infosys",
+  "license": "SEE LICENSE IN LICENSE",
+  "description": "This is the first attempt in building a sturdy foundation of CSS (LESS) for ViUR products and Mausbrand projects. ViUR Ignite CSS is built upon the principles of many CSS guides and frameworks.",
+  "repository": {
+      "type": "git",
+      "url": "git+git@github.com:phneutral/viur-css.git"
+    },
+  "keywords": [
+    "VIUR",
+    "CSS",
+    "framework",
+    "vicss"
+  ],
+  "homepage": "https://bitbucket.org/phneutral/viur-css#readme",
+  "devDependencies": {}
 }
