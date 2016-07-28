@@ -19,7 +19,7 @@
 @import "form.less"; // inputs, selects and other form elements.
 @import "table.less"; // a classic table layout.
 
-// Tooltips, Messages and States  
+// Tooltips, Messages and States
 @import "tooltip.less"; // lightweight tooltips.
 @import "badge.less"; // badges and marker.
 @import "message.less"; // hints, errors, warnings etc.
@@ -31,7 +31,8 @@
 // Objects
 @import "app.less"; // customize your CSS here.
 @import "menu.less";
-@import "parallax.less";
+@import "bar.less";
+@import "key.less";
 @import "grid.less";
 @import "boxes.less";
 @import "progress.less";
@@ -47,23 +48,22 @@
 
 /* Media Queries */
 @media only screen and (max-width: @breakLarge) {
-	.media-mixin(@breakLarge);
+  .media-mixin(@breakLarge);
 }
 
 @media only screen and (max-width: @breakMedium) {
-	.media-mixin(@breakMedium);
+  .media-mixin(@breakMedium);
 }
 
 @media only screen and (max-width: @breakSmall) {
-	.media-mixin(@breakSmall);
+  .media-mixin(@breakSmall);
 }
 
-@media only screen and (min-device-pixel-ratio: 2),
-only screen and (min-resolution: @break2x) {
-	.media-mixin(@break2x);
+@media only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: @break2x) {
+  .media-mixin(@break2x);
 }
 
 /* Print */
 @media @breakPrint {
-	.media-mixin(@breakPrint);
+  .media-mixin(@breakPrint);
 }

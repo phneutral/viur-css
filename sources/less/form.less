@@ -77,10 +77,6 @@
 .input::-moz-placeholder {color:lighten(contrast(@inputColor, #222222, #f4f4f4), 50%); opacity: 1;}
 .input:-ms-input-placeholder {color:lighten(contrast(@inputColor, #222222, #f4f4f4), 50%); opacity: 1;}
 
-// required input
-// readonly inputs
-// textareas
-
 .input-vContrast {
 	background-color: darken(@inputColor,5%);
 	border: 1px solid darken(@inputColor,15%);
@@ -294,7 +290,7 @@
 	.btn+.btn {margin-right: 10px;}
 }
 
-// => form Media Queries
+// => Forms Media Queries
 
 .media-mixin(@break) when (@break = @breakSmall) {
 	.inputGroup .label,
@@ -335,7 +331,15 @@
 	}
 }
 
+.media-mixin(@break) when (@break = @breakMedium) {
+
+}
+
 .media-mixin(@break) when (@break = @breakLarge) {
+
+}
+
+.media-mixin(@break) when (@break = @break2x) {
 
 }
 
