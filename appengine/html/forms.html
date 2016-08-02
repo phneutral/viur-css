@@ -83,7 +83,7 @@
 		<h1 class="headline">Forms</h1>
 	</div>
 	<div class="section">
-		<h2>Default Form</h2>
+		<h2 class="subline">Default Form</h2>
 		<p>This is a standard form.</p>
 		<form>
 			<label class="label">Label</label>
@@ -93,7 +93,7 @@
 		</form>
 	</div>
 	<div class="section">
-		<h2>Selection</h2>
+		<h2 class="subline">Selection</h2>
 		<p>This is a select menu.</p>
 		<form>
 			<label class="label">Select an option</label>
@@ -105,7 +105,7 @@
 		</form>
 	</div>
 	<div class="section">
-		<h2>Small selection</h2>
+		<h2 class="subline">Small selection</h2>
 		<p>This is a small select menu.</p>
 		<form>
 			<label class="label label-vSmall">Select an option</label>
@@ -117,7 +117,7 @@
 		</form>
 	</div>
 	<div class="section">
-		<h2>Input connected with button</h2>
+		<h2 class="subline">Input connected with button</h2>
 		<p>This is an input directly connected to a button.</p>
 		<form>
 			<div class="inputGroup">
@@ -138,21 +138,21 @@
 		</form>
 	</div>
 	<div class="section">
-		<h2>Small input</h2>
+		<h2 class="subline">Small input</h2>
 		<p>This is a small input.</p>
 		<form>
 			<input class="input input-vSmall" type="text" placeholder="Small input">
 		</form>
 	</div>
 	<div class="section">
-		<h2>Large input</h2>
+		<h2 class="subline">Large input</h2>
 		<p>This is a large input.</p>
 		<form>
 			<input class="input input-vLarge" type="text" placeholder="Large input">
 		</form>
 	</div>
 	<div class="section">
-		<h2>Disabled and read-only inputs</h2>
+		<h2 class="subline">Disabled and read-only inputs</h2>
 		<p>This is a disabled and a read-only input.</p>
 		<form>
 			<label class="label is-disabled">Label</label>
@@ -161,14 +161,14 @@
 		</form>
 	</div>
 	<div class="section">
-		<h2>Block input</h2>
+		<h2 class="subline">Block input</h2>
 		<p>This is a block input.</p>
 		<form>
 			<p><input class="input input-vBlock" type="text" placeholder="Block input"/></p>
 		</form>
 	</div>
 	<div class="section">
-		<h2>Error, recommended and accepted on input</h2>
+		<h2 class="subline">Error, recommended and accepted on input</h2>
 		<p>These are examples for an error, a recommendation and an accepted status.</p>
 		<form>
 			<div class="inputGroup">
@@ -185,15 +185,10 @@
 			</div>
 		</form>
 	</div>
-	<div class="section">
-		<h2>Checkbox</h2>
-		<p>This is an example of an checkbox.</p>
+	<section class="section">
+		<h2 class="subline">Switch</h2>
+		<p>This is a simple, yet elegant, boolean switch.</p>
 		<form>
-			<label class="pointer" for="check1">
-				<input id="check1" class="checkbox" type="checkbox">
-				Test checkbox
-			</label>
-			<p class="note">This is an informative note.</p>
 			<div class="inputGroup">
 				<label class="label">Label</label>
 				<div class="switch">
@@ -202,9 +197,47 @@
 				</div>
 			</div>
 		</form>
-	</div>
+	</section>
+	<section class="section">
+		<h2 class="subline">Radio</h2>
+		<p>These are simple radio buttons. You may group them.</p>
+		<form>
+			<div class="inputGroup">
+				<label class="label">Label</label>
+				<div class="radioGroup">
+					<div class="radio">
+						<input class="radio-input" id="radio1" type="radio" name="radiogroup1"/>
+						<label class="radio-label" for="radio1">Radio Option 1</label>
+					</div>
+					<div class="radio">
+						<input class="radio-input" id="radio2" type="radio" name="radiogroup1"/>
+						<label class="radio-label" for="radio2">Radio Option 2</label>
+					</div>
+					<div class="radio">
+						<input class="radio-input" id="radio3" type="radio" name="radiogroup1"/>
+						<label class="radio-label" for="radio3">Radio Option 3</label>
+					</div>
+				</div>
+			</div>
+			<div class="inputGroup">
+					<label class="label">Label</label>
+						<div class="radio">
+							<input class="radio-input" id="radio1" type="radio" name="radiogroup1"/>
+							<label class="radio-label" for="radio1">Radio Option 1</label>
+						</div>
+						<div class="radio">
+							<input class="radio-input" id="radio2" type="radio" name="radiogroup1"/>
+							<label class="radio-label" for="radio2">Radio Option 2</label>
+						</div>
+						<div class="radio">
+							<input class="radio-input" id="radio3" type="radio" name="radiogroup1"/>
+							<label class="radio-label" for="radio3">Radio Option 3</label>
+						</div>
+			</div>
+		</form>
+	</section>
 	<div class="section">
-		<h2>Textarea</h2>
+		<h2 class="subline">Textarea</h2>
 		<p>This is an example of a textarea.</p>
 		<form>
 			<div class="inputGroup">
@@ -217,8 +250,12 @@
 		</form>
 	</div>
 	<div class="section">
-		<h2>Form actions</h2>
+		<h2 class="subline">Form actions</h2>
 		<p>Use formActions to float submit buttons to the right at the end of your form.</p>
+		<div class="msg msg-vError">
+			<h3 class="msg-headline">Deprecated!</h3>
+			<p>formActions are deprecated. Please use the .bar element instead!</p>
+		</div>
 		<form>
 			<div class="formActions">
 				<input type="submit" class="btn btn-vPrimary">

@@ -892,7 +892,8 @@ ol.is-list{
   background-repeat:no-repeat;
 }
 .inputGroup.is-invalid .input,
-.input.is-invalid{
+.input.is-invalid,
+.input:invalid{
   color:#d2190b;
   border-color:#f44336;
   background-color:#fff8f7;
@@ -900,7 +901,8 @@ ol.is-list{
   background-position:95% center;
 }
 .inputGroup.is-invalid .input:focus,
-.input.is-invalid:focus{
+.input.is-invalid:focus,
+.input:invalid:focus{
   color:#222222;
   background-color:#ffffff;
   border:1px solid #e6e6e6;
@@ -1011,13 +1013,15 @@ ol.is-list{
   min-width:150px;
 }
 .inputGroup.is-required .label,
-.label.is-required{
+.label.is-required,
+.label:required{
   border-left:2px solid #d00f1c;
   color:#d00f1c;
   font-weight:600;
 }
 .inputGroup.is-required .label:after,
-.label.is-required:after{
+.label.is-required:after,
+.label:required:after{
   content:'\00a0*';
 }
 .inputGroup.is-invalid .label,
@@ -1033,8 +1037,7 @@ ol.is-list{
   background-color:#76caed;
 }
 .inputGroup.is-valid .label,
-.label.is-valid,
-.label:valid{
+.label.is-valid{
   color:#23511f;
   border-color:#4cad42;
   background-color:#8cd085;
@@ -1113,7 +1116,9 @@ ol.is-list{
 .inputGroup .btn,
 .inputGroup .select,
 .inputGroup .label,
-.inputGroup .switch{
+.inputGroup .switch,
+.inputGroup > .radio,
+.inputGroup .radioGroup{
   margin:6px 0px;
   float:left;
   position:relative;
@@ -1121,7 +1126,9 @@ ol.is-list{
 .inputGroup .input,
 .inputGroup .label,
 .inputGroup .textarea,
-.inputGroup .switch{
+.inputGroup .switch,
+.inputGroup > .radio,
+.inputGroup .radioGroup{
   box-shadow:0px 1px 1px rgba(0, 0, 0, 0.4);
 }
 .inputGroup .label:first-child{
@@ -1198,6 +1205,65 @@ ol.is-list{
   background:#fff;
   transition:all .2s ease;
   box-shadow:0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+.radio{
+  margin:6px 0;
+  vertical-align:middle;
+  display:inline-block;
+  background-color:#fafafa;
+  border:1px solid #e0e0e0;
+  color:#000000;
+}
+.radio-input{
+  opacity:0;
+  position:absolute;
+}
+.radio-label{
+  position:relative;
+  display:inline-block;
+  padding:7px 14px;
+  outline:0;
+  cursor:pointer;
+}
+.radio-label:before{
+  content:'';
+  background:#fff;
+  border:2px solid #e6e6e6;
+  display:inline-block;
+  vertical-align:middle;
+  width:1em;
+  height:1em;
+  margin-right:10px;
+  margin-top:-2px;
+  text-align:center;
+  border-radius:50%;
+  transition:all .4s ease;
+  box-shadow:inset 0px 0px 0px 2px #fff;
+}
+.radio-label:hover,.radio-label:focus{
+  background-color:#ffffff;
+}
+.radio-input:checked + .radio-label:before{
+  background:#8cd085;
+  border:2px solid #69c260;
+}
+.radioGroup{
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-direction:column;
+  flex-direction:column;
+}
+.radioGroup .radio{
+  margin:0;
+  border-width:0 1px;
+}
+.radioGroup .radio:first-child{
+  border-width:1px;
+  border-bottom-width:0;
+}
+.radioGroup .radio:last-child{
+  border-width:1px;
+  border-top-width:0;
 }
 .note{
   font-size:0.8em;
@@ -2848,16 +2914,16 @@ a.menu-link .icon{
   -ms-transition:all 0.6s ease;
   -o-transition:all 0.6s ease;
 }
-[type=radio]:checked ~ label{
+.tab [type=radio]:checked ~ label{
   background:white;
   border-bottom:1px solid white;
   z-index:2;
 }
-[type=radio]:checked ~ label ~ .tab-content{
+.tab [type=radio]:checked ~ label ~ .tab-content{
   z-index:1;
   visibility:visible;
 }
-[type=radio]:checked ~ label ~ .tab-content > *{
+.tab [type=radio]:checked ~ label ~ .tab-content > *{
   opacity:1;
   -webkit-transform:translateX(0);
   -moz-transform:translateX(0);
@@ -3393,12 +3459,15 @@ a.menu-link .icon{
   .inputGroup .input,
   .inputGroup .label,
   .inputGroup .switch,
-  .inputGroup .textarea{
+  .inputGroup .textarea,
+  .inputGroup > .radio,
+  .inputGroup .radioGroup{
     box-shadow:none;
   }
   .input,
   .select,
-  .switch{
+  .switch,
+  .radio{
     width:100%;
     margin:0;
     margin-bottom:5px;
@@ -3407,7 +3476,10 @@ a.menu-link .icon{
   .inputGroup .input,
   .inputGroup .btn,
   .inputGroup .switch,
-  .inputGroup .textarea{
+  .inputGroup .textarea,
+  .inputGroup > .radio,
+  .inputGroup .radioGroup,
+  .radioGroup .radio{
     width:100%;
     margin:0;
   }
