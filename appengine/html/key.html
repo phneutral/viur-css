@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0">
-	<title>VIUR CSS - Start</title>
+	<title>VIUR CSS - Key</title>
 	<meta name="description" content="This is the first attempt in building a sturdy foundation of CSS (LESS) for ViUR products and Mausbrand projects. ViUR Ignite CSS is built upon the principles of many CSS guides and frameworks.">
 	<meta name="keywords" content="VIUR, CSS, framework, vicss">
 	<link rel="stylesheet" href="../static/css/style.css">
@@ -54,7 +54,7 @@
 			<label for="nav-trigger"></label>
 			<div class="sidebar">
 				<ul class="menu-list">
-					<li class="menu-item"><a class="menu-link is-primary is-active" href="index.html">Start</a></li>
+					<li class="menu-item"><a class="menu-link is-primary" href="index.html">Start</a></li>
 <li class="menu-item"><a class="menu-link" href="gettingStarted.html">Getting Started</a></li>
 
 				</ul>
@@ -65,7 +65,7 @@
 <li class="menu-item"><a class="menu-link" href="buttons.html">Buttons</a></li>
 <li class="menu-item"><a class="menu-link" href="forms.html">Forms</a></li>
 <li class="menu-item"><a class="menu-link" href="grid.html">Grid</a></li>
-<li class="menu-item"><a class="menu-link" href="key.html">Key</a></li>
+<li class="menu-item"><a class="menu-link is-active" href="key.html">Key</a></li>
 <li class="menu-item"><a class="menu-link" href="menus.html">Menu</a></li>
 <li class="menu-item"><a class="menu-link" href="popup.html">Popups</a></li>
 <li class="menu-item"><a class="menu-link" href="progress.html">Progressbar</a></li>
@@ -78,74 +78,78 @@
 
 				</ul>
 			</div>
-			<div class="content">
-	<section class="section">
-		<h1 class="headline">ViUR Ignite CSS</h1>
-
-		<p>This is the first attempt in building a sturdy foundation of CSS (LESS) for <a href="http://www.viur.is">ViUR</a> products and <a href="https://www.mausbrand.de">Mausbrand</a> projects.
-		ViUR Ignite CSS is built upon the principles of many CSS guides and frameworks.</p>
-
-		<p>Different projects demand different solutions.<br />
-		ViUR Ignite CSS is a solution based on the needs of our python/jinja oriented stack.<br />
-		A lightweight framework for many different customer projects.<br />
-		For other purposes you may use one of the frameworks or guides below.<br />
-		Their samples, knowledge and expertise helped us to make ViUR Ignite CSS.</p>
-
-		<ul class="is-list">
-			<li><a href="http://primercss.io">Primer CSS</a></li>
-			<li><a href="https://benfrain.com/enduring-css-writing-style-sheets-rapidly-changing-long-lived-projects/">Enduring CSS</a></li>
-			<li><a href="http://bulma.io">Bulma</a></li>
-			<li><a href="http://cssguidelin.es">CSS Guidelin.es</a></li>
-			<li><a href="http://andhart.github.io/bijou">Bijou</a></li>
-			<li><a href="https://github.com/jscarmona/bedrock">Bedrock</a></li>
-			<li>and others</li>
-		</ul>
-
-		<p>Thanks guys!</p>
-
-
-		<h3>What is this repository for?</h3>
-		<ul class="is-list">
-			<li>ViUR Ignite CSS is a development toolkit for sturdy HTML and CSS</li>
-			<li>It is a lightweightned collection of helpful CSS components</li>
-			<li>It is responsive and adaptable</li>
-			<li>It is build in LESS</li>
-			<li>ViUR Ignite CSS is JavaScript free as most projects use their own JS implementation.</li>
-		</ul>
-	</section>
-
-	<!-- old:
-
-		<h3>How do I get it?</h3>
-		<ul style="list-style-type: square;">
-			<li><p>Download the Project on <a href="https://bitbucket.org/phneutral/vicss">Bitbucket</a></p></li>
-		</ul>
-
-		<h3>How do I get set up?</h3>
-		<ul style="list-style-type: square;">
-			<li>All LESS files are stored in the sources/less folder.</li>
-			<li>The function of each LESS file is shown in the according HTML.</li>
-			<li>Each LESS file is documented in itself, too.</li>
-			<li>style.less is the catalogue of all used less files. Add and remove files as needed.</li>
-			<li>Customize your project using appconf.less (for dimensions, fonts and colors) and project.less for custom CSS.</li>
-			<li>Only the contents of the appengine folder is deployed to the server.</li>
-			<li>Use <a href="http://gulpjs.com">Gulp</a> to compile style.less into the appengine/static/css folder.</li>
-		</ul>
-
-		<h3>Contribution guidelines</h3>
-		<ul style="list-style-type: square;">
-			<li><p>Available for use under the GNU license</p></li>
-		</ul>
-
-		<h3>Who do I talk to?</h3>
-		<ul style="list-style-type: square;">
-			<li><a href="https://bitbucket.org/phneutral">@phneutral</a></li>
-		</ul>
-
+			<section class="content section">
+		<h1 class="headline">Key element</h1>
+		<p>
 		</p>
 
-	-->
-</div>
+	<div class="sandbox">
+<section class="key">
+	<div class="key-up">
+		<nav class="bar">
+			<div class="barGroup barGroup-vLeft">
+				<span class="bar-item">Just some Text</span>
+			</div>
+			<div class="barGroup barGroup-vCenter">
+				<button class="btn">A Button</button>
+				<a class="bar-link" href="#">A Link</a>
+				<span class="bar-item">Just some Text</span>
+			</div>
+			<div class="barGroup barGroup-vRight barGroup-vNav">
+				<span class="bar-item">Just some Text</span>
+				<a class="bar-link" href="#">A Link</a>
+				<a class="bar-link" href="#">A Link</a>
+
+			</div>
+		</nav>
+	</div>
+	<div class="key-content">
+		<div class="container">
+			<h1 class="headline">Headline!</h1>
+			<h2 class="subline">Subline.</h2>
+		</div>
+	</div>
+	<div class="key-down">
+		<nav class="bar">
+			<div class="barGroup barGroup-vLeft">
+				<span class="bar-item">Just some Text</span>
+			</div>
+			<div class="barGroup barGroup-vCenter">
+				<button class="btn">A Button</button>
+				<a class="bar-link" href="#">A Link</a>
+				<span class="bar-item">Just some Text</span>
+			</div>
+			<div class="barGroup barGroup-vRight barGroup-vNav">
+				<span class="bar-item">Just some Text</span>
+				<a class="bar-link" href="#">A Link</a>
+				<a class="bar-link" href="#">A Link</a>
+
+			</div>
+		</nav>
+	</div>
+</section>
+	</div>
+
+	<div class="sandbox">
+		<nav class="bar">
+			<div class="barGroup barGroup-vLeft">
+				<span class="bar-item">Just some Text</span>
+			</div>
+			<div class="barGroup barGroup-vCenter">
+				<button class="btn">A Button</button>
+				<a class="bar-link" href="#">A Link</a>
+				<span class="bar-item">Just some Text</span>
+			</div>
+			<div class="barGroup barGroup-vRight barGroup-vNav">
+				<span class="bar-item">Just some Text</span>
+				<a class="bar-link" href="#">A Link</a>
+				<a class="bar-link" href="#">A Link</a>
+
+			</div>
+		</nav>
+	</div>
+</section>
+
 		</div>
 	</article>
 	<script src="../static/js/jquery-3.1.0.min.js"></script>
