@@ -1,4 +1,9 @@
 default:
+	make css
+	make js
+	make html
+
+all:
 	make iconClass
 	gulp
 	make html

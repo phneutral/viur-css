@@ -35,6 +35,7 @@ def htmlRender():
 		tmpMenu1 = '<li class="menu-item"><a class="menu-link is-primary' + ( ' is-active' if site == "index.html" else '' ) + '" href="index.html">Start</a></li>' + '\n'
 		tmpMenu1 += '<li class="menu-item"><a class="menu-link' + ( ' is-active' if site == "gettingStarted.html" else '' ) + '" href="gettingStarted.html">Getting Started</a></li>' + '\n'
 		tmpMenu2 = ''
+		
 		for siteMenu, titleMenu in sites:
 			if siteMenu == "index.html" or siteMenu == "gettingStarted.html":
 				continue
